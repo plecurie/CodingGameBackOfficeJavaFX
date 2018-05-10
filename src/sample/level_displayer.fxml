@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="361.0" layoutY="382.0" prefHeight="308.0" prefWidth="674.0">
+        <columns>
+          <TableColumn prefWidth="541.0" text="Name" />
+          <TableColumn minWidth="0.0" prefWidth="132.0" text="Difficulty" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Button layoutX="452.0" layoutY="701.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" text="Modify Level">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button layoutX="714.0" layoutY="701.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" text="Delete Level">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <TextArea layoutX="361.0" layoutY="153.0" prefHeight="210.0" prefWidth="450.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextArea>
+      <Label layoutX="361.0" layoutY="126.0" text="Description :" />
+      <Label layoutX="499.0" layoutY="51.0" text="TITLE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Button layoutX="872.0" layoutY="239.0" mnemonicParsing="false" text="Save changes">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="58.0" layoutY="340.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="230.0" text="Create Level">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
