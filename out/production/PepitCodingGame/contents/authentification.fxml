@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Starter">
+   <children>
+      <TextField layoutX="313.0" layoutY="349.0" fx:id="textField">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <PasswordField layoutX="313.0" layoutY="415.0" fx:id="passwordField">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </PasswordField>
+      <Button layoutX="447.0" layoutY="480.0" mnemonicParsing="false" text="Connect" onAction="#onValidButton">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="291.0" fitWidth="456.0" layoutX="251.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="250.64962768554688" AnchorPane.topAnchor="46.0">
+         <image>
+            <Image url="@../images/main_logo.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Label layoutX="313.0" layoutY="319.0" text="Username :" />
+      <Label layoutX="313.0" layoutY="388.0" text="Password :" />
+   </children>
+</AnchorPane>

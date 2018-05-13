@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Displayer">
+   <children>
+      <VBox prefHeight="660.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="183.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/main_logo.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="200.0" text="Home" />
+            <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="200.0" text="Games" />
+            <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="200.0" text="Users" />
+            <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="200.0" text="Admin Settings" />
+            <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="200.0" text="Preferences" />
+            <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="200.0" style="-fx-background-color: red;" text="Disconnect">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="main" layoutX="200.0" prefHeight="660.0" prefWidth="1080.0" />
+   </children>
+</AnchorPane>

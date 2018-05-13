@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fill="DODGERBLUE" layoutX="362.0" layoutY="253.0" radius="89.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="362.0" layoutY="509.0" radius="89.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="678.0" layoutY="258.0" radius="89.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="688.0" layoutY="506.0" radius="89.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Circle>
+      <Label layoutX="322.0" layoutY="361.0" text="PepitHack" />
+      <Label layoutX="297.0" layoutY="609.0" text="Casse-Sombrero" />
+      <Label layoutX="599.0" layoutY="361.0" text="Pepito L'explorateur" />
+      <Label layoutX="569.0" layoutY="609.0" text="Qui veut gagner des Pepitos ?" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="835.0" layoutY="258.0" prefHeight="241.0" prefWidth="240.0">
+         <children>
+            <VBox prefHeight="320.0" prefWidth="82.0">
+               <children>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Blue" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Left" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Pepito" />
+               </children>
+            </VBox>
+            <VBox prefHeight="267.0" prefWidth="115.0">
+               <children>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Green" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Up" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Down" />
+               </children>
+            </VBox>
+            <VBox prefHeight="320.0" prefWidth="82.0">
+               <children>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Red" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Right" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Void" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="861.0" layoutY="526.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="84.0" text="Undo" />
+      <Button layoutX="973.0" layoutY="526.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Redo" />
+      <Button layoutX="903.0" layoutY="639.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" text="Save" />
+      <Button layoutX="903.0" layoutY="699.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" text="Quit" />
+      <Button layoutX="877.0" layoutY="53.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="84.0" text="10x10" />
+      <Button layoutX="955.0" layoutY="53.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="84.0" text="15x15" />
+      <ChoiceBox layoutX="876.0" layoutY="175.0" prefHeight="39.0" prefWidth="165.0" />
+      <Label layoutX="876.0" layoutY="148.0" text="Number of functions" />
+   </children>
+</AnchorPane>

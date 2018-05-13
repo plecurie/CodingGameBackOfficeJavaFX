@@ -2,48 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/BDD/cookorder.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/BDD/cookorder_structure.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/controller/ensureUserData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/controller/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/controller/private_acces/ensureAuthenticated.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/controller/private_acces/ensureRole.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/cookorder.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/models/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/postman/CookOrder.postman_collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/oauth2-redirect.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui-bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui-bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui-standalone-preset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui-standalone-preset.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/public/api-docs/swagger-ui.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/commandes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/commandes/commandes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/orders/orders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/products/products.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/services/services.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/routes/users/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/commandes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/commandes/commandes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/orders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/orders/orders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/products/products.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/services/services.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/services/users/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/API-dashboardMerge-ba488b5b1422241cfdec1163d0274ee1827f4851/settings/index.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Chewbs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/Displayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/Starter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/10x10.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/15x15.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BasicApplication_css/BasicApplication.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BasicApplication_css/BasicApplication_css.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BasicApplication_i18n/BasicApplication.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BasicApplication_i18n/BasicApplication_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BasicApplication_i18n/BasicApplication_fr.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BasicApplication_i18n/BasicApplication_i18n.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/authentification.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/dashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/games_displayer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/level_displayer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/selected_user.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sombrero_toolbox.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/users_displayer.fxml" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,8 +91,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,32 +100,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <file leaf-file-name="Starter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="59">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="10x10.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/10x10.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="Displayer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/Displayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#901#902#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="15x15.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/15x15.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+      <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>controll</find>
+    </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -151,9 +165,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/authentication.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/Controller.java" />
+        <option value="$PROJECT_DIR$/src/controllers/StarterController.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/contents/authentification.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/contents/dashboard.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/Home.java" />
+        <option value="$PROJECT_DIR$/src/controllers/Starter.java" />
+        <option value="$PROJECT_DIR$/src/controllers/Displayer.java" />
       </list>
     </option>
   </component>
@@ -168,12 +191,13 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1614" />
-    <option name="height" value="876" />
+    <option name="x" value="-12" />
+    <option name="width" value="981" />
+    <option name="height" value="504" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -182,31 +206,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="IntellijCodingGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IntellijCodingGame" type="462c0819:PsiDirectoryNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="IntellijCodingGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IntellijCodingGame" type="462c0819:PsiDirectoryNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="IntellijCodingGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IntellijCodingGame" type="462c0819:PsiDirectoryNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="contents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,6 +252,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -334,17 +365,23 @@
       <workItem from="1523698309107" duration="967000" />
       <workItem from="1524662894066" duration="50000" />
       <workItem from="1525953325419" duration="456000" />
+      <workItem from="1525958286554" duration="1841000" />
+      <workItem from="1526064357824" duration="686000" />
+      <workItem from="1526125472999" duration="597000" />
+      <workItem from="1526208261651" duration="13066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2844000" />
+    <option name="totallyTimeSpent" value="19034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3291592" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -352,11 +389,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
+      <window_info anchor="bottom" x="0" y="245" width="1281" height="191" id="Run" order="2" visible="true" weight="0.38282648" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20608899" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16842106" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -365,7 +402,6 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -395,6 +431,79 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
@@ -403,7 +512,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -420,7 +529,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -437,7 +546,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
@@ -454,41 +563,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/10x10.fxml">
+    <entry file="file://$PROJECT_DIR$/src/images/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/authentication.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/15x15.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+    <entry file="file://$PROJECT_DIR$/src/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/models/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/10x10.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/History.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/authentification.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/dashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Displayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
