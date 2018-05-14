@@ -4,4 +4,6 @@ public class Settings {
     public Settings() {
         /* todo default constructor */
     }
+
+
 }

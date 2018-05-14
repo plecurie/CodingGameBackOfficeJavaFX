@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.Games">
+   <children>
+      <Label layoutX="322.0" layoutY="361.0" text="PepitHack" />
+      <Label layoutX="297.0" layoutY="609.0" text="Casse-Sombrero" />
+      <Label layoutX="599.0" layoutY="361.0" text="Pepito L'explorateur" />
+      <Label layoutX="569.0" layoutY="609.0" text="Qui veut gagner des Pepitos ?" />
+      <Button onAction="#onFirst" layoutX="273.0" layoutY="169.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300;" text="Button" />
+      <Button onAction="#onSecond" layoutX="590.0" layoutY="169.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300;" text="Button" />
+      <Button onAction="#onThird" layoutX="274.0" layoutY="417.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300;" text="Button" />
+      <Button onAction="#onFourth" layoutX="590.0" layoutY="417.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300;" text="Button" />
+   </children>
+</AnchorPane>

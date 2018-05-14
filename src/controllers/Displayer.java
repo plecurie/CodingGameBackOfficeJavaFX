@@ -16,42 +16,121 @@ import java.util.ResourceBundle;
 
 public class Displayer implements Initializable {
 
-    @FXML private AnchorPane main ;
-    private static Stage stage ;
-
     public Displayer() {
         /* todo default constructor */
     }
+
+    @FXML AnchorPane main ;
+    /* on doit pouvoir le changer depuis les autres controllers ! */
+
+    private static Stage stage ;
+    private static AnchorPane anchorpane ;
+    private void setStage(Stage stage) {
+        Displayer.stage = stage;
+    }
+    private void setAnchorPane(AnchorPane anchorpane) { Displayer.anchorpane = anchorpane;}
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         main.setStyle("-fx-background-color: white");
         try {
-            onHome(new ActionEvent());
+            onGames(new ActionEvent());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void setStage(Stage stage) {
-        Displayer.stage = stage;
-    }
-
-    @FXML private void onHome(ActionEvent actionEvent){
-        Home home = new Home();
+    @FXML public void onHome(ActionEvent actionEvent){
         try {
-            main.getChildren().add(home.displayHome());
+            main.getChildren().clear();
+            main.getChildren().add(displayHome());
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML private void onPreferences(ActionEvent actionEvent){
+        try {
+            main.getChildren().clear();
+            main.getChildren().add(displayPreferences());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML private void onSettings(ActionEvent actionEvent){
+        try {
+            main.getChildren().clear();
+            main.getChildren().add(displaySettings());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML private void onUsers(ActionEvent actionEvent){
+        try {
+            main.getChildren().clear();
+            main.getChildren().add(displayUsers());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML private void onGames(ActionEvent actionEvent){
+        try {
+            main.getChildren().clear();
+            main.getChildren().add(displayGames());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private BorderPane displayHome() throws Exception {
+        BorderPane sceneRoot = new BorderPane();
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/home.fxml"));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+        return sceneRoot ;
+    }
+
+    private BorderPane displayPreferences() throws Exception {
+        BorderPane sceneRoot = new BorderPane();
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/preferences.fxml"));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+        return sceneRoot ;
+    }
+
+    private BorderPane displaySettings() throws Exception {
+        BorderPane sceneRoot = new BorderPane();
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/settings.fxml"));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+        return sceneRoot ;
+    }
+
+    private BorderPane displayUsers() throws Exception {
+        BorderPane sceneRoot = new BorderPane();
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/users.fxml"));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+        return sceneRoot ;
+    }
+
+    private BorderPane displayGames() throws Exception {
+        BorderPane sceneRoot = new BorderPane();
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/games.fxml"));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+        return sceneRoot ;
     }
 
     public void displayDashboard(){
-
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane;
         try {
             anchorPane = FXMLLoader.load(getClass().getResource("../contents/dashboard.fxml"));
+            setAnchorPane(anchorPane);
             sceneRoot.setCenter(anchorPane);
             Scene scene = new Scene(sceneRoot);
             Stage stage = new Stage();
@@ -63,5 +142,10 @@ public class Displayer implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML private void onDisconnect(ActionEvent actionEvent){
+        stage.close();
+    }
+
 
 }
