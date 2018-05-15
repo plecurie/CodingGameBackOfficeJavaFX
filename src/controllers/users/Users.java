@@ -4,6 +4,4 @@ public class Users {
     public Users() {
         /* todo default constructor */
     }
-
-
 }

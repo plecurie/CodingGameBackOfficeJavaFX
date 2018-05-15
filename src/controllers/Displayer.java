@@ -23,24 +23,23 @@ public class Displayer implements Initializable {
     @FXML AnchorPane main ;
     /* on doit pouvoir le changer depuis les autres controllers ! */
 
+    public AnchorPane getMain() { return main; }
     private static Stage stage ;
-    private static AnchorPane anchorpane ;
     private void setStage(Stage stage) {
         Displayer.stage = stage;
     }
-    private void setAnchorPane(AnchorPane anchorpane) { Displayer.anchorpane = anchorpane;}
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         main.setStyle("-fx-background-color: white");
         try {
-            onGames(new ActionEvent());
+            onHome(new ActionEvent());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @FXML public void onHome(ActionEvent actionEvent){
+    @FXML private void onHome(ActionEvent actionEvent){
         try {
             main.getChildren().clear();
             main.getChildren().add(displayHome());
@@ -130,7 +129,6 @@ public class Displayer implements Initializable {
         final AnchorPane anchorPane;
         try {
             anchorPane = FXMLLoader.load(getClass().getResource("../contents/dashboard.fxml"));
-            setAnchorPane(anchorPane);
             sceneRoot.setCenter(anchorPane);
             Scene scene = new Scene(sceneRoot);
             Stage stage = new Stage();
