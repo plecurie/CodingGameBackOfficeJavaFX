@@ -134,12 +134,20 @@ public class Displayer implements Initializable {
         return sceneRoot ;
     }
 
+    public BorderPane displaySelectedLevel() throws Exception {
+        BorderPane sceneRoot = new BorderPane();
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/sbr_toolbox_10x10.fxml"));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+        return sceneRoot ;
+    }
+
 
     public void displayDashboard(){
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane;
         try {
-            anchorPane = FXMLLoader.load(getClass().getResource("../contents/dashboard.fxml"));
+            anchorPane = FXMLLoader.load(getClass().getResource("../contents/displayer.fxml"));
             sceneRoot.setCenter(anchorPane);
             Scene scene = new Scene(sceneRoot);
             Stage stage = new Stage();
