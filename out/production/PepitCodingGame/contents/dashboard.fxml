@@ -27,7 +27,7 @@
             <Button mnemonicParsing="false" onAction="#onGames" prefHeight="112.0" prefWidth="200.0" text="Games" />
             <Button mnemonicParsing="false" onAction="#onUsers" prefHeight="112.0" prefWidth="200.0" text="Users" />
             <Button mnemonicParsing="false" onAction="#onSettings" prefHeight="112.0" prefWidth="200.0" text="Admin Settings" />
-            <Button mnemonicParsing="false" onAction="#onPreferences" prefHeight="112.0" prefWidth="200.0" text="Preferences" />
+            <Button mnemonicParsing="false" onAction="#onPreferences" prefHeight="112.0" prefWidth="200.0" text="Dashboard Preferences" />
             <Button mnemonicParsing="false" onAction="#onDisconnect" prefHeight="112.0" prefWidth="200.0" style="-fx-background-color: red;" text="Disconnect">
                <effect>
                   <DropShadow />

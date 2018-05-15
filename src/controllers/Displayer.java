@@ -16,17 +16,19 @@ import java.util.ResourceBundle;
 
 public class Displayer implements Initializable {
 
-    public Displayer() {
-        /* todo default constructor */
-    }
-
+    private static Displayer currentDisplayer;
     @FXML AnchorPane main ;
-    /* on doit pouvoir le changer depuis les autres controllers ! */
-
-    public AnchorPane getMain() { return main; }
     private static Stage stage ;
     private void setStage(Stage stage) {
         Displayer.stage = stage;
+    }
+
+    public static Displayer getCurrentDisplayer() {
+        return currentDisplayer;
+    }
+
+    public Displayer() {
+        /* todo default constructor */
     }
 
     @Override
@@ -39,7 +41,7 @@ public class Displayer implements Initializable {
         }
     }
 
-    @FXML private void onHome(ActionEvent actionEvent){
+    @FXML public void onHome(ActionEvent actionEvent){
         try {
             main.getChildren().clear();
             main.getChildren().add(displayHome());
@@ -102,7 +104,7 @@ public class Displayer implements Initializable {
 
     private BorderPane displaySettings() throws Exception {
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/settings.fxml"));
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/dashboard_settings.fxml"));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
         return sceneRoot ;
@@ -123,6 +125,15 @@ public class Displayer implements Initializable {
         sceneRoot.setVisible(true);
         return sceneRoot ;
     }
+
+    public BorderPane displayLevels() throws Exception {
+        BorderPane sceneRoot = new BorderPane();
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/levels.fxml"));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+        return sceneRoot ;
+    }
+
 
     public void displayDashboard(){
         BorderPane sceneRoot = new BorderPane();
