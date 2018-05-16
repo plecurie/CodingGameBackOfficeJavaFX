@@ -16,16 +16,19 @@ import java.util.ResourceBundle;
 
 public class Displayer implements Initializable {
 
-    private static Displayer currentDisplayer;
     @FXML AnchorPane main ;
     private static Stage stage ;
     private void setStage(Stage stage) {
         Displayer.stage = stage;
     }
 
+
+    public static Displayer currentDisplayer;
+
     public static Displayer getCurrentDisplayer() {
         return currentDisplayer;
     }
+
 
     public Displayer() {
         /* todo default constructor */

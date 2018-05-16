@@ -23,7 +23,8 @@ public class Games {
     @FXML private void onThird(ActionEvent actionEvent){
 
         try {
-            displayer.onHome(new ActionEvent());
+            Displayer.currentDisplayer.displaySelectedLevel();
+            displayer.displaySelectedLevel();
         } catch (Exception e) {
             e.printStackTrace();
         }
