@@ -2,7 +2,6 @@ package controllers;
 
 import controllers.games.Games;
 import controllers.games.levels.Levels;
-import controllers.users.Users;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -113,7 +112,7 @@ public class Displayer implements Initializable {
 
     BorderPane displaySettings() throws Exception {
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/dashboard_settings.fxml"));
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/gaming_settings.fxml"));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
         return sceneRoot ;
