@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PepitCodingGame.iml" filepath="$PROJECT_DIR$/PepitCodingGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pepito.iml" filepath="$PROJECT_DIR$/.idea/modules/pepito.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pepito_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pepito_main.iml" group="pepito" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pepito_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pepito_test.iml" group="pepito" />
     </modules>
   </component>
 </project>
