@@ -1,5 +1,8 @@
 package controllers;
 
+import controllers.games.Games;
+import controllers.games.levels.Levels;
+import controllers.users.Users;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -123,7 +126,11 @@ public class Displayer implements Initializable {
 
     private BorderPane displayGames() throws Exception {
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/games.fxml"));
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/games.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/games.fxml"));
+        final AnchorPane anchorPane = loader.load();
+        Games gamesController = loader.getController();
+        gamesController.setMain(this, main);
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
         return sceneRoot ;
@@ -131,7 +138,11 @@ public class Displayer implements Initializable {
 
     public BorderPane displayLevels() throws Exception {
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/levels.fxml"));
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/levels.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/levels.fxml"));
+        final AnchorPane anchorPane = loader.load();
+        Levels levelsController = loader.getController();
+        levelsController.setMain(this, main);
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
         return sceneRoot ;
