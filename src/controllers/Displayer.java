@@ -92,15 +92,18 @@ public class Displayer implements Initializable {
         }
     }
 
-    private BorderPane displayHome() throws Exception {
+    BorderPane displayHome() throws Exception {
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/home.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/home.fxml"));
+        final AnchorPane anchorPane = loader.load();
+        Home homeController = loader.getController();
+        homeController.setMain(this, main);
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
         return sceneRoot ;
     }
 
-    private BorderPane displayPreferences() throws Exception {
+    BorderPane displayPreferences() throws Exception {
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/preferences.fxml"));
         sceneRoot.setCenter(anchorPane);
@@ -108,7 +111,7 @@ public class Displayer implements Initializable {
         return sceneRoot ;
     }
 
-    private BorderPane displaySettings() throws Exception {
+    BorderPane displaySettings() throws Exception {
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/dashboard_settings.fxml"));
         sceneRoot.setCenter(anchorPane);
@@ -116,7 +119,7 @@ public class Displayer implements Initializable {
         return sceneRoot ;
     }
 
-    private BorderPane displayUsers() throws Exception {
+    BorderPane displayUsers() throws Exception {
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/users.fxml"));
         sceneRoot.setCenter(anchorPane);
@@ -124,9 +127,8 @@ public class Displayer implements Initializable {
         return sceneRoot ;
     }
 
-    private BorderPane displayGames() throws Exception {
+    BorderPane displayGames() throws Exception {
         BorderPane sceneRoot = new BorderPane();
-        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/games.fxml"));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/games.fxml"));
         final AnchorPane anchorPane = loader.load();
         Games gamesController = loader.getController();
@@ -138,7 +140,6 @@ public class Displayer implements Initializable {
 
     public BorderPane displayLevels() throws Exception {
         BorderPane sceneRoot = new BorderPane();
-        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/levels.fxml"));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/levels.fxml"));
         final AnchorPane anchorPane = loader.load();
         Levels levelsController = loader.getController();
@@ -157,7 +158,7 @@ public class Displayer implements Initializable {
     }
 
 
-    public void displayDashboard(){
+    void displayDashboard(){
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane;
         try {
@@ -175,7 +176,10 @@ public class Displayer implements Initializable {
     }
 
     @FXML private void onDisconnect(ActionEvent actionEvent){
+
         stage.close();
+        Starter starter = new Starter();
+        starter.displayStarter();
     }
 
 
