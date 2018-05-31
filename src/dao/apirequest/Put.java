@@ -1,6 +1,6 @@
 package dao.apirequest;
 
-import dao.services.InputStreamToString;
+import dao.services.InputStreamToJson;
 import settings.ApiConstant;
 
 import javax.json.JsonObject;
@@ -29,7 +29,7 @@ public class Put {
             os.close();
 
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
-            response = new InputStreamToString().parseInputStream(connection.getInputStream());
+            response = new InputStreamToJson().parseInputStream(connection.getInputStream());
             in.close();
 
             connection.disconnect();

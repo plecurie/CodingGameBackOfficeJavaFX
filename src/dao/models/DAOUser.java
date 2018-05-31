@@ -24,7 +24,7 @@ public class DAOUser {
         Get get = new Get();
         List list = get.sendGetRequest("/users");
 
-        List list_users = new ArrayList();
+        List<User> list_users = new ArrayList<>();
 
         for (Object aList : list) {
             String[] list_objet = aList.toString().split(":");
@@ -73,8 +73,9 @@ public class DAOUser {
                     list_users.add(new User(id, username, firstname, lastname, age, email, profil, level, exp, type));
                     break;
                 }
-                default:
+                default: {
                     break;
+                }
             }
         }
         return list_users;

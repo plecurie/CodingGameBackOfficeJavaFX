@@ -5,19 +5,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class InputStreamToString {
+public class InputStreamToJson {
 
     public String parseInputStream(InputStream is) {
-
         BufferedReader br = null;
-        StringBuilder sb = new StringBuilder();
+        StringBuilder json = new StringBuilder();
 
         String line;
         try {
 
             br = new BufferedReader(new InputStreamReader(is));
             while ((line = br.readLine()) != null) {
-                sb.append(line);
+                json.append(line);
             }
 
         } catch (IOException e) {
@@ -32,7 +31,7 @@ public class InputStreamToString {
             }
         }
 
-        return sb.toString();
+        return json.toString();
     }
 
 }

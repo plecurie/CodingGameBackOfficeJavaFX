@@ -1,5 +1,6 @@
 package controllers;
 
+import dao.models.DAOAuth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,8 @@ public class StarterController {
 
     @FXML private TextField textField;
     @FXML private PasswordField passwordField;
+
+    DAOAuth daoAuth = new DAOAuth();
 
     public StarterController() {
         /* todo default constructor */
@@ -44,13 +47,16 @@ public class StarterController {
     @FXML
     protected void onValidButton(ActionEvent actionEvent) {
 
-        String username = textField.getText().toString();
-        String password = passwordField.getText().toString();
+        String username = textField.getText();
+        String password = passwordField.getText();
 
         try{
-                stage.close();
-                DisplayerController displayerController = new DisplayerController();
-                displayerController.displayDashboard();
+                if (daoAuth.signIn(username,password)) {
+                    stage.close();
+                    DisplayerController displayerController = new DisplayerController();
+                    displayerController.displayDashboard();
+                }
+
         }catch (Exception e){
             e.printStackTrace();
         }

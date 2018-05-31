@@ -1,17 +1,26 @@
 package models;
 
 public class User {
-    private static int id ;
-    private static String username ;
-    private static String password ;
-    private static String firstname ;
-    private static String lastname ;
-    private static int age ;
-    private static String email ;
-    private static String profil ;
-    private static int level ;
-    private static float exp ;
-    private static String type ;
+
+    private static String USERNAME ;
+    private static String FIRSTNAME ;
+    private static String LASTNAME ;
+    private static String AGE ;
+    private static String EMAIL ;
+    private static String LEVEL ;
+    private static String EXP ;
+    private static String TYPE ;
+    private static String TOKEN;
+    private int id ;
+    private String username ;
+    private String firstname ;
+    private String lastname ;
+    private int age ;
+    private String email ;
+    private String profil ;
+    private int level ;
+    private float exp ;
+    private String type ;
 
     public User(){ /*todo default constructor*/ }
 
@@ -28,94 +37,156 @@ public class User {
         setType(type);
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        User.id = id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public static String getUsername() {
+    public String getUsername() {
         return username;
     }
 
-    public static void setUsername(String username) {
-        User.username = username;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public static String getPassword() {
-        return password;
-    }
-
-    public static void setPassword(String password) {
-        User.password = password;
-    }
-
-    public static String getFirstname() {
+    public String getFirstname() {
         return firstname;
     }
 
-    public static void setFirstname(String firstname) {
-        User.firstname = firstname;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public static String getLastname() {
+    public String getLastname() {
         return lastname;
     }
 
-    public static void setLastname(String lastname) {
-        User.lastname = lastname;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public static int getAge() {
+    public int getAge() {
         return age;
     }
 
-    public static void setAge(int age) {
-        User.age = age;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public static void setEmail(String email) {
-        User.email = email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public static String getProfil() {
+    public String getProfil() {
         return profil;
     }
 
-    public static void setProfil(String profil) {
-        User.profil = profil;
+    public void setProfil(String profil) {
+        this.profil = profil;
     }
 
-    public static int getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public static void setLevel(int level) {
-        User.level = level;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
-    public static float getExp() {
+    public float getExp() {
         return exp;
     }
 
-    public static void setExp(float exp) {
-        User.exp = exp;
+    public void setExp(float exp) {
+        this.exp = exp;
     }
 
-    public static String getType() {
+    public String getType() {
         return type;
     }
 
-    public static void setType(String type) {
-        User.type = type;
+    public void setType(String type) {
+        this.type = type;
     }
 
+    public static String getUSERNAME() {
+        return USERNAME;
+    }
 
+    public static void setUSERNAME(String USERNAME) {
+        User.USERNAME = USERNAME;
+    }
+
+    public static String getFIRSTNAME() {
+        return FIRSTNAME;
+    }
+
+    public static void setFIRSTNAME(String FIRSTNAME) {
+        User.FIRSTNAME = FIRSTNAME;
+    }
+
+    public static String getLASTNAME() {
+        return LASTNAME;
+    }
+
+    public static void setLASTNAME(String LASTNAME) {
+        User.LASTNAME = LASTNAME;
+    }
+
+    public static String getAGE() {
+        return AGE;
+    }
+
+    public static void setAGE(String AGE) {
+        User.AGE = AGE;
+    }
+
+    public static String getEMAIL() {
+        return EMAIL;
+    }
+
+    public static void setEMAIL(String EMAIL) {
+        User.EMAIL = EMAIL;
+    }
+
+    public static String getLEVEL() {
+        return LEVEL;
+    }
+
+    public static void setLEVEL(String LEVEL) {
+        User.LEVEL = LEVEL;
+    }
+
+    public static String getEXP() {
+        return EXP;
+    }
+
+    public static void setEXP(String EXP) {
+        User.EXP = EXP;
+    }
+
+    public static String getTYPE() {
+        return TYPE;
+    }
+
+    public static void setTYPE(String TYPE) {
+        User.TYPE = TYPE;
+    }
+
+    public static String getTOKEN() {
+        return TOKEN;
+    }
+
+    public static void setTOKEN(String TOKEN) {
+        User.TOKEN = TOKEN;
+    }
 
 }

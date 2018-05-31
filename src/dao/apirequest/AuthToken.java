@@ -1,6 +1,8 @@
 package dao.apirequest;
 
-import dao.services.InputStreamToString;
+import controllers.AlertController;
+import dao.services.ErrorHandler;
+import dao.services.InputStreamToJson;
 import settings.ApiConstant;
 
 import javax.json.JsonObject;
@@ -28,11 +30,14 @@ public class AuthToken {
             os.write(params.toString().getBytes("UTF-8"));
             os.close();
 
-            token = new InputStreamToString().parseInputStream(connection.getInputStream());
+            token = new InputStreamToJson().parseInputStream(connection.getInputStream());
 
             connection.disconnect();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            ErrorHandler errorHandler = new ErrorHandler();
+            String error = errorHandler.getErrorCode(e.getMessage());
+            AlertController.showAlert(error);
         }
         return token;
     }

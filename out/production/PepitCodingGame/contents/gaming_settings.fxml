@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
    <children>
       <Button layoutX="510.0" layoutY="584.0" mnemonicParsing="false" text="Save" />
@@ -25,7 +22,7 @@
       </TableView>
       <ChoiceBox layoutX="401.0" layoutY="124.0" prefWidth="150.0" />
       <Label layoutX="227.0" layoutY="130.0" text="Choose a game :" />
-      <Label layoutX="72.0" layoutY="229.0" text="Levels available :" />
+      <Label layoutX="72.0" layoutY="229.0" text="Levels library" />
       <Label layoutX="605.0" layoutY="229.0" text="In-Profile levels" />
       <Button layoutX="523.0" layoutY="377.0" mnemonicParsing="false" text="--&gt;">
          <font>

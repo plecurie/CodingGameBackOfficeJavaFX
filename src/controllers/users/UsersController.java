@@ -27,14 +27,13 @@ public class UsersController implements Initializable {
     @FXML private TableColumn<String, Float> column_exp;
     @FXML private TableColumn<String, String> column_type;
 
-    private ObservableList data;
     private DAOUser daoUser = new DAOUser();
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList data = getInitialTableData();
-        tab_users.setItems(data);
+
+        ObservableList list_users = getInitialTableData();
+        if (!list_users.isEmpty()) tab_users.setItems(list_users);
 
         column_id.setCellValueFactory(new PropertyValueFactory<>("id"));
         column_username.setCellValueFactory(new PropertyValueFactory<>("username"));
@@ -48,7 +47,6 @@ public class UsersController implements Initializable {
         column_type.setCellValueFactory(new PropertyValueFactory<>("type"));
 
         tab_users.getColumns().setAll(column_id, column_username,column_firstname, column_lastname, column_age, column_email, column_profil, column_level, column_exp, column_type );
-
     }
 
     private ObservableList getInitialTableData() {
@@ -57,6 +55,5 @@ public class UsersController implements Initializable {
 
         return FXCollections.observableList(list);
     }
-
 
 }

@@ -20,20 +20,13 @@ public class DisplayerController implements Initializable {
 
     @FXML AnchorPane main ;
     private static Stage stage ;
-    private void setStage(Stage stage) {
-        DisplayerController.stage = stage;
-    }
-
-
-    public static DisplayerController currentDisplayerController;
-
-    public static DisplayerController getCurrentDisplayerController() {
-        return currentDisplayerController;
-    }
-
 
     public DisplayerController() {
         /* todo default constructor */
+    }
+
+    void setStage(Stage stage) {
+        DisplayerController.stage = stage;
     }
 
     @Override
@@ -156,6 +149,21 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
+    void displayAlert() {
+        BorderPane sceneRoot = new BorderPane();
+        try {
+            final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/error.fxml"));
+            sceneRoot.setCenter(anchorPane);
+            Scene scene = new Scene(sceneRoot);
+            stage.getIcons().add(new Image("/contents/images/favicon.png"));
+            stage.setTitle("Pepit'CodingGame - Error");
+            stage.setScene(scene);
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     void displayDashboard(){
         BorderPane sceneRoot = new BorderPane();
@@ -175,7 +183,6 @@ public class DisplayerController implements Initializable {
     }
 
     @FXML private void onDisconnect(ActionEvent actionEvent){
-
         stage.close();
         StarterController starterController = new StarterController();
         starterController.displayStarter();
