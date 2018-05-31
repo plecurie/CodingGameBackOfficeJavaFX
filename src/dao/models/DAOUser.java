@@ -1,0 +1,82 @@
+package dao.models;
+
+import dao.apirequest.Get;
+import models.User;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DAOUser {
+
+    public List getUsers() {
+
+        int id = 0;
+        String username = "";
+        String firstname = "";
+        String lastname = "";
+        int age = 0;
+        String email = "";
+        String profil = "";
+        int level = 0;
+        float exp = 0;
+        String type;
+
+        Get get = new Get();
+        List list = get.sendGetRequest("/users");
+
+        List list_users = new ArrayList();
+
+        for (Object aList : list) {
+            String[] list_objet = aList.toString().split(":");
+            String key = list_objet[0];
+            String value = list_objet[1];
+
+            switch (key) {
+                case "id": {
+                    id = Integer.valueOf(value);
+                    break;
+                }
+                case "username": {
+                    username = value;
+                    break;
+                }
+                case "firstname": {
+                    firstname = value;
+                    break;
+                }
+                case "lastname": {
+                    lastname = value;
+                    break;
+                }
+                case "age": {
+                    age = Integer.valueOf(value);
+                    break;
+                }
+                case "email": {
+                    email = value;
+                    break;
+                }
+                case "profil": {
+                    profil = value;
+                    break;
+                }
+                case "level": {
+                    level = Integer.valueOf(value);
+                    break;
+                }
+                case "exp": {
+                    exp = Float.valueOf(value);
+                    break;
+                }
+                case "type": {
+                    type = value;
+                    list_users.add(new User(id, username, firstname, lastname, age, email, profil, level, exp, type));
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
+        return list_users;
+    }
+}

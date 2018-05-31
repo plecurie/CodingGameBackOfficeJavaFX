@@ -7,7 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Starter">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StarterController">
    <children>
       <TextField layoutX="313.0" layoutY="349.0" fx:id="textField">
          <effect>
@@ -26,7 +26,7 @@
       </Button>
       <ImageView fitHeight="291.0" fitWidth="456.0" layoutX="251.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="250.64962768554688" AnchorPane.topAnchor="46.0">
          <image>
-            <Image url="@../images/main_logo.png" />
+            <Image url="@images/main_logo.png" />
          </image>
          <viewport>
             <Rectangle2D />

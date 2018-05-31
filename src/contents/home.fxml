@@ -15,11 +15,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Home">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <children>
       <ImageView fitHeight="291.0" fitWidth="456.0" layoutX="366.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/home_img.png" />
+            <Image url="@images/home_img.png" />
          </image>
       </ImageView>
       <Button onAction="#onGames" layoutX="293.0" layoutY="364.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: orange;" text="Games" textAlignment="CENTER" wrapText="true">

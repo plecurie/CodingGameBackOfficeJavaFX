@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.Games">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.GamesController">
    <children>
       <Button layoutX="293.0" layoutY="117.0" mnemonicParsing="false" onAction="#onFirst" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: orange;" text="PepiHack" textAlignment="CENTER" wrapText="true">
          <effect>
