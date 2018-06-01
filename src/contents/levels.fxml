@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.levels.LevelsController">
    <children>
       <TableView layoutX="203.0" layoutY="284.0" prefHeight="276.0" prefWidth="678.0">
@@ -15,14 +18,14 @@
             <InnerShadow />
          </effect>
       </TableView>
-      <Button layoutX="425.0" layoutY="581.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: orange;" text="Modify Level">
+      <Button layoutX="425.0" layoutY="581.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: peru;" text="Modify Level">
          <effect>
             <DropShadow />
          </effect>
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>
-      <Button layoutX="730.0" layoutY="582.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: orange;" text="Delete Level">
+      <Button layoutX="730.0" layoutY="582.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: peru;" text="Delete Level">
          <effect>
             <DropShadow />
          </effect>
@@ -43,7 +46,7 @@
             <Font name="Century Gothic" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="743.0" layoutY="175.0" mnemonicParsing="false" style="-fx-background-color: orange;" text="Save changes">
+      <Button layoutX="743.0" layoutY="175.0" mnemonicParsing="false" style="-fx-background-color: peru;" text="Save changes">
          <effect>
             <DropShadow />
          </effect>
@@ -51,7 +54,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button onAction="#onCreate" layoutX="123.0" layoutY="582.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: orange;" text="Create Level">
+      <Button layoutX="123.0" layoutY="582.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: peru;" text="Create Level">
          <effect>
             <DropShadow />
          </effect>
