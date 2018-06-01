@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -158,6 +159,7 @@ public class DisplayerController implements Initializable {
             stage.getIcons().add(new Image("/contents/images/favicon.png"));
             stage.setTitle("Pepit'CodingGame - Error");
             stage.setScene(scene);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         }catch (Exception e){
             e.printStackTrace();

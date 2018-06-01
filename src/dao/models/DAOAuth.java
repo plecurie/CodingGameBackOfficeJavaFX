@@ -10,8 +10,6 @@ public class DAOAuth {
     public Boolean signIn(String username, String password) {
         boolean authenticated = false;
 
-        System.out.println("\nusername : " + username + "\npassword : " + password);
-
         JsonObject parameters = Json.createObjectBuilder().add("username", username)
                 .add("password", password).build();
 
@@ -25,5 +23,25 @@ public class DAOAuth {
         }
 
         return authenticated;
+    }
+
+    public Boolean signUp(String username, String password, String firstname, String lastname, String email, int age, String profil, int level, float exp, String type ) {
+        Boolean created = false;
+
+        /*
+        *
+        * */
+
+        return created;
+    }
+
+    public Boolean logOut() {
+        Boolean disconnected = false;
+
+        /*
+        *
+        * */
+
+        return disconnected;
     }
 }
