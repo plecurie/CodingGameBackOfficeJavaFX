@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <ignored path="JavaFxApplication.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/gradle/.gradle/" />
+    <ignored path="$PROJECT_DIR$/gradle/build/" />
+    <ignored path="$PROJECT_DIR$/gradle/out/" />
+    <ignored path="$PROJECT_DIR$/pepito/.gradle/" />
+    <ignored path="$PROJECT_DIR$/pepito/build/" />
+    <ignored path="$PROJECT_DIR$/pepito/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/gradle">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JavaFxApplication" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/services/jsonfactory/StringToJson.java" />
+        <option value="$PROJECT_DIR$/src/services/jsonfactory/InputStreamToString.java" />
+        <option value="$PROJECT_DIR$/src/services/parsefactory/InputStreamToString.java" />
+        <option value="$PROJECT_DIR$/src/services/api/Delete.java" />
+        <option value="$PROJECT_DIR$/src/settings/settings.java" />
+        <option value="$PROJECT_DIR$/src/settings/Settings.java" />
+        <option value="$PROJECT_DIR$/src/tools/Tools.java" />
+        <option value="$PROJECT_DIR$/src/settings/ApiConstant.java" />
+        <option value="$PROJECT_DIR$/src/services/api/Auth.java" />
+        <option value="$PROJECT_DIR$/src/services/api/Authent.java" />
+        <option value="$PROJECT_DIR$/src/services/api/AuthToken.java" />
+        <option value="$PROJECT_DIR$/src/services/api/Put.java" />
+        <option value="$PROJECT_DIR$/src/services/api/Post.java" />
+        <option value="$PROJECT_DIR$/src/services/api/Get.java" />
+        <option value="$PROJECT_DIR$/src/controllers/Settings.java" />
+        <option value="$PROJECT_DIR$/src/models/Level.java" />
+        <option value="$PROJECT_DIR$/src/models/History.java" />
+        <option value="$PROJECT_DIR$/src/models/Game.java" />
+        <option value="$PROJECT_DIR$/src/contents/Home.java" />
+        <option value="$PROJECT_DIR$/src/controllers/Home.java" />
+        <option value="$PROJECT_DIR$/src/settings/InputStreamToString.java" />
+        <option value="$PROJECT_DIR$/src/controllers/users/Users.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/GamesController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/users/SelectedUserController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/PreferencesController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/SettingsController.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/Errors.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/ErrorHandler.java" />
+        <option value="$PROJECT_DIR$/gradle/build.gradle" />
+        <option value="$PROJECT_DIR$/src/contents/users.fxml" />
+        <option value="$PROJECT_DIR$/src/dao/services/InputStreamToString.java" />
+        <option value="$PROJECT_DIR$/src/dao/services/InputStreamToJson.java" />
+        <option value="$PROJECT_DIR$/src/controllers/users/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/contents/error.fxml" />
+        <option value="$PROJECT_DIR$/src/dao/services/JsonToString.java" />
+        <option value="$PROJECT_DIR$/src/dao/services/StringToJson.java" />
+        <option value="$PROJECT_DIR$/src/models/User.java" />
+        <option value="$PROJECT_DIR$/src/contents/displayer.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/AlertController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/StarterController.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/AuthToken.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/Get.java" />
+        <option value="$PROJECT_DIR$/src/dao/services/ErrorHandler.java" />
+        <option value="$PROJECT_DIR$/src/dao/models/DAOAuth.java" />
+        <option value="$PROJECT_DIR$/src/dao/models/DAOUser.java" />
+        <option value="$PROJECT_DIR$/src/controllers/DisplayerController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java" />
+        <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" />
+        <option value="$PROJECT_DIR$/src/contents/authentification.fxml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="315" />
+    <option name="width" value="1614" />
+    <option name="height" value="1032" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MyWorking3DCube" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1523697820685" duration="69000" />
+      <workItem from="1523698309107" duration="967000" />
+      <workItem from="1524662894066" duration="50000" />
+      <workItem from="1525953325419" duration="456000" />
+      <workItem from="1525958286554" duration="1841000" />
+      <workItem from="1526064357824" duration="686000" />
+      <workItem from="1526125472999" duration="597000" />
+      <workItem from="1526208261651" duration="15669000" />
+      <workItem from="1526285078785" duration="13366000" />
+      <workItem from="1526373521473" duration="8160000" />
+      <workItem from="1526461643689" duration="1947000" />
+      <workItem from="1526470118862" duration="377000" />
+      <workItem from="1526480655241" duration="991000" />
+      <workItem from="1526544049619" duration="170000" />
+      <workItem from="1526554962649" duration="2092000" />
+      <workItem from="1526631731977" duration="9961000" />
+      <workItem from="1526654229027" duration="1052000" />
+      <workItem from="1527703837433" duration="31119000" />
+      <workItem from="1527775360430" duration="22429000" />
+      <workItem from="1527801889178" duration="3375000" />
+      <workItem from="1527878164118" duration="8425000" />
+      <workItem from="1528320672570" duration="140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="125551000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" x="0" y="245" width="1281" height="191" id="Run" order="2" weight="0.3309481" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.3291592" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5706619" visible="true" weight="0.20890689" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" sideWeight="0.4293381" side_tool="true" weight="0.32955465" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Favorites" order="4" sideWeight="0.4293381" side_tool="true" weight="0.32955465" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892665" />
+      <window_info anchor="right" id="JetGradle" order="6" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.3291592" />
+      <window_info anchor="right" id="Gradle" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3237925" />
+      <window_info anchor="bottom" id="Changes" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="15" />
+      <window_info anchor="bottom" id="Profiler" order="9" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Application Servers" order="12" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/Level.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/Game.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/users/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/Menu.java" />
+    <entry file="file://$PROJECT_DIR$/../../../Android/AndroidProjectOld/AppAndroid/app/src/main/java/com/esgi/cookorder/cookorderapp/models/RequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="128" column="14" lean-forward="true" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pepito/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Put.java" />
+    <entry file="file://$PROJECT_DIR$/src/settings/ApiConstant.java" />
+    <entry file="file://$PROJECT_DIR$/src/models/Level.java" />
+    <entry file="file://$PROJECT_DIR$/src/models/History.java" />
+    <entry file="file://$PROJECT_DIR$/src/models/Game.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/models/DAOGame.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/models/DAOHistory.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/models/DAOLevel.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/GamesController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/users/SelectedUserController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/PreferencesController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/SettingsController.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Delete.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.0/fbe493e2f03a114cca5d7e9ab7de837654b91135/javax.json-api-1.0-sources.jar!/javax/json/Json.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/build.gradle" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.0/fbe493e2f03a114cca5d7e9ab7de837654b91135/javax.json-api-1.0-sources.jar!/javax/json/spi/JsonProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="88" column="10" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/sun/net/www/protocol/http/HttpURLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="1912" selection-start-line="1912" selection-end-line="1912" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="853" column="23" selection-start-line="853" selection-start-column="23" selection-end-line="853" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/services/InputStreamToJson.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/services/JsonToString.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/services/StringToJson.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/users/UsersController.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="843" selection-start-line="843" selection-end-line="843" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="935" selection-start-line="935" selection-end-line="935" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Post.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/AlertController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Get.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/AuthToken.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/services/ErrorHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/models/DAOAuth.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/models/DAOUser.java" />
+    <entry file="file://$PROJECT_DIR$/src/models/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java" />
+  </component>
+</project>
