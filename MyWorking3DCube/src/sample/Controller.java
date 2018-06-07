@@ -1,8 +1,11 @@
 package sample;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
@@ -14,8 +17,8 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    //private double mousePosX, mousePosY;
-    //private double mouseOldX, mouseOldY;
+    private double mousePosX, mousePosY;
+    private double mouseOldX, mouseOldY;
 
     private final Rotate rotateX = new Rotate(0, Rotate.X_AXIS);
     private final Rotate rotateY = new Rotate(0, Rotate.Y_AXIS);
@@ -42,26 +45,26 @@ public class Controller implements Initializable {
 
         root.getChildren().add(puzzle);
 
-        /*
-        Scene scene = new Scene(root, 800, 450, true);
-        scene.setFill(Color.BLACK);
-        scene.setCamera(new PerspectiveCamera());
-
-
-        scene.setOnMousePressed(me -> {
-            mouseOldX = me.getSceneX();
-            mouseOldY = me.getSceneY();
+        puzzle.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                System.out.println(event.getSceneX());
+            }
         });
-        scene.setOnMouseDragged(me -> {
-            mousePosX = me.getSceneX();
-            mousePosY = me.getSceneY();
+
+        root.setOnMousePressed(position -> {
+            mouseOldX = position.getSceneX();
+            mouseOldY = position.getSceneY();
+        });
+
+        root.setOnMouseDragged(position -> {
+            mousePosX = position.getSceneX();
+            mousePosY = position.getSceneY();
             rotateX.setAngle(rotateX.getAngle() - (mousePosY - mouseOldY));
             rotateY.setAngle(rotateY.getAngle() + (mousePosX - mouseOldX));
             mouseOldX = mousePosX;
             mouseOldY = mousePosY;
-
         });
-        */
 
     }
 
