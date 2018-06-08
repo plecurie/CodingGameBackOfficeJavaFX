@@ -17,7 +17,7 @@ public class Main extends Application {
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            Scene scene = new Scene(root, 800, 450, true);
+            Scene scene = new Scene(root, 1200, 800, true);
             primaryStage.setTitle("Casse-sombrero");
             scene.setFill(Color.BLACK);
             scene.setCamera(new PerspectiveCamera());

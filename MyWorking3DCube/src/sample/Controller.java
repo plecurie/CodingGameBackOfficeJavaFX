@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
@@ -20,7 +19,9 @@ public class Controller implements Initializable {
     private double mousePosX, mousePosY;
     private double mouseOldX, mouseOldY;
 
-    private final Rotate rotateX = new Rotate(0, Rotate.X_AXIS);
+    private double PARENT_WIDTH, PARENT_HEIGHT;
+
+    private final Rotate rotateX = new Rotate(25, Rotate.X_AXIS);
     private final Rotate rotateY = new Rotate(0, Rotate.Y_AXIS);
 
     @FXML StackPane root;
@@ -48,25 +49,73 @@ public class Controller implements Initializable {
         puzzle.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                System.out.println(event.getSceneX());
+                //System.out.println(event.getSceneX());
             }
         });
 
         root.setOnMousePressed(position -> {
             mouseOldX = position.getSceneX();
             mouseOldY = position.getSceneY();
-        });
 
+            PARENT_HEIGHT = root.getParent().getLayoutBounds().getHeight();
+            PARENT_WIDTH = root.getParent().getLayoutBounds().getWidth();
+
+            if ((mouseOldY > PARENT_HEIGHT/2 - 100)
+                    && (mouseOldY < PARENT_HEIGHT/2 + 100)){
+                if (mouseOldX < PARENT_WIDTH/2 - 100 ) {
+                    System.out.println("Afficher face gauche");
+                    rotateY.setAngle(rotateY.getAngle() - 90);
+                }
+                else if (mouseOldX > PARENT_WIDTH/2 + 100) {
+                    System.out.println("Afficher face droite");
+                    rotateY.setAngle(rotateY.getAngle() + 90);
+                }
+            }
+            else if ((mouseOldX > PARENT_WIDTH/2 - 100)
+                    && (mouseOldX < PARENT_WIDTH/2 + 100)) {
+                if (mouseOldY < PARENT_HEIGHT/2 - 100) {
+                    System.out.println("Afficher face haut");
+                    rotateX.setAngle(rotateX.getAngle() - 90);
+                }
+                else if (mouseOldY > PARENT_HEIGHT/2 + 100) {
+                    System.out.println("Afficher face bas");
+                    rotateX.setAngle(rotateX.getAngle() + 90);
+                }
+            }
+        });
+/*
         root.setOnMouseDragged(position -> {
             mousePosX = position.getSceneX();
             mousePosY = position.getSceneY();
             rotateX.setAngle(rotateX.getAngle() - (mousePosY - mouseOldY));
             rotateY.setAngle(rotateY.getAngle() + (mousePosX - mouseOldX));
+            //System.out.println(rotateX.getAngle() + ", " + rotateY.getAngle());
             mouseOldX = mousePosX;
             mouseOldY = mousePosY;
         });
+        */
 
     }
+/*
+    public Image createImage(double size) {
+
+        Random rnd = new Random();
+
+        int width = (int) size/2;
+        int height = (int) size/2;
+
+        WritableImage wr = new WritableImage(width, height);
+        PixelWriter pw = wr.getPixelWriter();
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                Color color = Color.rgb(rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+                pw.setColor(x, y, color);
+            }
+        }
+        return wr;
+    }
+*/
+
 
     private Box createBox (double x, double y, double z, double size, PhongMaterial material) {
         Box box = new Box(100,100,100);
