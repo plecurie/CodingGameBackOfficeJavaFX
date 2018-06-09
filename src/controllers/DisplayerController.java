@@ -131,18 +131,19 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    public BorderPane displayLevels() throws Exception {
+    public BorderPane displayLevels(String selected_game) throws Exception {
         BorderPane sceneRoot = new BorderPane();
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/levels.fxml"));
         final AnchorPane anchorPane = loader.load();
-        LevelsController levelsControllerController = loader.getController();
-        levelsControllerController.setMain(this, main);
+        LevelsController levelsController = loader.getController();
+        levelsController.init(this, main, selected_game);
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
         return sceneRoot ;
     }
 
-    public BorderPane displaySelectedLevel() throws Exception {
+    public BorderPane displaySelectedLevel(String game) throws Exception {
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/sbr_toolbox_10x10.fxml"));
         sceneRoot.setCenter(anchorPane);

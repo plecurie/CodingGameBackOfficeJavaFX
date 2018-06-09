@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
@@ -9,36 +10,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.levels.LevelsController">
    <children>
-      <TableView layoutX="203.0" layoutY="284.0" prefHeight="276.0" prefWidth="678.0">
-        <columns>
-          <TableColumn prefWidth="541.0" text="Name" />
-          <TableColumn minWidth="0.0" prefWidth="132.0" text="Difficulty" />
-        </columns>
+      <TextArea layoutX="54.0" layoutY="198.0" prefHeight="311.0" prefWidth="314.0">
          <effect>
             <InnerShadow />
          </effect>
-      </TableView>
-      <Button layoutX="425.0" layoutY="581.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: peru;" text="Modify Level">
-         <effect>
-            <DropShadow />
-         </effect>
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Button>
-      <Button layoutX="730.0" layoutY="582.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: peru;" text="Delete Level">
-         <effect>
-            <DropShadow />
-         </effect>
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Button>
-      <TextArea layoutX="203.0" layoutY="114.0" prefHeight="160.0" prefWidth="450.0">
-         <effect>
-            <InnerShadow />
-         </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextArea>
-      <Label layoutX="203.0" layoutY="87.0" text="Description :" />
-      <Label layoutX="501.0" layoutY="28.0" text="Game Name" textAlignment="CENTER" underline="true">
+      <Label fx:id="game_label" layoutX="463.0" layoutY="27.0" text="Game Name" textAlignment="CENTER" underline="true">
          <effect>
             <Reflection />
          </effect>
@@ -46,21 +26,39 @@
             <Font name="Century Gothic" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="743.0" layoutY="175.0" mnemonicParsing="false" style="-fx-background-color: peru;" text="Save changes">
+      <Button layoutX="121.0" layoutY="539.0" mnemonicParsing="false" onAction="#onSave" style="-fx-background-color: peru; -fx-background-radius: 40;" text="Save description">
          <effect>
             <DropShadow />
          </effect>
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button layoutX="123.0" layoutY="582.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: peru;" text="Create Level">
+      <Button layoutX="858.0" layoutY="115.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: peru; -fx-background-radius: 40;" text="+ Create Level">
          <effect>
             <DropShadow />
          </effect>
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
+      <TableView layoutX="410.0" layoutY="194.0" prefHeight="384.0" prefWidth="612.0">
+         <columns>
+            <TableColumn prefWidth="484.0" text="Name" />
+            <TableColumn minWidth="0.0" prefWidth="127.0" text="Difficulty" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
    </children>
 </AnchorPane>

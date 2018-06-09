@@ -1,6 +1,7 @@
 package controllers.users;
 
 import dao.models.DAOUser;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,6 +9,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import models.User;
 
 import java.net.URL;
 import java.util.List;
@@ -55,5 +59,16 @@ public class UsersController implements Initializable {
 
         return FXCollections.observableList(list);
     }
+
+    @FXML protected void onSelectedRow(MouseEvent event) {
+
+        int index_selected_user = tab_users.getSelectionModel().getSelectedIndex();
+        ObservableValue cell = column_id.getCellObservableValue(index_selected_user);
+        Object id = cell.getValue();
+        User selected_user = daoUser.getSelectedUser(Integer.valueOf(id.toString()));
+        System.out.println(selected_user.getId());
+
+    }
+
 
 }
