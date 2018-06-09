@@ -7,12 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/contents/authentification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/authentification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/displayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/displayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/games.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/games.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/levels.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/levels.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/ExplorerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/QuizzController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,50 +90,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="SelectedLevelController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java">
+      <file leaf-file-name="SombreroController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="170">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1537#1538#0" expanded="true" />
-                <element signature="e#1590#1591#0" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1453#1454#0" expanded="true" />
-                <element signature="e#1807#1808#0" expanded="true" />
-                <element signature="e#1862#1863#0" expanded="true" />
-                <element signature="e#1918#1919#0" expanded="true" />
-                <element signature="e#1971#1972#0" expanded="true" />
-                <element signature="e#2028#2029#0" expanded="true" />
-                <element signature="e#2083#2084#0" expanded="true" />
-                <element signature="e#2139#2140#0" expanded="true" />
-                <element signature="e#2193#2194#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sbr_toolbox_10x10.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+      <file leaf-file-name="HackController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authentification.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/contents/authentification.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor" />
+      <file leaf-file-name="QuizzController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/QuizzController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="games.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contents/games.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="686">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExplorerController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/ExplorerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="DisplayerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
+            <state relative-caret-position="2193">
               <caret line="146" selection-start-line="146" selection-end-line="146" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -349,7 +372,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/gradle" value="6107682399514" />
+        <entry key="$PROJECT_DIR$/gradle" value="6114142385548" />
         <entry key="$PROJECT_DIR$/gradle/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/gradle/build.gradle" value="1432243908" />
         <entry key="$PROJECT_DIR$/gradle/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
@@ -536,8 +559,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/services/jsonfactory/StringToJson.java" />
-        <option value="$PROJECT_DIR$/src/services/jsonfactory/InputStreamToString.java" />
         <option value="$PROJECT_DIR$/src/services/parsefactory/InputStreamToString.java" />
         <option value="$PROJECT_DIR$/src/services/api/Delete.java" />
         <option value="$PROJECT_DIR$/src/settings/settings.java" />
@@ -587,6 +608,8 @@
         <option value="$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java" />
         <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" />
         <option value="$PROJECT_DIR$/src/contents/authentification.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/games/levels/SombreroController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java" />
       </list>
     </option>
   </component>
@@ -601,9 +624,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="316" />
+    <option name="x" value="315" />
     <option name="width" value="1614" />
-    <option name="height" value="1031" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -616,7 +639,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -660,6 +683,15 @@
               <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="levels" type="462c0819:PsiDirectoryNode" />
+              <item name="selectedlevel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -697,8 +729,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -848,11 +880,12 @@
       <workItem from="1527775360430" duration="22429000" />
       <workItem from="1527801889178" duration="3375000" />
       <workItem from="1527878164118" duration="8425000" />
+      <workItem from="1528535634966" duration="276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125101000" />
+    <option name="totallyTimeSpent" value="125377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -860,7 +893,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.3291592" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
@@ -868,11 +900,12 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" x="0" y="245" width="1281" height="191" id="Run" order="2" visible="true" weight="0.3309481" />
+      <window_info anchor="bottom" x="0" y="245" width="1281" height="191" id="Run" order="2" weight="0.3309481" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.3291592" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5706619" visible="true" weight="0.20566802" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5706619" visible="true" weight="0.20890689" />
+      <window_info anchor="bottom" id="Build" order="15" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Gradle" order="10" />
       <window_info id="Structure" order="1" sideWeight="0.4293381" side_tool="true" weight="0.32955465" />
@@ -882,13 +915,13 @@
       <window_info id="Favorites" order="4" sideWeight="0.4293381" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892665" />
       <window_info anchor="right" id="JetGradle" order="6" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.3291592" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3237925" />
       <window_info anchor="bottom" id="Changes" order="8" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="15" />
       <window_info anchor="bottom" id="Profiler" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Problems" order="10" />
@@ -915,20 +948,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1015,16 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="13" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1247,7 +1256,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
+        <state relative-caret-position="2193">
           <caret line="146" selection-start-line="146" selection-end-line="146" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1255,39 +1264,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="272">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1807#1808#0" expanded="true" />
-            <element signature="e#1862#1863#0" expanded="true" />
-            <element signature="e#1918#1919#0" expanded="true" />
-            <element signature="e#1971#1972#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#2193#2194#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contents/authentification.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/QuizzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/games.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/ExplorerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

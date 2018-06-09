@@ -1,18 +1,16 @@
-package controllers.games.levels;
+package controllers.games.levels.selectedlevel;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SelectedLevelController implements Initializable {
+public class SombreroController implements Initializable {
 
     @FXML private GridPane gridPane;
 
@@ -39,11 +37,11 @@ public class SelectedLevelController implements Initializable {
     }
 
     private static void setColor(String color) {
-        SelectedLevelController.color = color;
+        SombreroController.color = color;
     }
 
     private static void setCellCount(int grid) {
-        SelectedLevelController.cellCount = grid;
+        SombreroController.cellCount = grid;
     }
 
     @FXML private void onTenToTen() {
