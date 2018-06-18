@@ -1,18 +1,11 @@
 package controllers.games.levels;
 
 import controllers.DisplayerController;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import models.Level;
-import models.User;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class LevelsController {
 
@@ -20,9 +13,19 @@ public class LevelsController {
     private AnchorPane main ;
     @FXML Label game_label;
 
-    public void init(DisplayerController dc, AnchorPane m, String game_name) {
+    public void init(DisplayerController dc, AnchorPane m, int id_game) {
         this.displayController = dc;
         this.main = m;
+
+        String game_name = "";
+        if (id_game == 2) {
+            game_name = "Pepito l'Explorateur";
+        } else if (id_game == 3) {
+            game_name = "Casse-Sombrero";
+        } else if (id_game == 4) {
+            game_name = "PepitQuizz";
+        }
+
         game_label.setText(game_name);
     }
 

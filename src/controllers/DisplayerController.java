@@ -3,15 +3,21 @@ package controllers;
 import controllers.games.GamesController;
 import controllers.games.levels.LevelsController;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -131,15 +137,50 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    public BorderPane displayLevels(String selected_game) throws Exception {
+    private void displayHack() {
+        try {
+            stage.hide();
+            Stage stage1 = new Stage();
+            StackPane root = FXMLLoader.load(getClass().getResource("../contents/pepithack.fxml"));
+            Scene scene = new Scene(root, 1200, 600, true);
+
+            scene.setFill(Color.BLACK);
+            root.setStyle("-fx-background-color: transparent");
+            scene.setCamera(new PerspectiveCamera());
+
+            stage1.setTitle("PepitHack");
+            stage1.setResizable(false);
+            stage1.setScene(scene);
+            stage1.show();
+            stage1.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent event) {
+                    try {
+                        stage.show();
+                        main.getChildren().add(displayGames());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public BorderPane displayLevels(int selected_game) throws Exception {
         BorderPane sceneRoot = new BorderPane();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/levels.fxml"));
-        final AnchorPane anchorPane = loader.load();
-        LevelsController levelsController = loader.getController();
-        levelsController.init(this, main, selected_game);
-        sceneRoot.setCenter(anchorPane);
-        sceneRoot.setVisible(true);
+        if (selected_game == 1) {
+            displayHack();
+        } else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/levels.fxml"));
+            final AnchorPane anchorPane = loader.load();
+            LevelsController levelsController = loader.getController();
+            levelsController.init(this, main, selected_game);
+            sceneRoot.setCenter(anchorPane);
+            sceneRoot.setVisible(true);
+        }
+
         return sceneRoot ;
     }
 
@@ -167,7 +208,6 @@ public class DisplayerController implements Initializable {
         }
     }
 
-
     void displayDashboard(){
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane;
@@ -180,6 +220,13 @@ public class DisplayerController implements Initializable {
             stage.setScene(scene);
             setStage(stage);
             stage.show();
+
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent event) {
+                    onDisconnect(new ActionEvent());
+                }
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

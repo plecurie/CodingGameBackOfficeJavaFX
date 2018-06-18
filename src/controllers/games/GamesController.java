@@ -17,7 +17,7 @@ public class GamesController {
     @FXML private void onFirst(ActionEvent actionEvent){
         try {
             main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels("PepiHack"));
+            main.getChildren().add(displayController.displayLevels(1));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -26,7 +26,7 @@ public class GamesController {
     @FXML private void onSecond(ActionEvent actionEvent){
         try {
             main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels("Pepito L'explorateur"));
+            main.getChildren().add(displayController.displayLevels(2));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -36,7 +36,7 @@ public class GamesController {
 
         try {
             main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels("Casse-Sombrero"));
+            main.getChildren().add(displayController.displayLevels(3));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,14 +45,14 @@ public class GamesController {
     @FXML private void onFourth(ActionEvent actionEvent){
         try {
             main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels("PepitQuizz"));
+            main.getChildren().add(displayController.displayLevels(4));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void setMain(DisplayerController displayerControllerController, AnchorPane main) {
-        this.displayController = displayerControllerController;
+    public void setMain(DisplayerController displayerController, AnchorPane main) {
+        this.displayController = displayerController;
         this.main = main;
     }
 }

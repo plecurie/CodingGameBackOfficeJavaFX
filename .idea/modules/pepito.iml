@@ -2,10 +2,10 @@
 <module external.linked.project.id="pepito" external.linked.project.path="$MODULE_DIR$/../../gradle" external.root.project.path="$MODULE_DIR$/../../gradle" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../gradle">
-      <excludeFolder url="file://$MODULE_DIR$/../../gradle/.gradle" />
-      <excludeFolder url="file://$MODULE_DIR$/../../gradle/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../gradle/out" />
+    <content url="file://$MODULE_DIR$/../../pepito">
+      <excludeFolder url="file://$MODULE_DIR$/../../pepito/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../pepito/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../pepito/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
