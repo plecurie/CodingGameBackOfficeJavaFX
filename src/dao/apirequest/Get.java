@@ -1,6 +1,6 @@
 package dao.apirequest;
 
-import controllers.AlertController;
+import controllers.DisplayerController;
 import dao.services.ErrorHandler;
 import dao.services.InputStreamToJson;
 import dao.services.JsonToString;
@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Get {
+
+    private DisplayerController displayerController;
 
         public List sendGetRequest(String route)  {
 
@@ -35,7 +37,7 @@ public class Get {
             } catch (IOException e) {
                 ErrorHandler errorHandler = new ErrorHandler();
                 String error = errorHandler.getErrorCode(e.getMessage());
-                AlertController.showAlert(error);
+                displayerController.displayAlert(error);
             }
 
             return response;

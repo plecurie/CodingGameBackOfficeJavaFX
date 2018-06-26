@@ -1,5 +1,7 @@
 package dao.apirequest;
 
+import controllers.DisplayerController;
+import dao.services.ErrorHandler;
 import dao.services.InputStreamToJson;
 import settings.ApiConstant;
 
@@ -11,6 +13,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Put {
+
+    private DisplayerController displayerController;
 
     public String sendPutRequest(JsonObject params, String route) {
         String response = "";
@@ -35,7 +39,9 @@ public class Put {
             connection.disconnect();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler errorHandler = new ErrorHandler();
+            String error = errorHandler.getErrorCode(e.getMessage());
+            displayerController.displayAlert(error);
         }
         return response;
     }

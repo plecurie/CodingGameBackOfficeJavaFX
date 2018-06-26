@@ -7,37 +7,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/contents/pepithack.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contents/explorer_toolbox.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contents/quizz_toolbox.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/pepito.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/pepito.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/pepito_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/pepito_main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/pepito_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/pepito_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyWorking3DCube/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/authentification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/authentification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/displayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/displayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/games.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/games.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/levels.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/levels.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/levels.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_10x10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_10x10.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_15x15.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_15x15.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/AlertController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/PreferencesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/PreferencesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/SettingsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/StarterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/StarterController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/GamesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/GamesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/LevelsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/LevelsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/selectedlevel/HackController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/selectedlevel/HackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/selectedlevel/HackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/LevelsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/selectedlevel/ExplorerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/selectedlevel/HackController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/selectedlevel/QuizzController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/levels/selectedlevel/SombreroController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/SelectedUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/SelectedUserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/authentification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/authentification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/displayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/displayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/games.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/games.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/levels.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/levels.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/AuthToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/AuthToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Delete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Delete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Get.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Get.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Put.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/apirequest/Put.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOAuth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOAuth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOLevel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/models/DAOUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/ErrorHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/ErrorHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/InputStreamToJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/InputStreamToJson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/JsonToString$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/JsonToString$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/JsonToString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/dao/services/JsonToString.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/History.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/History.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/ApiConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/ApiConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contents/levels.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contents/pepithack.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/pepithack.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AlertController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/DisplayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DisplayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/games/GamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/GamesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/ExplorerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/hack/HackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/QuizzController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/LevelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/apirequest/AuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/apirequest/AuthToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/apirequest/Get.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/apirequest/Get.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/apirequest/Put.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/apirequest/Put.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,8 +151,8 @@
       <file leaf-file-name="Get.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Get.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="306">
+              <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,14 +160,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java">
+      <file leaf-file-name="Delete.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Delete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Post.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Post.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Put.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Put.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -140,34 +190,12 @@
       <file leaf-file-name="DisplayerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="151" column="39" lean-forward="true" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="39" />
+            <state relative-caret-position="94">
+              <caret line="262" column="10" selection-start-line="262" selection-start-column="10" selection-end-line="262" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7826#7827#0" expanded="true" />
-                <element signature="e#7880#7881#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pepithack.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contents/pepithack.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HackController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#9671#9672#0" expanded="true" />
+                <element signature="e#9742#9743#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,11 +204,35 @@
       <file leaf-file-name="GamesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/games/GamesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+            <state relative-caret-position="221">
+              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1160#1161#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/LevelController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="118" column="24" lean-forward="true" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+              <folding>
+                <element signature="e#3306#3307#0" expanded="true" />
+                <element signature="e#3351#3352#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthToken.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/apirequest/AuthToken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="40" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -190,8 +242,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -206,6 +258,12 @@
       <find>password</find>
       <find>constructLoadException</find>
       <find>@FXML</find>
+      <find>10x10</find>
+      <find>sbr</find>
+      <find>15x15</find>
+      <find>clear</find>
+      <find>gridpa</find>
+      <find>save</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -219,7 +277,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$/gradle" value="C:\Users\Chewbs\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
+        <entry key="$PROJECT_DIR$/gradle" value="C:\Users\plecurie\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -394,9 +452,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/gradle" value="6114177525151" />
+        <entry key="$PROJECT_DIR$/gradle" value="6120034488370" />
         <entry key="$PROJECT_DIR$/gradle/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/gradle/build.gradle" value="1432243908" />
+        <entry key="$PROJECT_DIR$/gradle/build.gradle" value="2651425704" />
         <entry key="$PROJECT_DIR$/gradle/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
         <entry key="$PROJECT_DIR$/gradle/settings.gradle" value="1977133661" />
       </map>
@@ -581,19 +639,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/settings/Settings.java" />
-        <option value="$PROJECT_DIR$/src/tools/Tools.java" />
-        <option value="$PROJECT_DIR$/src/settings/ApiConstant.java" />
-        <option value="$PROJECT_DIR$/src/services/api/Auth.java" />
-        <option value="$PROJECT_DIR$/src/services/api/Authent.java" />
-        <option value="$PROJECT_DIR$/src/services/api/AuthToken.java" />
-        <option value="$PROJECT_DIR$/src/services/api/Put.java" />
-        <option value="$PROJECT_DIR$/src/services/api/Post.java" />
-        <option value="$PROJECT_DIR$/src/services/api/Get.java" />
-        <option value="$PROJECT_DIR$/src/controllers/Settings.java" />
-        <option value="$PROJECT_DIR$/src/models/Level.java" />
-        <option value="$PROJECT_DIR$/src/models/History.java" />
-        <option value="$PROJECT_DIR$/src/models/Game.java" />
         <option value="$PROJECT_DIR$/src/contents/Home.java" />
         <option value="$PROJECT_DIR$/src/controllers/Home.java" />
         <option value="$PROJECT_DIR$/src/settings/InputStreamToString.java" />
@@ -604,7 +649,6 @@
         <option value="$PROJECT_DIR$/src/controllers/SettingsController.java" />
         <option value="$PROJECT_DIR$/src/dao/apirequest/Errors.java" />
         <option value="$PROJECT_DIR$/src/dao/apirequest/ErrorHandler.java" />
-        <option value="$PROJECT_DIR$/gradle/build.gradle" />
         <option value="$PROJECT_DIR$/src/dao/services/InputStreamToString.java" />
         <option value="$PROJECT_DIR$/src/dao/services/InputStreamToJson.java" />
         <option value="$PROJECT_DIR$/src/contents/error.fxml" />
@@ -612,25 +656,39 @@
         <option value="$PROJECT_DIR$/src/dao/services/StringToJson.java" />
         <option value="$PROJECT_DIR$/src/models/User.java" />
         <option value="$PROJECT_DIR$/src/contents/displayer.fxml" />
-        <option value="$PROJECT_DIR$/src/controllers/AlertController.java" />
         <option value="$PROJECT_DIR$/src/controllers/StarterController.java" />
-        <option value="$PROJECT_DIR$/src/dao/apirequest/AuthToken.java" />
-        <option value="$PROJECT_DIR$/src/dao/apirequest/Get.java" />
         <option value="$PROJECT_DIR$/src/dao/services/ErrorHandler.java" />
         <option value="$PROJECT_DIR$/src/dao/models/DAOAuth.java" />
         <option value="$PROJECT_DIR$/src/controllers/games/levels/SelectedLevelController.java" />
-        <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" />
         <option value="$PROJECT_DIR$/src/contents/authentification.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/games/levels/SombreroController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java" />
         <option value="$PROJECT_DIR$/src/contents/levels.fxml" />
         <option value="$PROJECT_DIR$/src/contents/users.fxml" />
         <option value="$PROJECT_DIR$/src/dao/models/DAOUser.java" />
         <option value="$PROJECT_DIR$/src/controllers/users/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/GamesController.java" />
         <option value="$PROJECT_DIR$/src/contents/pepithack.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java" />
+        <option value="$PROJECT_DIR$/gradle/build.gradle" />
+        <option value="$PROJECT_DIR$/src/contents/explorer_toolbox.fxml" />
+        <option value="$PROJECT_DIR$/src/contents/quizz_toolbox.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/levels/SombreroLevelsController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/ExplorerController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java" />
+        <option value="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/games/GamesController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroController.java" />
+        <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" />
+        <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" />
+        <option value="$PROJECT_DIR$/src/contents/confirmation.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/ConfirmationController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/AlertController.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/AuthToken.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/Get.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/Post.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/LevelController.java" />
+        <option value="$PROJECT_DIR$/src/dao/apirequest/Put.java" />
         <option value="$PROJECT_DIR$/src/controllers/DisplayerController.java" />
       </list>
     </option>
@@ -645,10 +703,11 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="315" />
-    <option name="width" value="1614" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -661,61 +720,107 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="gradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="contents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="games" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="games" type="462c0819:PsiDirectoryNode" />
-              <item name="levels" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="games" type="462c0819:PsiDirectoryNode" />
-              <item name="levels" type="462c0819:PsiDirectoryNode" />
-              <item name="selectedlevel" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
+              <item name="explorer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
+              <item name="hack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
+              <item name="quizz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
+              <item name="sombrero" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="apirequest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -730,12 +835,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -751,7 +856,9 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -768,6 +875,41 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -813,24 +955,44 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -868,51 +1030,50 @@
       <workItem from="1528535634966" duration="6795000" />
       <workItem from="1528544632943" duration="1198000" />
       <workItem from="1529147579588" duration="17862000" />
+      <workItem from="1530007814427" duration="1968000" />
+      <workItem from="1530011152865" duration="17736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150956000" />
+    <option name="totallyTimeSpent" value="170660000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.3291592" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" x="0" y="245" width="1281" height="191" id="Run" order="2" visible="true" weight="0.27728087" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.3291592" />
-      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5048611" side_tool="true" visible="true" weight="0.3294271" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5706619" visible="true" weight="0.21538462" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Gradle" order="10" />
-      <window_info id="Structure" order="1" sideWeight="0.4293381" side_tool="true" weight="0.32955465" />
+      <window_info anchor="bottom" id="Build" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Favorites" order="4" sideWeight="0.4293381" side_tool="true" weight="0.32955465" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892665" />
-      <window_info anchor="right" id="JetGradle" order="6" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3237925" />
-      <window_info anchor="bottom" id="Changes" order="8" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49444443" weight="0.32985657" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49513888" visible="true" weight="0.3294271" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15486111" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49930555" weight="0.3294271" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="15" />
-      <window_info anchor="bottom" id="Profiler" order="9" />
+      <window_info anchor="right" id="Properties" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Problems" order="10" />
-      <window_info anchor="bottom" id="Application Servers" order="12" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -935,54 +1096,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="145" column="54" selection-start-line="145" selection-start-column="54" selection-end-line="145" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7826#7827#0" expanded="true" />
-            <element signature="e#7880#7881#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/Level.java" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/Game.java" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/users/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/Menu.java" />
-    <entry file="file://$PROJECT_DIR$/../../../Android/AndroidProjectOld/AppAndroid/app/src/main/java/com/esgi/cookorder/cookorderapp/models/RequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="128" column="14" lean-forward="true" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pepito/build.gradle" />
-    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Put.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/settings/ApiConstant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1063,48 +1177,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Delete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.0/fbe493e2f03a114cca5d7e9ab7de837654b91135/javax.json-api-1.0-sources.jar!/javax/json/Json.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.0/fbe493e2f03a114cca5d7e9ab7de837654b91135/javax.json-api-1.0-sources.jar!/javax/json/spi/JsonProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="88" column="10" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/sun/net/www/protocol/http/HttpURLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="1912" selection-start-line="1912" selection-end-line="1912" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/net/URLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="853" column="23" selection-start-line="853" selection-start-column="23" selection-end-line="853" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.0/fbe493e2f03a114cca5d7e9ab7de837654b91135/javax.json-api-1.0-sources.jar!/javax/json/Json.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.0/fbe493e2f03a114cca5d7e9ab7de837654b91135/javax.json-api-1.0-sources.jar!/javax/json/spi/JsonProvider.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/sun/net/www/protocol/http/HttpURLConnection.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/net/URLConnection.java" />
     <entry file="file://$PROJECT_DIR$/src/dao/services/InputStreamToJson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-119">
@@ -1127,54 +1203,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/services/StringToJson.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="843" selection-start-line="843" selection-end-line="843" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="935" selection-start-line="935" selection-end-line="935" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AlertController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/AuthToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Thread.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/dao/services/ErrorHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1196,27 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/SombreroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/ExplorerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/QuizzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/models/DAOUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1231,62 +1240,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Get.java">
+    <entry file="file://$PROJECT_DIR$/gradle/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/quizz_toolbox.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/explorer_toolbox.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/hack/HackController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/games.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306" />
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/sombrero_levels.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="58" column="78" selection-start-line="58" selection-start-column="78" selection-end-line="58" selection-end-column="78" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/SombreroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/confirmation.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="61" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="61" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ConfirmationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="47" column="59" lean-forward="true" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AlertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/AuthToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="40" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Delete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/games/GamesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+        <state relative-caret-position="221">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/LevelsController.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/LevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="118" column="24" lean-forward="true" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+          <folding>
+            <element signature="e#3306#3307#0" expanded="true" />
+            <element signature="e#3351#3352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Get.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contents/pepithack.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/dao/apirequest/Put.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/levels/selectedlevel/HackController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="151" column="39" lean-forward="true" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="39" />
+        <state relative-caret-position="94">
+          <caret line="262" column="10" selection-start-line="262" selection-start-column="10" selection-end-line="262" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7826#7827#0" expanded="true" />
-            <element signature="e#7880#7881#0" expanded="true" />
+            <element signature="e#9671#9672#0" expanded="true" />
+            <element signature="e#9742#9743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1333,7 +1488,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1345,7 +1500,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>pepito</last-edited>
+          <last-edited>pepito_test|pepito</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

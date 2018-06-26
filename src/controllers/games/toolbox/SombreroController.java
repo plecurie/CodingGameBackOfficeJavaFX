@@ -1,33 +1,20 @@
-package controllers.games.levels;
+package controllers.games.toolbox;
 
 import controllers.DisplayerController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 
-public class LevelsController {
+public class SombreroController {
+
+    public void setDisplayController(DisplayerController displayController) {
+        this.displayController = displayController;
+    }
 
     private DisplayerController displayController;
-    private AnchorPane main ;
     @FXML Label game_label;
 
-    public void init(DisplayerController dc, AnchorPane m, int id_game) {
-        this.displayController = dc;
-        this.main = m;
-
-        String game_name = "";
-        if (id_game == 2) {
-            game_name = "Pepito l'Explorateur";
-        } else if (id_game == 3) {
-            game_name = "Casse-Sombrero";
-        } else if (id_game == 4) {
-            game_name = "PepitQuizz";
-        }
-
-        game_label.setText(game_name);
-    }
 
     @FXML private void onSave(ActionEvent actionEvent) {
         // envoi modifs à l'API
@@ -35,8 +22,7 @@ public class LevelsController {
 
     @FXML private void onCreate(ActionEvent actionEvent){
         try {
-            main.getChildren().clear();
-            main.getChildren().add(displayController.displaySelectedLevel(game_label.getText()));
+            displayController.displayToolbox(3);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -3,21 +3,14 @@ package controllers.games;
 import controllers.DisplayerController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.layout.AnchorPane;
 
 public class GamesController {
 
-    private AnchorPane main ;
     private DisplayerController displayController;
-
-    public GamesController() {
-        /* todo default constructor */
-    }
 
     @FXML private void onFirst(ActionEvent actionEvent){
         try {
-            main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels(1));
+            displayController.displayToolbox(1);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -25,18 +18,15 @@ public class GamesController {
 
     @FXML private void onSecond(ActionEvent actionEvent){
         try {
-            main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels(2));
+            displayController.displayToolbox(2);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML private void onThird(ActionEvent actionEvent){
-
         try {
-            main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels(3));
+            displayController.displayLevels();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -44,15 +34,13 @@ public class GamesController {
 
     @FXML private void onFourth(ActionEvent actionEvent){
         try {
-            main.getChildren().clear();
-            main.getChildren().add(displayController.displayLevels(4));
+            displayController.displayToolbox(4);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void setMain(DisplayerController displayerController, AnchorPane main) {
+    public void setDisplayer(DisplayerController displayerController) {
         this.displayController = displayerController;
-        this.main = main;
     }
 }

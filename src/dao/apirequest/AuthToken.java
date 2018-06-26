@@ -1,6 +1,6 @@
 package dao.apirequest;
 
-import controllers.AlertController;
+import controllers.DisplayerController;
 import dao.services.ErrorHandler;
 import dao.services.InputStreamToJson;
 import settings.ApiConstant;
@@ -37,7 +37,8 @@ public class AuthToken {
             System.out.println(e.getMessage());
             ErrorHandler errorHandler = new ErrorHandler();
             String error = errorHandler.getErrorCode(e.getMessage());
-            AlertController.showAlert(error);
+            DisplayerController displayerController = new DisplayerController();
+            displayerController.displayAlert(error);
         }
         return token;
     }

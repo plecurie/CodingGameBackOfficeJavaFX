@@ -11,9 +11,9 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
-    <bytecodeTargetLevel>
-      <module name="pepito_main" target="1.8" />
-      <module name="pepito_test" target="1.8" />
+    <bytecodeTargetLevel target="10">
+      <module name="pepito_main" target="1.9" />
+      <module name="pepito_test" target="1.9" />
     </bytecodeTargetLevel>
   </component>
 </project>

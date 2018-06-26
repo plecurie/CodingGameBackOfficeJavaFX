@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.explorer.ExplorerController">
+   <children>
+      <Label layoutX="149.0" layoutY="303.0" text="PEPITO L'EXPLORATEUR : On construction...">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
