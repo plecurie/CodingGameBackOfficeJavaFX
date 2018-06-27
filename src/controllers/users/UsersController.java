@@ -1,6 +1,6 @@
 package controllers.users;
 
-import dao.models.DAOUser;
+import dao.DAOUser;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -65,7 +65,6 @@ public class UsersController implements Initializable {
         ObservableValue cell = column_id.getCellObservableValue(index_selected_user);
         Object id = cell.getValue();
         User selected_user = daoUser.getSelectedUser(Integer.valueOf(id.toString()));
-        System.out.println(selected_user.getId());
 
     }
 

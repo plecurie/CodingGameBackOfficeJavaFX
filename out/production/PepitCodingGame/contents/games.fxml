@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.GamesController">
    <children>
-      <Button layoutX="293.0" layoutY="117.0" mnemonicParsing="false" onAction="#onFirst" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" text="PepiHack" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="button_1" layoutX="293.0" layoutY="117.0" mnemonicParsing="false" onAction="#onFirst" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" textAlignment="CENTER" wrapText="true">
          <effect>
             <DropShadow />
          </effect>
@@ -17,7 +17,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="610.0" layoutY="117.0" mnemonicParsing="false" onAction="#onSecond" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" text="Pepito L'explorateur" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="button_2" layoutX="610.0" layoutY="117.0" mnemonicParsing="false" onAction="#onSecond" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" textAlignment="CENTER" wrapText="true">
          <effect>
             <DropShadow />
          </effect>
@@ -27,7 +27,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="294.0" layoutY="365.0" mnemonicParsing="false" onAction="#onThird" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" text="Casse-Sombrero" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="button_3" layoutX="294.0" layoutY="365.0" mnemonicParsing="false" onAction="#onThird" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" textAlignment="CENTER" wrapText="true">
          <effect>
             <DropShadow />
          </effect>
@@ -37,7 +37,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="610.0" layoutY="365.0" mnemonicParsing="false" onAction="#onFourth" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" text="PepitQuizz" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="button_4" layoutX="610.0" layoutY="365.0" mnemonicParsing="false" onAction="#onFourth" prefHeight="178.0" prefWidth="178.0" style="-fx-background-radius: 300; -fx-background-color: peru;" textAlignment="CENTER" wrapText="true">
          <effect>
             <DropShadow />
          </effect>

@@ -1,6 +1,6 @@
 package controllers;
 
-import dao.models.DAOAuth;
+import dao.DAOAuth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +19,7 @@ public class StarterController {
     @FXML private TextField textField;
     @FXML private PasswordField passwordField;
 
-    DAOAuth daoAuth = new DAOAuth();
+    private DAOAuth daoAuth = new DAOAuth();
 
     public StarterController() {
         /* todo default constructor */

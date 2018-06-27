@@ -1,32 +1,38 @@
 package controllers.games.toolbox;
 
 import controllers.DisplayerController;
+import dao.DAOGame;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
+import models.Game;
 
-public class SombreroController {
-
-    public void setDisplayController(DisplayerController displayController) {
-        this.displayController = displayController;
-    }
+public class SombreroLevelController {
 
     private DisplayerController displayController;
-    @FXML Label game_label;
+    Game selected_game;
 
+    public void linkDisplayerGame(DisplayerController displayController, Game game) {
+        this.displayController = displayController;
+        this.selected_game = game;
+    }
 
-    @FXML private void onSave(ActionEvent actionEvent) {
-        // envoi modifs à l'API
+    @FXML private void onSaveDescription(ActionEvent actionEvent) {
+        // envoi description à l'API
+
     }
 
     @FXML private void onCreate(ActionEvent actionEvent){
         try {
-            displayController.displayToolbox(3);
+            displayController.displayToolbox(selected_game);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
+
+
 
     @FXML protected void onSelectedRow(MouseEvent event) {
 /*
@@ -45,8 +51,4 @@ public class SombreroController {
     @FXML private void onDelete(ActionEvent actionEvent) {
 
     }
-
-
-
-
 }

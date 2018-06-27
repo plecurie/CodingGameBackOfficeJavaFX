@@ -1,4 +1,4 @@
-package dao.services;
+package services;
 
 public class ErrorHandler {
 

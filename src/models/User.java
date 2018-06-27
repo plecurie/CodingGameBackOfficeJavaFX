@@ -11,6 +11,7 @@ public class User {
     private static String EXP ;
     private static String TYPE ;
     private static String TOKEN;
+
     private int id ;
     private String username ;
     private String firstname ;
@@ -22,7 +23,7 @@ public class User {
     private float exp ;
     private String type ;
 
-    public User(){ /*todo default constructor*/ }
+    public User() {/*todo default constructor;*/ }
 
     public User(int id, String username, String firstname, String lastname, int age, String email, String profil, int level, float exp, String type) {
         setId(id);
@@ -49,7 +50,7 @@ public class User {
         return username;
     }
 
-    public void setUsername(String username) {
+    private void setUsername(String username) {
         this.username = username;
     }
 
@@ -57,7 +58,7 @@ public class User {
         return firstname;
     }
 
-    public void setFirstname(String firstname) {
+    private void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
@@ -65,7 +66,7 @@ public class User {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
+    private void setLastname(String lastname) {
         this.lastname = lastname;
     }
 
@@ -73,7 +74,7 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
+    private void setAge(int age) {
         this.age = age;
     }
 
@@ -81,7 +82,7 @@ public class User {
         return email;
     }
 
-    public void setEmail(String email) {
+    private void setEmail(String email) {
         this.email = email;
     }
 
@@ -89,7 +90,7 @@ public class User {
         return profil;
     }
 
-    public void setProfil(String profil) {
+    private void setProfil(String profil) {
         this.profil = profil;
     }
 
@@ -97,7 +98,7 @@ public class User {
         return level;
     }
 
-    public void setLevel(int level) {
+    private void setLevel(int level) {
         this.level = level;
     }
 
@@ -105,7 +106,7 @@ public class User {
         return exp;
     }
 
-    public void setExp(float exp) {
+    private void setExp(float exp) {
         this.exp = exp;
     }
 
@@ -113,7 +114,7 @@ public class User {
         return type;
     }
 
-    public void setType(String type) {
+    private void setType(String type) {
         this.type = type;
     }
 

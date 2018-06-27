@@ -1,4 +1,4 @@
-package dao.services;
+package services;
 
 import javax.json.Json;
 import javax.json.stream.JsonParser;

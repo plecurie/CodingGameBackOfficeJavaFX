@@ -1,8 +1,8 @@
 package controllers;
 
 import controllers.games.GamesController;
-import controllers.games.toolbox.SombreroController;
-import controllers.games.toolbox.sombrero.LevelController;
+import controllers.games.toolbox.SombreroLevelController;
+import controllers.games.toolbox.sombrero.SombreroToolboxController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -17,9 +17,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import models.Game;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,11 +31,8 @@ public class DisplayerController implements Initializable {
     @FXML AnchorPane main ;
     private static Stage stage ;
 
-    public DisplayerController() {
-        /* todo default constructor */
-    }
-
-    void setStage(Stage stage) {
+    public DisplayerController() { /* todo default constructor */ }
+    private void setStage(Stage stage) {
         DisplayerController.stage = stage;
     }
 
@@ -95,73 +92,82 @@ public class DisplayerController implements Initializable {
     }
 
     private BorderPane displayHome() throws Exception {
+
         BorderPane sceneRoot = new BorderPane();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/home.fxml"));
         final AnchorPane anchorPane = loader.load();
-        HomeController homeControllerController = loader.getController();
-        homeControllerController.setMain(this, main);
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
+
+        HomeController homeControllerController = loader.getController();
+        homeControllerController.setMain(this, main);
+
         return sceneRoot ;
     }
 
     private BorderPane displayPreferences() throws Exception {
+
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/preferences.fxml"));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
+
         return sceneRoot ;
     }
 
     private BorderPane displaySettings() throws Exception {
+
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/gaming_settings.fxml"));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
+
         return sceneRoot ;
     }
 
     BorderPane displayUsers() throws Exception {
+
         BorderPane sceneRoot = new BorderPane();
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/users.fxml"));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
+
         return sceneRoot ;
     }
 
     BorderPane displayGames() throws Exception {
-        BorderPane sceneRoot = new BorderPane();
 
+        BorderPane sceneRoot = new BorderPane();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/games.fxml"));
         final AnchorPane anchorPane = loader.load();
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 
         GamesController gamesControllerController = loader.getController();
-        gamesControllerController.setDisplayer(this);
+        gamesControllerController.linkDisplayer(this);
 
         return sceneRoot ;
     }
 
-    public void displayLevels() throws Exception {
-        BorderPane sceneRoot = new BorderPane();
+    public void displaySombreroLevels(Game game) throws Exception {
 
+        BorderPane sceneRoot = new BorderPane();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_levels.fxml"));
         final AnchorPane anchorPane = loader.load();
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 
-        SombreroController sombreroController = loader.getController();
-        sombreroController.setDisplayController(this);
+        SombreroLevelController sombreroLevelController = loader.getController();
+        sombreroLevelController.linkDisplayerGame(this, game);
 
         main.getChildren().clear();
         main.getChildren().add(sceneRoot);
     }
 
-    public void displayToolbox(int selected_game) throws Exception {
+    public void displayToolbox(Game game) throws Exception {
         BorderPane sceneRoot = new BorderPane();
 
-        switch (selected_game) {
+        switch (game.getId()) {
             case 1 : {
                 displayHack();
                 break;
@@ -171,9 +177,9 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 3 : {
-                int cell = LevelController.getCellCount();
+                int cell = SombreroToolboxController.getCellCount();
                 if (cell == 0) cell = 10;
-                sceneRoot = displaySombrero(cell);
+                sceneRoot = displaySombrero(game, cell);
                 break;
             }
             case 4 : {
@@ -232,7 +238,7 @@ public class DisplayerController implements Initializable {
         return sceneRoot;
     }
 
-    public BorderPane displaySombrero(int cell) throws IOException {
+    public BorderPane displaySombrero(Game game, int cell) throws IOException {
         String resource_name = "../contents/sbr_toolbox_" + cell + "x" + cell + ".fxml";
 
         BorderPane sceneRoot = new BorderPane();
@@ -242,8 +248,8 @@ public class DisplayerController implements Initializable {
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 
-        LevelController levelController = loader.getController();
-        levelController.setDisplayer(this);
+        SombreroToolboxController sombreroToolboxController = loader.getController();
+        sombreroToolboxController.linkDisplayerGame(this, game);
 
         return sceneRoot ;
     }

@@ -5,26 +5,25 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import models.Game;
 
 import java.net.URL;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class LevelController implements Initializable {
+public class SombreroToolboxController implements Initializable {
 
     @FXML private GridPane gridPane;
     private DisplayerController displayController;
+    private Game selected_game;
 
     private static String color;
     private static int cellCount;
-    private static final String BLACK = "-fx-background-color:BLACK;";
-    private static final String RED = "-fx-background-color:RED;";
-    private static final String GREEN = "-fx-background-color:GREEN;";
-    private static final String BLUE = "-fx-background-color:BLUE;";
+    private final String BLACK = "-fx-background-color:BLACK;";
+    private final String RED = "-fx-background-color:RED;";
+    private final String GREEN = "-fx-background-color:GREEN;";
+    private final String BLUE = "-fx-background-color:BLUE;";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -39,12 +38,15 @@ public class LevelController implements Initializable {
         }
     }
 
+    public void linkDisplayerGame(DisplayerController displayerController, Game game) {
+        this.displayController = displayerController;
+        this.selected_game = game;
+    }
+
     @FXML private void onVoidClick(ActionEvent event) {
         setColor(BLACK);
     }
-    @FXML private void onRedClick(ActionEvent event) {
-        setColor(RED);
-    }
+    @FXML private void onRedClick(ActionEvent event) { setColor(RED); }
     @FXML private void onGreenClick(ActionEvent event) {
         setColor(GREEN);
     }
@@ -92,16 +94,13 @@ public class LevelController implements Initializable {
 
     private boolean requestConfirmation() {
         String confirm_message = "Would you like to delete modifications ?";
-        boolean confirmed = displayController.displayConfirmation(confirm_message);
-
-        if (confirmed) return true;
-        else return false;
+        return displayController.displayConfirmation(confirm_message);
     }
 
     private void changeGrid(int gridCell) {
         setCellCount(gridCell);
         try {
-            displayController.displayToolbox(3);
+            displayController.displayToolbox(selected_game);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -109,12 +108,10 @@ public class LevelController implements Initializable {
 
     public static int getCellCount() { return cellCount; }
 
-    public static void setCellCount(int cellCount) { LevelController.cellCount = cellCount; }
+    private static void setCellCount(int cellCount) { SombreroToolboxController.cellCount = cellCount; }
 
-    private static void setColor(String color) {
-        LevelController.color = color;
-    }
+    private static void setColor(String color) { SombreroToolboxController.color = color; }
 
-    public void setDisplayer(DisplayerController displayerController) { this.displayController = displayerController; }
+
 
 }

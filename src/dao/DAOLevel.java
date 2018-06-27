@@ -1,4 +1,4 @@
-package dao.models;
+package dao;
 
 public class DAOLevel {
 }
