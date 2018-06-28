@@ -7,18 +7,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroToolboxController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroToolboxController">
    <children>
       <HBox layoutX="871.0" layoutY="264.0" maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0">
          <children>
             <VBox maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0">
                <children>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBlueClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue;" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="V">
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowLeftClick" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="V">
                      <font>
                         <Font name="Gill Sans Ultra Bold" size="27.0" />
                      </font></Button>
-                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView onMouseClicked="#onBiscuitClick" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/favicon.png" />
                      </image>
@@ -28,11 +28,11 @@
             <VBox maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0">
                <children>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGreenClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: green;" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" rotate="180.0" text="V">
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowUpClick" prefHeight="60.0" prefWidth="60.0" rotate="180.0" text="V">
                      <font>
                         <Font name="Gill Sans Ultra Bold" size="27.0" />
                      </font></Button>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="V">
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowDownClick" prefHeight="60.0" prefWidth="60.0" text="V">
                      <font>
                         <Font name="Gill Sans Ultra Bold" size="27.0" />
                      </font></Button>
@@ -41,7 +41,7 @@
             <VBox maxHeight="-Infinity" prefHeight="120.0" prefWidth="82.0">
                <children>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRedClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: red;" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" rotate="270.0" text="V">
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowRightClick" prefHeight="60.0" prefWidth="60.0" rotate="270.0" text="V">
                      <font>
                         <Font name="Gill Sans Ultra Bold" size="27.0" />
                      </font></Button>
@@ -51,14 +51,14 @@
          </children>
       </HBox>
       <Button layoutX="919.0" layoutY="470.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="60.0" prefWidth="84.0" text="Clear All" textAlignment="CENTER" />
-      <Button cancelButton="true" layoutX="906.0" layoutY="604.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" text="Quit" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="604.0" />
+      <Button cancelButton="true" layoutX="906.0" layoutY="604.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="40.0" prefWidth="110.0" text="Quit" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="604.0" />
       <Button layoutX="877.0" layoutY="65.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="84.0" text="10x10">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
       <Button layoutX="955.0" layoutY="65.0" mnemonicParsing="false" onAction="#onFifteenToFifteen" prefHeight="60.0" prefWidth="84.0" text="15x15" />
-      <ChoiceBox layoutX="877.0" layoutY="197.0" prefHeight="39.0" prefWidth="165.0" />
+      <ChoiceBox fx:id="choiceBox" layoutX="877.0" layoutY="197.0" prefHeight="39.0" prefWidth="165.0" />
       <Label layoutX="877.0" layoutY="170.0" text="Number of functions" />
       <GridPane fx:id="gridPane" gridLinesVisible="true" layoutX="9.0" layoutY="10.0" prefHeight="660.0" prefWidth="838.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <columnConstraints>
@@ -188,7 +188,7 @@
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="9" />
          </children>
       </GridPane>
-      <Button defaultButton="true" layoutX="906.0" layoutY="564.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" text="Save" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="563.0">
+      <Button defaultButton="true" layoutX="906.0" layoutY="564.0" mnemonicParsing="false" onAction="#onSaveClick" prefHeight="40.0" prefWidth="110.0" text="Resolve" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="563.0">
          <effect>
             <DropShadow />
          </effect>

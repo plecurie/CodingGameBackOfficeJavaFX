@@ -1,7 +1,7 @@
 package dao;
 
-import services.HttpRequest;
 import models.User;
+import services.HttpRequest;
 
 import javax.json.Json;
 import javax.json.JsonObject;

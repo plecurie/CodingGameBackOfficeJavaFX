@@ -1,29 +1,37 @@
 package controllers.games.toolbox.sombrero;
 
 import controllers.DisplayerController;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import models.Game;
+import settings.Colors;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import static settings.Colors.*;
 
 public class SombreroToolboxController implements Initializable {
 
     @FXML private GridPane gridPane;
+    @FXML private ChoiceBox<String> choiceBox;
     private DisplayerController displayController;
     private Game selected_game;
 
     private static String color;
     private static int cellCount;
-    private final String BLACK = "-fx-background-color:BLACK;";
-    private final String RED = "-fx-background-color:RED;";
-    private final String GREEN = "-fx-background-color:GREEN;";
-    private final String BLUE = "-fx-background-color:BLUE;";
+    private static String action = "color";
+    private final Label arrow = new Label("PEPITO");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,9 +41,36 @@ public class SombreroToolboxController implements Initializable {
         for (Node node : gridPane.getChildren()) {
             node.setStyle(BLACK);
             node.setOnMouseClicked((MouseEvent t) -> {
-                node.setStyle(color);
+                //Pane selectedPane = (Pane) t.getSource();
+                Pane selectedPane = (Pane) node.lookup("Pane");
+                switch (action) {
+                    case "color" : {
+                        node.setStyle(color);
+                        break;
+                    }
+                    case "arrow" : {
+                        if (selectedPane.getChildren().isEmpty())
+                            selectedPane.getChildren().add(arrow);
+                        break;
+                    }
+                    case "biscuit" : {
+                        if (selectedPane.getChildren().isEmpty())
+                            selectedPane.getChildren().add(new Label("MINI-ROLL"));
+                        break;
+                    }
+                    default:
+                        break;
+                }
             });
         }
+
+        List<String> list_functions = new ArrayList<String>() ;
+        for (int i = 0; i < 7; i++) {
+            String function = "F" + (i+1);
+            list_functions.add(function);
+        }
+        choiceBox.setItems(FXCollections.observableArrayList(list_functions));
+        choiceBox.setValue(list_functions.get(0));
     }
 
     public void linkDisplayerGame(DisplayerController displayerController, Game game) {
@@ -43,21 +78,6 @@ public class SombreroToolboxController implements Initializable {
         this.selected_game = game;
     }
 
-    @FXML private void onVoidClick(ActionEvent event) {
-        setColor(BLACK);
-    }
-    @FXML private void onRedClick(ActionEvent event) { setColor(RED); }
-    @FXML private void onGreenClick(ActionEvent event) {
-        setColor(GREEN);
-    }
-    @FXML private void onBlueClick(ActionEvent event) {
-        setColor(BLUE);
-    }
-    @FXML private void onClearClick(ActionEvent event) {
-        for (Node node : gridPane.getChildren()) {
-            node.setStyle(BLACK);
-        }
-    }
 
     @FXML private void onFifteenToFifteen() {
         boolean empty = ensureNotFilled();
@@ -80,6 +100,67 @@ public class SombreroToolboxController implements Initializable {
             if(confirmation) {
                 changeGrid(10);
             }
+        }
+    }
+
+    @FXML private void onVoidClick(ActionEvent event) {
+        action = "color";
+        setColor(BLACK);
+    }
+    @FXML private void onRedClick(ActionEvent event) {
+        action = "color";
+        setColor(RED);
+    }
+    @FXML private void onGreenClick(ActionEvent event) {
+        action = "color";
+        setColor(GREEN);
+    }
+    @FXML private void onBlueClick(ActionEvent event) {
+        action = "color";
+        setColor(BLUE);
+    }
+    @FXML private void onArrowLeftClick(ActionEvent event) {
+        action = "arrow";
+    }
+    @FXML private void onArrowRightClick(ActionEvent event) {
+        action = "arrow";
+    }
+    @FXML private void onArrowUpClick(ActionEvent event) {
+        action = "arrow";
+    }
+    @FXML private void onArrowDownClick(ActionEvent event) {
+        action = "arrow";
+    }
+    @FXML private void onBiscuitClick() {
+        action = "biscuit";
+    }
+
+    @FXML private void onClearClick(ActionEvent event) {
+        displayController.displayConfirmation("Are you sure you want to delete all ? \nYou will not be able to return modifications...");
+        for (Node node : gridPane.getChildren()) {
+            node.setStyle(BLACK);
+            Pane pane = (Pane) node.lookup("Pane");
+            try {
+                pane.getChildren().clear();
+            } catch (Exception ignored) {}
+        }
+    }
+
+    @FXML private void onSaveClick() {
+
+    }
+
+    @FXML private void onQuit() {
+        if (displayController.displayConfirmation("Do you really want to quit ?")) {
+            quit();
+        }
+    }
+
+    private void quit() {
+        try {
+            displayController.displaySombreroLevels(selected_game);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -107,11 +188,7 @@ public class SombreroToolboxController implements Initializable {
     }
 
     public static int getCellCount() { return cellCount; }
-
     private static void setCellCount(int cellCount) { SombreroToolboxController.cellCount = cellCount; }
-
     private static void setColor(String color) { SombreroToolboxController.color = color; }
-
-
 
 }
