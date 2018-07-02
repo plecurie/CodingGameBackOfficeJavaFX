@@ -73,7 +73,7 @@
       </Button>
       <Button cancelButton="true" layoutX="903.0" layoutY="603.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="40.0" prefWidth="110.0" text="Quit" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="604.0" />
       <Button layoutX="919.0" layoutY="470.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="60.0" prefWidth="84.0" text="Clear All" textAlignment="CENTER" />
-      <Button defaultButton="true" layoutX="906.0" layoutY="563.0" mnemonicParsing="false" onAction="#onSaveClick" prefHeight="40.0" prefWidth="110.0" text="Resolve" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="563.0">
+      <Button defaultButton="true" layoutX="906.0" layoutY="563.0" mnemonicParsing="false" onAction="#onResolveClick" prefHeight="40.0" prefWidth="110.0" text="Resolve" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="563.0">
          <effect>
             <DropShadow />
          </effect>

@@ -17,7 +17,8 @@
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowLeftClick" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="V">
                      <font>
                         <Font name="Gill Sans Ultra Bold" size="27.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <ImageView onMouseClicked="#onBiscuitClick" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/favicon.png" />
@@ -188,7 +189,7 @@
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="9" />
          </children>
       </GridPane>
-      <Button defaultButton="true" layoutX="906.0" layoutY="564.0" mnemonicParsing="false" onAction="#onSaveClick" prefHeight="40.0" prefWidth="110.0" text="Resolve" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="563.0">
+      <Button defaultButton="true" layoutX="906.0" layoutY="564.0" mnemonicParsing="false" onAction="#onResolveClick" prefHeight="40.0" prefWidth="110.0" text="Resolve" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="563.0">
          <effect>
             <DropShadow />
          </effect>

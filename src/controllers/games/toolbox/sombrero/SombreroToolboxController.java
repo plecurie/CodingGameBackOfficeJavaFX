@@ -4,16 +4,24 @@ import controllers.DisplayerController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import models.Game;
 import settings.Colors;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -146,7 +154,13 @@ public class SombreroToolboxController implements Initializable {
         }
     }
 
-    @FXML private void onSaveClick() {
+    @FXML private void onResolveClick() {
+
+        try {
+            displayController.displaySombreroTest(gridPane, choiceBox.getValue(), cellCount);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -188,7 +202,7 @@ public class SombreroToolboxController implements Initializable {
     }
 
     public static int getCellCount() { return cellCount; }
-    private static void setCellCount(int cellCount) { SombreroToolboxController.cellCount = cellCount; }
+    public static void setCellCount(int cellCount) { SombreroToolboxController.cellCount = cellCount; }
     private static void setColor(String color) { SombreroToolboxController.color = color; }
 
 }

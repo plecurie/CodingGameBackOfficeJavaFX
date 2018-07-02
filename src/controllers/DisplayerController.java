@@ -2,6 +2,7 @@ package controllers;
 
 import controllers.games.GamesController;
 import controllers.games.toolbox.SombreroLevelController;
+import controllers.games.toolbox.sombrero.SombreroTestController;
 import controllers.games.toolbox.sombrero.SombreroToolboxController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,6 +16,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -164,6 +166,19 @@ public class DisplayerController implements Initializable {
         main.getChildren().add(sceneRoot);
     }
 
+    public void displaySombreroTest(GridPane testGrid, String functions, int cell) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
+        SombreroTestController.grid_test = testGrid;
+        SombreroTestController.functions = functions;
+        SombreroTestController.cell_max = cell;
+        AnchorPane anchorPane = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(anchorPane, 850, 650);
+        stage.getIcons().add(new Image("/contents/images/favicon.png"));
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void displayToolbox(Game game) throws Exception {
         BorderPane sceneRoot = new BorderPane();
 
@@ -178,7 +193,10 @@ public class DisplayerController implements Initializable {
             }
             case 3 : {
                 int cell = SombreroToolboxController.getCellCount();
-                if (cell == 0) cell = 10;
+                if (cell == 0) {
+                    SombreroToolboxController.setCellCount(10);
+                    cell = 10;
+                }
                 sceneRoot = displaySombrero(game, cell);
                 break;
             }
