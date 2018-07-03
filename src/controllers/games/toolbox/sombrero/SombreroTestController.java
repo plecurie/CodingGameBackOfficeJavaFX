@@ -9,6 +9,8 @@ import javafx.scene.layout.Pane;
 import models.Game;
 import services.dao.DAOLevel;
 
+import javax.json.Json;
+import javax.json.JsonObject;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,13 +43,13 @@ public class SombreroTestController implements Initializable {
     }
 
     private void readGrid() {
-        //System.out.println("\nNombre de fonctions disponibles : " + functions + "\n");
+
         int column = 0, line = 0;
         List<Object> grid_list = new ArrayList<>();
         level_name = "TEST";
 
-        for (int i = 0; i < grid_test.getChildren().size() ; i++) {
 
+        for (int i = 0; i < grid_test.getChildren().size() ; i++) {
             if (column == cell_max) {
                 column = 0;
                 line++;
@@ -61,31 +63,31 @@ public class SombreroTestController implements Initializable {
                 switch (pane.getStyle()) {
                     case "-fx-background-color:BLACK;" : {
                         grid_list.add("color:BLACK");
-                        //System.out.println("BLACK");
                         break;
                     }
                     case "-fx-background-color:BLUE;" : {
                         grid_list.add("color:BLUE");
-                        //System.out.println("BLUE");
                         break;
                     }
                     case "-fx-background-color:RED;" : {
                         grid_list.add("color:RED");
-                        //System.out.println("RED");
                         break;
                     }
                     case "-fx-background-color:GREEN;" : {
                         grid_list.add("color:GREEN");
-                        //System.out.println("GREEN");
                         break;
                     }
                 }
-                Label label = (Label) pane.getChildren().get(0).lookup("Label");
-                grid_list.add("item:"+label.getText());
-                //System.out.println(label.getText());
+                Label item = (Label) pane.getChildren().get(0).lookup("Label");
+                grid_list.add("item:"+item.getText());
             } catch (Exception ignored) {}
         }
-        System.out.println("id_game :" + Game.GAME_ID + " \ngame_name : " + level_name + " \ngame_difficulty : " +  level_difficulty + " \nfunctions : " +  functions + " \ngrid_list : " +  grid_list);
+
+        JsonObject parameters = Json.createObjectBuilder().add("id_game", Game.GAME_ID)
+                .add("level_name", level_name).add("level_difficulty", level_difficulty)
+                .add("functions", functions).add("grid_list", String.valueOf(grid_list)).build();
+
+        System.out.println(parameters);
         //daoLevel.createLevel(Game.GAME_ID, level_name, level_difficulty, functions, grid_list);
     }
 }
