@@ -1,12 +1,12 @@
 package controllers.games;
 
 import controllers.DisplayerController;
-import dao.DAOGame;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import models.Game;
+import services.dao.DAOGame;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -18,7 +18,6 @@ public class GamesController implements Initializable {
     private DisplayerController displayController = new DisplayerController();
     private DAOGame daoGame = new DAOGame();
     private List<Game> list_games = daoGame.getGames();
-    private Game selected_game;
 
     @FXML private Button button_1;
     @FXML private Button button_2;
@@ -40,36 +39,36 @@ public class GamesController implements Initializable {
     }
 
     @FXML private void onFirst(ActionEvent actionEvent){
-        selected_game = list_games.get(0);
+        Game.setSelectedGame(list_games.get(0));
         try {
-            displayController.displayToolbox(selected_game);
+            displayController.displayToolbox();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML private void onSecond(ActionEvent actionEvent){
-        selected_game = list_games.get(1);
+        Game.setSelectedGame(list_games.get(1));
         try {
-            displayController.displayToolbox(selected_game);
+            displayController.displayToolbox();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML private void onThird(ActionEvent actionEvent){
-        selected_game = list_games.get(2);
+        Game.setSelectedGame(list_games.get(2));
         try {
-            displayController.displaySombreroLevels(selected_game);
+            displayController.displaySombreroLevels();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML private void onFourth(ActionEvent actionEvent){
-        selected_game = list_games.get(3);
+        Game.setSelectedGame(list_games.get(3));
         try {
-            displayController.displayToolbox(selected_game);
+            displayController.displayToolbox();
         } catch (Exception e) {
             e.printStackTrace();
         }

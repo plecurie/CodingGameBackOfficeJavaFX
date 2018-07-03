@@ -1,6 +1,5 @@
 package controllers.users;
 
-import dao.DAOUser;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import models.User;
+import services.dao.DAOUser;
 
 import java.net.URL;
 import java.util.List;

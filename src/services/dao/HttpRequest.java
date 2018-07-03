@@ -1,7 +1,10 @@
-package services;
+package services.dao;
 
 import controllers.DisplayerController;
 import models.User;
+import services.ErrorHandler;
+import services.InputStreamToJson;
+import services.JsonToString;
 import settings.ApiConstant;
 
 import javax.json.JsonObject;
@@ -13,11 +16,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HttpRequest {
+class HttpRequest {
 
     private String token;
 
-    protected String getToken(JsonObject params, String route) {
+    String getToken(JsonObject params, String route) {
 
         try {
             URL url = new URL(ApiConstant.HOST + route);
@@ -44,7 +47,7 @@ public class HttpRequest {
         return token;
     }
 
-    public List sendGetRequest(String route)  {
+    List sendGetRequest(String route)  {
 
         List response = new ArrayList();
 
@@ -57,8 +60,8 @@ public class HttpRequest {
             connection.setDoOutput(true);
             connection.setDoInput(true);
             connection.setRequestMethod("GET");
-            JsonToString jsonToString = new JsonToString();
 
+            JsonToString jsonToString = new JsonToString();
             response = jsonToString.parseJSON(new InputStreamToJson().parseInputStream(connection.getInputStream()));
 
         } catch (IOException e) {
@@ -71,7 +74,7 @@ public class HttpRequest {
         return response;
     }
 
-    protected List sendPostRequest(JsonObject params, String route) {
+    List sendPostRequest(JsonObject params, String route) {
         List response = new ArrayList();
 
         try {
@@ -79,6 +82,7 @@ public class HttpRequest {
             HttpURLConnection connection = (HttpURLConnection) server.openConnection();
             connection.setConnectTimeout(5000);
             connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            connection.setRequestProperty("Authorization", User.getTOKEN());
             connection.setDoOutput(true);
             connection.setDoInput(true);
             connection.setRequestMethod("POST");
@@ -103,7 +107,7 @@ public class HttpRequest {
         return response;
     }
 
-    public String sendPutRequest(JsonObject params, String route) {
+    String sendPutRequest(JsonObject params, String route) {
         String response = "";
 
         try {

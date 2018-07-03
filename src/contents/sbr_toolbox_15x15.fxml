@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroToolboxController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroToolboxController">
    <children>
-      <HBox layoutX="866.0" layoutY="259.0" maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="264.0">
+      <HBox layoutX="873.0" layoutY="271.0" maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0" AnchorPane.bottomAnchor="209.0" AnchorPane.leftAnchor="873.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="271.0">
          <children>
             <VBox maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0">
                <children>
@@ -63,17 +54,17 @@
             </VBox>
          </children>
       </HBox>
-      <Label layoutX="872.0" layoutY="165.0" text="Number of functions" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="170.0" />
-      <ChoiceBox fx:id="choiceBox" layoutX="874.0" layoutY="196.0" prefHeight="39.0" prefWidth="165.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="197.0" />
-      <Button layoutX="875.0" layoutY="65.0" mnemonicParsing="false" onAction="#onTenToTen" prefHeight="60.0" prefWidth="84.0" text="10x10" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="65.0" />
-      <Button layoutX="955.0" layoutY="65.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="84.0" text="15x15" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="65.0">
+      <Label layoutX="913.0" layoutY="138.0" text="Functions Limit :" AnchorPane.bottomAnchor="505.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="138.0" />
+      <ChoiceBox fx:id="functions_cb" layoutX="913.0" layoutY="157.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="473.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="157.0" />
+      <Button layoutX="880.0" layoutY="46.0" mnemonicParsing="false" onAction="#onTenToTen" prefHeight="60.0" prefWidth="84.0" text="10x10" AnchorPane.bottomAnchor="554.0" AnchorPane.leftAnchor="880.0" AnchorPane.rightAnchor="116.0" AnchorPane.topAnchor="46.0" />
+      <Button layoutX="958.0" layoutY="46.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="84.0" text="15x15" AnchorPane.bottomAnchor="554.0" AnchorPane.leftAnchor="958.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="46.0">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Button cancelButton="true" layoutX="903.0" layoutY="603.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="40.0" prefWidth="110.0" text="Quit" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="604.0" />
-      <Button layoutX="919.0" layoutY="470.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="60.0" prefWidth="84.0" text="Clear All" textAlignment="CENTER" />
-      <Button defaultButton="true" layoutX="906.0" layoutY="563.0" mnemonicParsing="false" onAction="#onResolveClick" prefHeight="40.0" prefWidth="110.0" text="Resolve" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="563.0">
+      <Button cancelButton="true" layoutX="908.0" layoutY="599.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="40.0" prefWidth="110.0" text="Quit" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="908.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="599.0" />
+      <Button layoutX="909.0" layoutY="535.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="40.0" prefWidth="110.0" text="Delete All" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="909.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="535.0" />
+      <Button defaultButton="true" layoutX="908.0" layoutY="475.0" mnemonicParsing="false" onAction="#onResolveClick" prefHeight="60.0" prefWidth="110.0" text="TEST IT !" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="908.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="475.0">
          <effect>
             <DropShadow />
          </effect>
@@ -341,5 +332,7 @@
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="14" GridPane.rowIndex="14" />
          </children>
       </GridPane>
+      <ChoiceBox fx:id="difficuly_cb" layoutX="913.0" layoutY="215.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="215.0" />
+      <Label layoutX="913.0" layoutY="198.0" text="Difficulty :" AnchorPane.bottomAnchor="445.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="198.0" />
    </children>
 </AnchorPane>

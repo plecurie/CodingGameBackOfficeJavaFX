@@ -2,9 +2,10 @@ package models;
 
 public class Game {
 
-    private static int GAME_ID;
-    private static String GAME_NAME;
-    private static String GAME_DESCRIPTION;
+    public static Game SELECTED_GAME;
+    public static int GAME_ID;
+    public static String GAME_NAME;
+    public static String GAME_DESCRIPTION;
 
     private int id;
     private String name;
@@ -18,33 +19,22 @@ public class Game {
         setDescription(description);
     }
 
-    public static int getGameId() {
-        return GAME_ID;
-    }
-
-    public static void setGameId(int gameId) {
-        GAME_ID = gameId;
-    }
-
-    public static String getGameName() {
-        return GAME_NAME;
-    }
-
     public static void setGameName(String gameName) {
         GAME_NAME = gameName;
-    }
-
-    public static String getGameDescription() {
-        return GAME_DESCRIPTION;
     }
 
     public static void setGameDescription(String gameDescription) {
         GAME_DESCRIPTION = gameDescription;
     }
 
-    public int getId() {
-        return id;
+    public static void setSelectedGame(Game selectedGame) {
+        SELECTED_GAME = selectedGame;
+        GAME_ID = selectedGame.id;
+        GAME_NAME = selectedGame.name;
+        GAME_DESCRIPTION = selectedGame.description;
     }
+
+    public int getId() { return id; }
 
     private void setId(int id) {
         this.id = id;
@@ -65,6 +55,5 @@ public class Game {
     private void setDescription(String description) {
         this.description = description;
     }
-
 
 }

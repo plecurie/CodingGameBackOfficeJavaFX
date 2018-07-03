@@ -4,22 +4,13 @@ import controllers.DisplayerController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-import models.Game;
-import settings.Colors;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,9 +23,9 @@ import static settings.Colors.*;
 public class SombreroToolboxController implements Initializable {
 
     @FXML private GridPane gridPane;
-    @FXML private ChoiceBox<String> choiceBox;
+    @FXML private ChoiceBox<String> functions_cb;
+    @FXML private ChoiceBox<Integer> difficuly_cb;
     private DisplayerController displayController;
-    private Game selected_game;
 
     private static String color;
     private static int cellCount;
@@ -77,13 +68,21 @@ public class SombreroToolboxController implements Initializable {
             String function = "F" + (i+1);
             list_functions.add(function);
         }
-        choiceBox.setItems(FXCollections.observableArrayList(list_functions));
-        choiceBox.setValue(list_functions.get(0));
+        functions_cb.setItems(FXCollections.observableArrayList(list_functions));
+        functions_cb.setValue(list_functions.get(0));
+
+
+        List<Integer> list_difficulty = new ArrayList<Integer>() ;
+        for (int i = 0; i < 10; i++) {
+            list_difficulty.add(i+1);
+        }
+        difficuly_cb.setItems(FXCollections.observableArrayList(list_difficulty));
+        difficuly_cb.setValue(list_difficulty.get(0));
+
     }
 
-    public void linkDisplayerGame(DisplayerController displayerController, Game game) {
+    public void linkDisplayer(DisplayerController displayerController) {
         this.displayController = displayerController;
-        this.selected_game = game;
     }
 
 
@@ -157,7 +156,7 @@ public class SombreroToolboxController implements Initializable {
     @FXML private void onResolveClick() {
 
         try {
-            displayController.displaySombreroTest(gridPane, choiceBox.getValue(), cellCount);
+            displayController.displaySombreroTest(gridPane, functions_cb.getValue(), difficuly_cb.getValue(), cellCount);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -172,7 +171,7 @@ public class SombreroToolboxController implements Initializable {
 
     private void quit() {
         try {
-            displayController.displaySombreroLevels(selected_game);
+            displayController.displaySombreroLevels();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -195,7 +194,7 @@ public class SombreroToolboxController implements Initializable {
     private void changeGrid(int gridCell) {
         setCellCount(gridCell);
         try {
-            displayController.displayToolbox(selected_game);
+            displayController.displayToolbox();
         } catch (Exception e) {
             e.printStackTrace();
         }

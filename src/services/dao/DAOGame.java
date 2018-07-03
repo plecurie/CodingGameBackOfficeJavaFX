@@ -1,13 +1,12 @@
-package dao;
+package services.dao;
 
 
 import models.Game;
-import services.HttpRequest;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAOGame extends HttpRequest {
+public class DAOGame {
 
     public List<Game> getGames() {
 
@@ -15,7 +14,8 @@ public class DAOGame extends HttpRequest {
         String name = "";
         String description;
 
-        List list = sendGetRequest("/games");
+        HttpRequest http = new HttpRequest();
+        List list = http.sendGetRequest("/games");
 
         List<Game> list_games = new ArrayList<>();
 
@@ -51,8 +51,8 @@ public class DAOGame extends HttpRequest {
         String name = "";
         String description = "";
 
-        List list = sendGetRequest("/games/" + id);
-        Game selected_game = new Game();
+        HttpRequest http = new HttpRequest();
+        List list = http.sendGetRequest("/games/" + id);
 
         for (Object aList : list) {
             String[] list_objet = aList.toString().split(":");
@@ -66,14 +66,14 @@ public class DAOGame extends HttpRequest {
                 }
                 case "description": {
                     description = value;
-                    selected_game = new Game(id, name, description);
+                    Game.setSelectedGame(new Game(id, name, description));
                     break;
                 }
                 default:
                     break;
             }
         }
-        return selected_game;
+        return Game.SELECTED_GAME;
     }
 
 }

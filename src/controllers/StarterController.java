@@ -1,6 +1,5 @@
 package controllers;
 
-import dao.DAOAuth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import services.dao.DAOAuth;
 
 public class StarterController {
 

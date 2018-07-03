@@ -1,12 +1,11 @@
-package dao;
+package services.dao;
 
 import models.User;
-import services.HttpRequest;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAOUser extends HttpRequest {
+public class DAOUser {
 
     public List getUsers() {
 
@@ -21,7 +20,8 @@ public class DAOUser extends HttpRequest {
         float exp = 0;
         String type;
 
-        List list = sendGetRequest("/users");
+        HttpRequest http = new HttpRequest();
+        List list = http.sendGetRequest("/users");
 
         List<User> list_users = new ArrayList<>();
 
@@ -92,7 +92,9 @@ public class DAOUser extends HttpRequest {
         float exp = 0;
         String type;
 
-        List list = sendGetRequest("/users/" + id);
+
+        HttpRequest http = new HttpRequest();
+        List list = http.sendGetRequest("/users/" + id);
         User selected_user = new User();
 
         for (Object aList : list) {

@@ -14,9 +14,9 @@ public class SombreroLevelController {
 
     @FXML TextArea description_ta;
 
-    public void linkDisplayerGame(DisplayerController displayController, Game game) {
+    public void linkDisplayer(DisplayerController displayController) {
         SombreroLevelController.displayController = displayController;
-        selected_game = game;
+        selected_game = Game.SELECTED_GAME;
         description_ta.setText(selected_game.getDescription());
     }
 
@@ -27,7 +27,7 @@ public class SombreroLevelController {
 
     @FXML private void onCreate(ActionEvent actionEvent){
         try {
-            displayController.displayToolbox(selected_game);
+            displayController.displayToolbox();
         } catch (Exception e) {
             e.printStackTrace();
         }
