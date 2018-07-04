@@ -7,7 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import models.Game;
-import services.dao.DAOLevel;
 
 import javax.json.Json;
 import javax.json.JsonObject;
@@ -20,33 +19,25 @@ public class SombreroTestController implements Initializable {
     public static GridPane grid_test;
     public static int cell_max;
     public static String functions;
-    private static String level_name;
     public static int level_difficulty;
-
-    private DAOLevel daoLevel = new DAOLevel();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         readGrid();
     }
 
-    @FXML private void onPlay() {
+    @FXML private void onPlay() {}
 
-    }
+    @FXML private void onNext() {}
 
-    @FXML private void onNext() {
-
-    }
-
-    @FXML private void onStop() {
-
-    }
+    @FXML private void onStop() {}
 
     private void readGrid() {
 
         int column = 0, line = 0;
         List<Object> grid_list = new ArrayList<>();
-        level_name = "TEST";
+        String level_name = "TEST";
+        String cell_color= "";
 
 
         for (int i = 0; i < grid_test.getChildren().size() ; i++) {
@@ -59,27 +50,34 @@ public class SombreroTestController implements Initializable {
 
             Node node = grid_test.getChildren().get(i);
             Pane pane = (Pane) node.lookup("Pane");
+
+            Label item = null;
             try {
                 switch (pane.getStyle()) {
                     case "-fx-background-color:BLACK;" : {
-                        grid_list.add("color:BLACK");
+                        cell_color = "BLACK";
+                        item = (Label) pane.getChildren().get(0).lookup("Label");
                         break;
                     }
                     case "-fx-background-color:BLUE;" : {
-                        grid_list.add("color:BLUE");
+                        cell_color = "BLUE";
+                        item = (Label) pane.getChildren().get(0).lookup("Label");
                         break;
                     }
                     case "-fx-background-color:RED;" : {
-                        grid_list.add("color:RED");
+                        cell_color = "RED";
+                        item = (Label) pane.getChildren().get(0).lookup("Label");
                         break;
                     }
                     case "-fx-background-color:GREEN;" : {
-                        grid_list.add("color:GREEN");
+                        cell_color = "GREEN";
+                        item = (Label) pane.getChildren().get(0).lookup("Label");
                         break;
                     }
                 }
-                Label item = (Label) pane.getChildren().get(0).lookup("Label");
-                grid_list.add("item:"+item.getText());
+
+                JsonObject cell_params = Json.createObjectBuilder().add("color", cell_color).add("item", item.getText()).build();
+                grid_list.add(cell_params);
             } catch (Exception ignored) {}
         }
 
