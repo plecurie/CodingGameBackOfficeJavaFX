@@ -24,6 +24,7 @@ public class DAOUser {
         List list = http.sendGetRequest("/users");
 
         List<User> list_users = new ArrayList<>();
+        System.out.println(list);
 
         for (Object aList : list) {
             String[] list_objet = aList.toString().split(":");

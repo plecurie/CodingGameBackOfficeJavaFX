@@ -9,15 +9,14 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -168,11 +167,16 @@ public class DisplayerController implements Initializable {
 
     public void displaySombreroTest(GridPane testGrid, String functions, int difficulty, int cell) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
-        SombreroTestController.grid_test = testGrid;
+        SombreroTestController.sombrero_test = testGrid;
         SombreroTestController.functions = functions;
         SombreroTestController.level_difficulty = difficulty;
         SombreroTestController.cell_max = cell;
+        GridPane gridPane = SombreroTestController.buildGrid();
+        gridPane.setLayoutY(30.0);
+        gridPane.setLayoutX(10.0);
         AnchorPane anchorPane = loader.load();
+        anchorPane.setStyle("-fx-background-color: moccasin ");
+        anchorPane.getChildren().add(gridPane);
         Stage stage = new Stage();
         Scene scene = new Scene(anchorPane, 850, 650);
         stage.getIcons().add(new Image("/contents/images/favicon.png"));
