@@ -2,15 +2,11 @@
 
 <?import java.lang.*?>
 <?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroToolboxController">
    <children>
@@ -290,12 +286,12 @@
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="14" GridPane.rowIndex="14" />
          </children>
       </GridPane>
-      <ChoiceBox fx:id="difficuly_cb" layoutX="913.0" layoutY="215.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="937.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="410.0" />
+      <ChoiceBox fx:id="difficulty_cb" layoutX="913.0" layoutY="215.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="937.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="410.0" />
       <Label layoutX="913.0" layoutY="198.0" text="Difficulty :" AnchorPane.bottomAnchor="261.0" AnchorPane.leftAnchor="934.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="369.0" />
       <VBox alignment="BOTTOM_LEFT" layoutX="838.0" layoutY="118.0" prefHeight="542.0" prefWidth="60.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="838.0" AnchorPane.rightAnchor="182.0" AnchorPane.topAnchor="113.0">
          <children>
             <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBlueClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue;" />
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGreenClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: green;" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGreenClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: limegreen;" />
             <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRedClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: red;" />
             <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onVoidClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: black;" />
             <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onItemClick" pickOnBounds="true">
@@ -325,10 +321,10 @@
             </ImageView>
          </children>
       </VBox>
-      <ChoiceBox fx:id="f1" layoutX="998.0" layoutY="220.0" prefHeight="39.0" prefWidth="60.0" />
-      <ChoiceBox fx:id="f2" layoutX="999.0" layoutY="263.0" prefHeight="39.0" prefWidth="60.0" />
-      <ChoiceBox fx:id="f3" layoutX="999.0" layoutY="306.0" prefHeight="39.0" prefWidth="60.0" />
-      <ChoiceBox fx:id="f4" layoutX="998.0" layoutY="176.0" prefHeight="39.0" prefWidth="60.0" AnchorPane.rightAnchor="22.0" />
+      <ChoiceBox fx:id="f1" layoutX="998.0" layoutY="176.0" prefHeight="39.0" prefWidth="60.0" AnchorPane.rightAnchor="22.0" />
+      <ChoiceBox fx:id="f2" disable="true" layoutX="998.0" layoutY="220.0" prefHeight="39.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="f3" disable="true" layoutX="999.0" layoutY="263.0" prefHeight="39.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="f4" disable="true" layoutX="999.0" layoutY="306.0" prefHeight="39.0" prefWidth="60.0" />
       <Label layoutX="906.0" layoutY="181.0" prefHeight="30.0" prefWidth="84.0" text="F1 commands :" AnchorPane.bottomAnchor="449.0" AnchorPane.leftAnchor="909.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="181.0" />
       <Label layoutX="906.0" layoutY="225.0" prefHeight="30.0" prefWidth="84.0" text="F2 commands :" AnchorPane.leftAnchor="909.0" />
       <Label layoutX="906.0" layoutY="268.0" prefHeight="30.0" prefWidth="84.0" text="F3 commands :" AnchorPane.leftAnchor="909.0" />

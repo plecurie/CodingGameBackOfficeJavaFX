@@ -167,7 +167,9 @@ public class DisplayerController implements Initializable {
     }
 
     public void displaySombreroTest(GridPane sombrero_to_test, String level_name, Integer f1, Integer f2, Integer f3, Integer f4, Integer difficulty, int cellCount) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
+
         SombreroTestController.sombrero_test = sombrero_to_test;
         SombreroTestController.level_name = level_name;
         SombreroTestController.f1 = f1;
@@ -176,17 +178,17 @@ public class DisplayerController implements Initializable {
         SombreroTestController.f4 = f4;
         SombreroTestController.level_difficulty = difficulty;
         SombreroTestController.cell_max = cellCount;
+
         GridPane sombrero_test = SombreroTestController.buildGrid();
-        sombrero_test.setLayoutY(30.0);
-        sombrero_test.setLayoutX(10.0);
-        AnchorPane anchorPane = loader.load();
-        anchorPane.setStyle("-fx-background-color: moccasin ");
-        anchorPane.getChildren().add(sombrero_test);
-        Stage stage = new Stage();
-        Scene scene = new Scene(anchorPane, 850, 650);
-        stage.getIcons().add(new Image("/contents/images/favicon.png"));
-        stage.setScene(scene);
-        stage.show();
+        sombrero_test.setMaxSize(600,600);
+
+        BorderPane borderPane = loader.load();
+        borderPane.setLeft(sombrero_test);
+        borderPane.setStyle("-fx-background-color: moccasin ");
+
+        main.getChildren().clear();
+        main.getChildren().add(borderPane);
+
     }
 
     public void displayToolbox() throws Exception {

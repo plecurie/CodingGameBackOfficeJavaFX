@@ -3,6 +3,7 @@ package controllers.games.toolbox.sombrero;
 import controllers.DisplayerController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -25,22 +26,23 @@ import static settings.Colors.*;
 
 public class SombreroToolboxController implements Initializable {
 
-    private static final double ITEM_DEFAULT_HEIGHT = 30;
-    private static final double ITEM_DEFAULT_WIDTH = 30;
     @FXML private GridPane gridPane;
     @FXML private TextField level_name;
     @FXML private ChoiceBox<Integer> f1;
     @FXML private ChoiceBox<Integer> f2;
     @FXML private ChoiceBox<Integer> f3;
     @FXML private ChoiceBox<Integer> f4;
-    @FXML private ChoiceBox<Integer> difficuly_cb;
-    private DisplayerController displayController;
+    @FXML private ChoiceBox<Integer> difficulty_cb;
 
     private static String color;
     private static int cellCount;
     private static String action = "color";
     private ImageView position_iv = new ImageView();
     private Label description_iv = new Label();
+    private static final double ITEM_DEFAULT_HEIGHT = 30;
+    private static final double ITEM_DEFAULT_WIDTH = 30;
+
+    private DisplayerController displayController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -55,6 +57,10 @@ public class SombreroToolboxController implements Initializable {
                 switch (action) {
                     case "color" : {
                         node.setStyle(color);
+                        if (color.equals(BLACK)) {
+                            Pane pane = (Pane) node.lookup("Pane");
+                            pane.getChildren().clear();
+                        }
                         break;
                     }
                     case "up" : {
@@ -114,7 +120,23 @@ public class SombreroToolboxController implements Initializable {
             });
         }
 
-        List<Integer> list_functions = new ArrayList<Integer>() ;
+        initDefaultFunctions();
+        initDifficulty();
+
+    }
+
+    private void initDifficulty() {
+        List<Integer> list_difficulty = new ArrayList<Integer>() ;
+        for (int i = 0; i < 10; i++) {
+            list_difficulty.add(i+1);
+        }
+        difficulty_cb.setItems(FXCollections.observableArrayList(list_difficulty));
+        difficulty_cb.setValue(list_difficulty.get(0));
+    }
+
+    private void initDefaultFunctions() {
+
+        final List<Integer> list_functions = new ArrayList<Integer>() ;
         for (int i = 0; i < 11; i++) {
             list_functions.add(i);
         }
@@ -127,16 +149,45 @@ public class SombreroToolboxController implements Initializable {
         f3.setValue(list_functions.get(0));
         f4.setValue(list_functions.get(0));
 
+        f1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (f1.getValue() != 0) f2.setDisable(false);
+                else {
+                    f2.setDisable(true);
+                    f3.setDisable(true);
+                    f4.setDisable(true);
+                    f2.setValue(list_functions.get(0));
+                    f3.setValue(list_functions.get(0));
+                    f4.setValue(list_functions.get(0));
+                }
+            }
+        });
 
-        List<Integer> list_difficulty = new ArrayList<Integer>() ;
-        for (int i = 0; i < 10; i++) {
-            list_difficulty.add(i+1);
-        }
-        difficuly_cb.setItems(FXCollections.observableArrayList(list_difficulty));
-        difficuly_cb.setValue(list_difficulty.get(0));
+        f2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (f2.getValue() != 0) f3.setDisable(false);
+                else {
+                    f3.setDisable(true);
+                    f4.setDisable(true);
+                    f3.setValue(list_functions.get(0));
+                    f4.setValue(list_functions.get(0));
+                }
+            }
+        });
 
+        f3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (f3.getValue() != 0) f4.setDisable(false);
+                else {
+                    f4.setDisable(true);
+                    f4.setValue(list_functions.get(0));
+                }
+            }
+        });
     }
-
     public void linkDisplayer(DisplayerController displayerController) {
         this.displayController = displayerController;
     }
@@ -221,7 +272,7 @@ public class SombreroToolboxController implements Initializable {
         }
         else {
             try {
-                displayController.displaySombreroTest(gridPane, level_name.getText(), f1.getValue(),f2.getValue(),f3.getValue(),f4.getValue(), difficuly_cb.getValue(), cellCount);
+                displayController.displaySombreroTest(gridPane, level_name.getText(), f1.getValue(),f2.getValue(),f3.getValue(),f4.getValue(), difficulty_cb.getValue(), cellCount);
             } catch (IOException e) {
                 e.printStackTrace();
             }
