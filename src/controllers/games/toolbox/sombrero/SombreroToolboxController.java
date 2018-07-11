@@ -8,11 +8,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,14 +24,18 @@ import static settings.Colors.*;
 public class SombreroToolboxController implements Initializable {
 
     @FXML private GridPane gridPane;
-    @FXML private ChoiceBox<String> functions_cb;
+    @FXML private ChoiceBox<Integer> functions_cb1;
+    @FXML private ChoiceBox<Integer> functions_cb2;
+    @FXML private ChoiceBox<Integer> functions_cb3;
+    @FXML private ChoiceBox<Integer> functions_cb4;
     @FXML private ChoiceBox<Integer> difficuly_cb;
     private DisplayerController displayController;
 
     private static String color;
     private static int cellCount;
     private static String action = "color";
-    private final Label arrow = new Label("PEPITO");
+    //private final Label position = new Label();
+    private final ImageView position = new ImageView();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -47,14 +52,58 @@ public class SombreroToolboxController implements Initializable {
                         node.setStyle(color);
                         break;
                     }
-                    case "arrow" : {
-                        if (selectedPane.getChildren().isEmpty())
-                            selectedPane.getChildren().add(arrow);
+                    case "up" : {
+                        if (selectedPane.getChildren().isEmpty()) {
+                            //position.setText("UP");
+                            position.setImage(new Image("file:src/contents/images/arrow.png"));
+                            position.setRotate(270);
+                            position.setFitHeight(60);
+                            position.setFitWidth(60);
+                            selectedPane.getChildren().add(position);
+                        }
                         break;
                     }
-                    case "biscuit" : {
-                        if (selectedPane.getChildren().isEmpty())
-                            selectedPane.getChildren().add(new Label("MINI-ROLL"));
+                    case "down" : {
+                        if (selectedPane.getChildren().isEmpty()) {
+                            //position.setText("DOWN");
+                            position.setImage(new Image("file:src/contents/images/arrow.png"));
+                            position.setRotate(90);
+                            position.setFitHeight(60);
+                            position.setFitWidth(60);
+                            selectedPane.getChildren().add(position);
+                        }
+                        break;
+                    }
+                    case "left" : {
+                        if (selectedPane.getChildren().isEmpty()){
+                            //position.setText("LEFT");
+                            position.setImage(new Image("file:src/contents/images/arrow.png"));
+                            position.setRotate(180);
+                            position.setFitHeight(60);
+                            position.setFitWidth(60);
+                            selectedPane.getChildren().add(position);
+                        }
+                        break;
+                    }
+                    case "right" : {
+                        if (selectedPane.getChildren().isEmpty()){
+                            //position.setText("RIGHT");
+                            position.setImage(new Image("file:src/contents/images/arrow.png"));
+                            position.setRotate(0);
+                            position.setFitHeight(60);
+                            position.setFitWidth(60);
+                            selectedPane.getChildren().add(position);
+                        }
+                        break;
+                    }
+                    case "item" : {
+                        if (selectedPane.getChildren().isEmpty()){
+                            ImageView item_iv = new ImageView("file:src/contents/images/stargold.png");
+                            item_iv.setFitHeight(60);
+                            item_iv.setFitWidth(60);
+                            selectedPane.getChildren().add(item_iv);
+                        }
+
                         break;
                     }
                     default:
@@ -63,13 +112,18 @@ public class SombreroToolboxController implements Initializable {
             });
         }
 
-        List<String> list_functions = new ArrayList<String>() ;
-        for (int i = 0; i < 7; i++) {
-            String function = "F" + (i+1);
-            list_functions.add(function);
+        List<Integer> list_functions = new ArrayList<Integer>() ;
+        for (int i = 0; i < 10; i++) {
+            list_functions.add(i+1);
         }
-        functions_cb.setItems(FXCollections.observableArrayList(list_functions));
-        functions_cb.setValue(list_functions.get(0));
+        functions_cb1.setItems(FXCollections.observableArrayList(list_functions));
+        functions_cb2.setItems(FXCollections.observableArrayList(list_functions));
+        functions_cb3.setItems(FXCollections.observableArrayList(list_functions));
+        functions_cb4.setItems(FXCollections.observableArrayList(list_functions));
+        functions_cb1.setValue(list_functions.get(0));
+        functions_cb2.setValue(list_functions.get(0));
+        functions_cb3.setValue(list_functions.get(0));
+        functions_cb4.setValue(list_functions.get(0));
 
 
         List<Integer> list_difficulty = new ArrayList<Integer>() ;
@@ -126,21 +180,19 @@ public class SombreroToolboxController implements Initializable {
         action = "color";
         setColor(BLUE);
     }
-    @FXML private void onArrowLeftClick(ActionEvent event) {
-        action = "arrow";
+    @FXML private void onArrowLeftClick(MouseEvent event) {
+        action = "left";
     }
-    @FXML private void onArrowRightClick(ActionEvent event) {
-        action = "arrow";
+    @FXML private void onArrowRightClick(MouseEvent event) {
+        action = "right";
     }
-    @FXML private void onArrowUpClick(ActionEvent event) {
-        action = "arrow";
+    @FXML private void onArrowUpClick(MouseEvent event) {
+        action = "up";
     }
-    @FXML private void onArrowDownClick(ActionEvent event) {
-        action = "arrow";
+    @FXML private void onArrowDownClick(MouseEvent event) {
+        action = "down";
     }
-    @FXML private void onBiscuitClick() {
-        action = "biscuit";
-    }
+    @FXML private void onItemClick() { action = "item"; }
 
     @FXML private void onClearClick(ActionEvent event) {
         displayController.displayConfirmation("Are you sure you want to delete all ? \nYou will not be able to return modifications...");
@@ -154,12 +206,13 @@ public class SombreroToolboxController implements Initializable {
     }
 
     @FXML private void onResolveClick() {
-
+/*
         try {
             displayController.displaySombreroTest(gridPane, functions_cb.getValue(), difficuly_cb.getValue(), cellCount);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        */
 
     }
 

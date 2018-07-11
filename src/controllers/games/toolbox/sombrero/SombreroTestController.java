@@ -1,23 +1,17 @@
 package controllers.games.toolbox.sombrero;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
-import javafx.stage.Stage;
 import models.Game;
 import services.JsonToString;
 import settings.Colors;
 
 import javax.json.Json;
 import javax.json.JsonObject;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class SombreroTestController {
 

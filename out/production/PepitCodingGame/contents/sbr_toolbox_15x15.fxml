@@ -19,7 +19,7 @@
                         <Font name="Gill Sans Ultra Bold" size="27.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onBiscuitClick" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onItemClick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/favicon.png" />
                      </image>
