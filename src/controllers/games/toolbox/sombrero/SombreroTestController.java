@@ -3,6 +3,7 @@ package controllers.games.toolbox.sombrero;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import models.Game;
 import services.JsonToString;
@@ -17,7 +18,11 @@ public class SombreroTestController {
 
     public static GridPane sombrero_test;
     public static int cell_max;
-    public static String functions;
+    public static String level_name;
+    public static int f1;
+    public static int f2;
+    public static int f3;
+    public static int f4;
     public static int level_difficulty;
 
     public static GridPane buildGrid() {
@@ -32,7 +37,7 @@ public class SombreroTestController {
         String name;
         int cell = 0;
         int difficulty;
-        String functions;
+        int f1, f2, f3, f4;
 
         for (Object aList : grid_list) {
             String[] list_objet = aList.toString().split(":");
@@ -56,8 +61,20 @@ public class SombreroTestController {
                     difficulty = Integer.valueOf(value);
                     break;
                 }
-                case "functions" : {
-                    functions = value;
+                case "f1" : {
+                    f1 = Integer.valueOf(value);
+                    break;
+                }
+                case "f2" : {
+                    f2 = Integer.valueOf(value);
+                    break;
+                }
+                case "f3" : {
+                    f3 = Integer.valueOf(value);
+                    break;
+                }
+                case "f4" : {
+                    f4 = Integer.valueOf(value);
                     break;
                 }
                 case "grid_list" : {
@@ -69,7 +86,6 @@ public class SombreroTestController {
                     String[][] cell_color = new String[cell][cell];
                     String[][] item = new String[cell][cell];
                     int cell_i = 0, cell_y = 0;
-
                     for (Object bList : cell_list) {
                         String[] o = bList.toString().split(":");
                         String k = o[0];
@@ -85,7 +101,7 @@ public class SombreroTestController {
                                 cell_color[cell_i][cell_y] = convertColor(v);
                                 break;
                             }
-                            case "item" : {
+                            case "description" : {
                                 item[cell_i][cell_y] = v;
                                 cell_y++;
                                 break;
@@ -115,7 +131,8 @@ public class SombreroTestController {
                             pane.setStyle(cell_color[i][j]);
                             if (item[i][j].equals("null")) item[i][j] = "";
                             pane.getChildren().add(new Label(item[i][j]));
-                            pane.setMinSize(50.0,50.0);
+                            if (cell == 10) pane.setMinSize(60.0,60.0);
+                            else if (cell == 15) pane.setMinSize(40.0,40.0);
                             panes[i][j] = pane;
                             board.add(panes[i][j], j, i);
                         }
@@ -153,9 +170,8 @@ public class SombreroTestController {
 
     private static JsonObject readGrid() {
 
-        int column = 0, line = 0;
+        int column = 0;
         List<Object> grid_list = new ArrayList<>();
-        String level_name = "TEST";
         String cell_color= "";
 
         for (int i = 0; i < sombrero_test.getChildren().size()-1 ; i++) {
@@ -167,44 +183,53 @@ public class SombreroTestController {
             Node node = sombrero_test.getChildren().get(i);
             Pane pane = (Pane) node.lookup("Pane");
 
-            Label item = null;
+            ImageView item = null;
+            Label description = null;
 
                 switch (pane.getStyle()) {
                     case "-fx-background-color:BLACK;" : {
                         cell_color = "BLACK";
-                        if (pane.getChildren().size() > 0)
-                            item = (Label) pane.getChildren().get(0).lookup("Label");
+                        if (pane.getChildren().size() > 0) {
+                            item = (ImageView) pane.getChildren().get(0).lookup("ImageView");
+                            description = (Label) pane.getChildren().get(1).lookup("Label");
+                        }
                         break;
                     }
                     case "-fx-background-color:BLUE;" : {
                         cell_color = "BLUE";
-                        if (pane.getChildren().size() > 0)
-                            item = (Label) pane.getChildren().get(0).lookup("Label");
+                        if (pane.getChildren().size() > 0) {
+                            item = (ImageView) pane.getChildren().get(0).lookup("ImageView");
+                            description = (Label) pane.getChildren().get(1).lookup("Label");
+                        }
                         break;
                     }
                     case "-fx-background-color:RED;" : {
                         cell_color = "RED";
-                        if (pane.getChildren().size() > 0)
-                            item = (Label) pane.getChildren().get(0).lookup("Label");
+                        if (pane.getChildren().size() > 0) {
+                            item = (ImageView) pane.getChildren().get(0).lookup("ImageView");
+                            description = (Label) pane.getChildren().get(1).lookup("Label");
+                        }
                         break;
                     }
                     case "-fx-background-color:GREEN;" : {
                         cell_color = "GREEN";
-                        if (pane.getChildren().size() > 0)
-                            item = (Label) pane.getChildren().get(0).lookup("Label");
+                        if (pane.getChildren().size() > 0) {
+                            item = (ImageView) pane.getChildren().get(0).lookup("ImageView");
+                            description = (Label) pane.getChildren().get(1).lookup("Label");
+                        }
                         break;
                     }
                     default: {
                         break;
                     }
                 }
-                if (item == null){ item = new Label("null"); }
-                JsonObject cell_params = Json.createObjectBuilder().add("color", cell_color).add("item", item.getText()).build();
+                if (description == null){ description = new Label("null"); }
+                JsonObject cell_params = Json.createObjectBuilder().add("color", cell_color).add("description", description.getText()).build();
                 grid_list.add(cell_params);
         }
 
         return Json.createObjectBuilder().add("id_game", Game.GAME_ID)
                 .add("name", level_name).add("cell", cell_max).add("difficulty", level_difficulty)
-                .add("functions", functions).add("grid_list", String.valueOf(grid_list)).build();
+                .add("f1", f1).add("f2", f2).add("f3", f3).add("f4", f4).add("grid_list", String.valueOf(grid_list)).build();
     }
 }

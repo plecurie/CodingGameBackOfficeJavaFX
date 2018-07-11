@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
@@ -7,64 +11,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroToolboxController">
    <children>
-      <HBox layoutX="873.0" layoutY="271.0" maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0" AnchorPane.bottomAnchor="209.0" AnchorPane.leftAnchor="873.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="271.0">
-         <children>
-            <VBox maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0">
-               <children>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBlueClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue;" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowLeftClick" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="V">
-                     <font>
-                        <Font name="Gill Sans Ultra Bold" size="27.0" />
-                     </font>
-                  </Button>
-                  <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onItemClick" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/favicon.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="120.0" prefWidth="60.0">
-               <children>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGreenClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: green;" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowUpClick" prefHeight="60.0" prefWidth="60.0" rotate="180.0" text="V">
-                     <font>
-                        <Font name="Gill Sans Ultra Bold" size="27.0" />
-                     </font>
-                  </Button>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowDownClick" prefHeight="60.0" prefWidth="60.0" text="V">
-                     <font>
-                        <Font name="Gill Sans Ultra Bold" size="27.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="120.0" prefWidth="82.0">
-               <children>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRedClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: red;" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onArrowRightClick" prefHeight="60.0" prefWidth="60.0" rotate="270.0" text="V">
-                     <font>
-                        <Font name="Gill Sans Ultra Bold" size="27.0" />
-                     </font>
-                  </Button>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onVoidClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: black;" />
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-      <Label layoutX="913.0" layoutY="138.0" text="Functions Limit :" AnchorPane.bottomAnchor="505.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="138.0" />
-      <ChoiceBox fx:id="functions_cb" layoutX="913.0" layoutY="157.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="473.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="157.0" />
-      <Button layoutX="880.0" layoutY="46.0" mnemonicParsing="false" onAction="#onTenToTen" prefHeight="60.0" prefWidth="84.0" text="10x10" AnchorPane.bottomAnchor="554.0" AnchorPane.leftAnchor="880.0" AnchorPane.rightAnchor="116.0" AnchorPane.topAnchor="46.0" />
-      <Button layoutX="958.0" layoutY="46.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="84.0" text="15x15" AnchorPane.bottomAnchor="554.0" AnchorPane.leftAnchor="958.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="46.0">
+      <Button layoutX="880.0" layoutY="46.0" mnemonicParsing="false" onAction="#onTenToTen" prefHeight="60.0" prefWidth="84.0" text="10x10" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="895.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="30.0" />
+      <Button layoutX="958.0" layoutY="46.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="84.0" text="15x15" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="973.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="30.0">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Button cancelButton="true" layoutX="908.0" layoutY="599.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="40.0" prefWidth="110.0" text="Quit" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="908.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="599.0" />
-      <Button layoutX="909.0" layoutY="535.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="40.0" prefWidth="110.0" text="Delete All" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="909.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="535.0" />
-      <Button defaultButton="true" layoutX="908.0" layoutY="475.0" mnemonicParsing="false" onAction="#onResolveClick" prefHeight="60.0" prefWidth="110.0" text="TEST IT !" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="908.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="475.0">
+      <Button cancelButton="true" layoutX="908.0" layoutY="599.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="40.0" prefWidth="110.0" text="Quit" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="938.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="596.0" />
+      <Button layoutX="909.0" layoutY="535.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="40.0" prefWidth="110.0" text="Clear All" textAlignment="CENTER" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="939.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="532.0" />
+      <Button defaultButton="true" layoutX="908.0" layoutY="475.0" mnemonicParsing="false" onAction="#onResolveClick" prefHeight="60.0" prefWidth="110.0" text="TEST IT !" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="938.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="472.0">
          <effect>
             <DropShadow />
          </effect>
@@ -332,7 +290,50 @@
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="14" GridPane.rowIndex="14" />
          </children>
       </GridPane>
-      <ChoiceBox fx:id="difficuly_cb" layoutX="913.0" layoutY="215.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="215.0" />
-      <Label layoutX="913.0" layoutY="198.0" text="Difficulty :" AnchorPane.bottomAnchor="445.0" AnchorPane.leftAnchor="913.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="198.0" />
+      <ChoiceBox fx:id="difficuly_cb" layoutX="913.0" layoutY="215.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="937.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="410.0" />
+      <Label layoutX="913.0" layoutY="198.0" text="Difficulty :" AnchorPane.bottomAnchor="261.0" AnchorPane.leftAnchor="934.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="369.0" />
+      <VBox alignment="BOTTOM_LEFT" layoutX="838.0" layoutY="118.0" prefHeight="542.0" prefWidth="60.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="838.0" AnchorPane.rightAnchor="182.0" AnchorPane.topAnchor="113.0">
+         <children>
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBlueClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue;" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGreenClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: green;" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRedClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: red;" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onVoidClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: black;" />
+            <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onItemClick" pickOnBounds="true">
+               <image>
+                  <Image url="@images/stargold.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onArrowUpClick" pickOnBounds="true" rotate="270.0">
+               <image>
+                  <Image url="@images/arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onArrowDownClick" pickOnBounds="true" rotate="90.0">
+               <image>
+                  <Image url="@images/arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onArrowLeftClick" pickOnBounds="true" rotate="180.0">
+               <image>
+                  <Image url="@images/arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#onArrowRightClick" pickOnBounds="true">
+               <image>
+                  <Image url="@images/arrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <ChoiceBox fx:id="f1" layoutX="998.0" layoutY="220.0" prefHeight="39.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="f2" layoutX="999.0" layoutY="263.0" prefHeight="39.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="f3" layoutX="999.0" layoutY="306.0" prefHeight="39.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="f4" layoutX="998.0" layoutY="176.0" prefHeight="39.0" prefWidth="60.0" />
+      <Label layoutX="934.0" layoutY="181.0" prefHeight="30.0" prefWidth="31.0" text="F1 :" AnchorPane.bottomAnchor="449.0" AnchorPane.leftAnchor="934.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="181.0" />
+      <Label layoutX="934.0" layoutY="225.0" prefHeight="30.0" prefWidth="31.0" text="F2 :" />
+      <Label layoutX="934.0" layoutY="268.0" prefHeight="30.0" prefWidth="31.0" text="F3 :" />
+      <Label layoutX="934.0" layoutY="311.0" prefHeight="30.0" prefWidth="31.0" text="F4 :" />
+      <Label layoutX="934.0" layoutY="100.0" text="Level Name :" />
+      <TextField fx:id="level_name" layoutX="935.0" layoutY="127.0" prefHeight="39.0" prefWidth="123.0" />
    </children>
 </AnchorPane>
