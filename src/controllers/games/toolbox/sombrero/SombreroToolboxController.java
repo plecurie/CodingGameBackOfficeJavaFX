@@ -115,8 +115,8 @@ public class SombreroToolboxController implements Initializable {
         }
 
         List<Integer> list_functions = new ArrayList<Integer>() ;
-        for (int i = 0; i < 10; i++) {
-            list_functions.add(i+1);
+        for (int i = 0; i < 11; i++) {
+            list_functions.add(i);
         }
         f1.setItems(FXCollections.observableArrayList(list_functions));
         f2.setItems(FXCollections.observableArrayList(list_functions));
