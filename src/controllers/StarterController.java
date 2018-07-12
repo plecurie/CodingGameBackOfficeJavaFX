@@ -44,8 +44,7 @@ public class StarterController {
         }
     }
 
-    @FXML
-    protected void onValidButton(ActionEvent actionEvent) {
+    @FXML protected void onValidButton(ActionEvent actionEvent) {
 
         String username = textField.getText();
         String password = passwordField.getText();

@@ -107,7 +107,6 @@ public class SombreroToolboxController implements Initializable {
                             item_iv.setFitHeight(30);
                             item_iv.setFitWidth(30);
                             item_iv.relocate(selectedPane.getWidth()/2-15,selectedPane.getHeight()/2-15);
-                            item_iv.setUserData("star");
                             selectedPane.getChildren().add(0, item_iv);
                             selectedPane.getChildren().add(1, description_it);
                         }

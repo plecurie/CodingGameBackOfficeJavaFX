@@ -4,8 +4,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import models.Game;
 import services.JsonToString;
 import settings.Colors;
@@ -29,15 +33,21 @@ public class SombreroTestController implements Initializable {
     public static int level_difficulty;
 
     private static int ID_GAME;
+    private static int DIFFICULTY;
     private static int CELL;
     private static String NAME;
     private static int F1;
     private static int F2;
     private static int F3;
     private static int F4;
-    private static int DIFFICULTY;
+    private static String ACTION;
+    private static String COLOR;
 
     @FXML private Label level_label;
+    @FXML private Label f1_label;
+    @FXML private Label f2_label;
+    @FXML private Label f3_label;
+    @FXML private Label f4_label;
     @FXML private GridPane gridPane_f1;
     @FXML private GridPane gridPane_f2;
     @FXML private GridPane gridPane_f3;
@@ -45,41 +55,41 @@ public class SombreroTestController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        level_label.setText(NAME);
+        level_label.setText("TESTING: " + NAME);
+        COLOR = Colors.LIGHTGREY;
+        ACTION = "";
 
+        fillCommandGrid();
+    }
+
+    private void fillCommandGrid() {
         gridPane_f1.getChildren().clear();
         for (int i = 0; i < F1; i++) {
-            Pane pane = buildCommandPane();
+            Pane pane = createCommandPane(i);
             gridPane_f1.addColumn(i, pane);
+            f1_label.setText("F1");
         }
-        System.out.println(gridPane_f1.isGridLinesVisible());
 
         gridPane_f2.getChildren().clear();
         for (int i = 0; i < F2; i++) {
-            Pane pane = buildCommandPane();
+            Pane pane = createCommandPane(i);
             gridPane_f2.addColumn(i, pane);
+            f2_label.setText("F2");
         }
 
         gridPane_f3.getChildren().clear();
         for (int i = 0; i < F3; i++) {
-            Pane pane = buildCommandPane();
+            Pane pane = createCommandPane(i);
             gridPane_f3.addColumn(i, pane);
+            f3_label.setText("F3");
         }
 
         gridPane_f4.getChildren().clear();
         for (int i = 0; i < F4; i++) {
-            Pane pane = buildCommandPane();
+            Pane pane = createCommandPane(i);
             gridPane_f4.addColumn(i, pane);
+            f4_label.setText("F4");
         }
-    }
-
-    private Pane buildCommandPane() {
-        Pane pane = new Pane();
-        pane.setPrefSize(48.0,48.0);
-        pane.setStyle(Colors.LIGHTGREY);
-        pane.setBorder((new Border(new BorderStroke(Color.BLACK,
-                BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT))));
-        return pane;
     }
 
     public static GridPane buildGrid() {
@@ -151,7 +161,7 @@ public class SombreroTestController implements Initializable {
                         }
 
                         switch (k) {
-                            case "color" : {
+                            case "COLOR" : {
                                 color_cell[cell_i][cell_y] = convertColor(v);
                                 break;
                             }
@@ -193,14 +203,124 @@ public class SombreroTestController implements Initializable {
         return board;
     }
 
-    @FXML private void onPlay() {}
+    private Pane createCommandPane(int number) {
 
-    @FXML private void onNext() {}
+        Label label = new Label(String.valueOf(number));
+        label.setTranslateX(20);
+        label.setTranslateY(10);
 
-    @FXML private void onStop() {}
+        Pane pane = new Pane();
+        pane.setPrefSize(48.0,48.0);
+        pane.setStyle(Colors.WHITESMOKE );
+        pane.getChildren().add(label);
+        pane.setBorder((new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT))));
+
+        pane.setOnMouseClicked(this::putCommand);
+
+        return pane;
+    }
+
+    @FXML private void onPlay() {
+        System.out.println("play");
+    }
+
+    @FXML private void onNext() {
+        System.out.println("next");
+    }
+
+    @FXML private void onStop() {
+        System.out.println("stop");
+    }
+
+    @FXML private void onChooseUp(MouseEvent event){
+        ImageView iv = (ImageView) event.getSource();
+        COLOR = iv.getParent().getStyle();
+        ACTION = "up";
+    }
+
+    @FXML private void onChooseLeft(MouseEvent event){
+        ImageView iv = (ImageView) event.getSource();
+        COLOR = iv.getParent().getStyle();
+        ACTION = "left";
+    }
+
+    @FXML private void onChooseRight(MouseEvent event){
+        ImageView iv = (ImageView) event.getSource();
+        COLOR = iv.getParent().getStyle();
+        ACTION = "right";
+    }
+
+    @FXML private void onFChoose(MouseEvent event) {
+        Label lb = (Label) event.getSource();
+        COLOR = lb.getParent().getStyle();
+        ACTION = lb.getText();
+    }
+
+    @FXML private void onVoidChoose(MouseEvent event) {
+        Pane pane = (Pane) event.getSource();
+        COLOR = pane.getStyle();
+        ACTION = "";
+    }
+
+    private void putCommand(MouseEvent event) {
+        Pane pane = (Pane) event.getSource();
+        pane.getChildren().clear();
+        pane.setStyle(COLOR);
+
+        Double pane_width = pane.getWidth();
+        Double pane_height = pane.getHeight();
+
+        switch (ACTION) {
+            case "up" : {
+                pane.getChildren().add(0, buildCommandImageView("file:src/contents/images/arrow-up.png", pane_width, pane_height));
+                break;
+            }
+            case "left" : {
+                pane.getChildren().add(0, buildCommandImageView("file:src/contents/images/arrow-back.png", pane_width, pane_height));
+                break;
+            }
+            case "right" : {
+                pane.getChildren().add(0, buildCommandImageView("file:src/contents/images/arrow-next.png", pane_width, pane_height));
+                break;
+            }
+            case "F1" : {
+                pane.getChildren().add(buildCommandLabel());
+                break;
+            }
+            case "F2" : {
+                pane.getChildren().add(buildCommandLabel());
+                break;
+            }
+            case "F3" : {
+                pane.getChildren().add(buildCommandLabel());
+                break;
+            }
+            case "F4" : {
+                pane.getChildren().add(buildCommandLabel());
+                break;
+            }
+            default:
+                break;
+        }
+    }
+
+    private Label buildCommandLabel() {
+        Label label = new Label(ACTION);
+        label.setTranslateX(18);
+        label.setTranslateY(10);
+        label.setFont(Font.font(null, FontWeight.BOLD, label.getFont().getSize()));
+        return label;
+    }
+
+    private ImageView buildCommandImageView(String url, Double parent_width, Double parent_height) {
+        ImageView imageView = new ImageView(url);
+        imageView.setFitHeight(30);
+        imageView.setFitWidth(30);
+        imageView.relocate(parent_width/2-15,parent_height/2-15);
+        return imageView;
+    }
 
     private static String convertColor(String cell_color){
-
         String str_color = "";
 
         if (cell_color.equals("BLACK")) str_color = Colors.BLACK;
@@ -226,23 +346,23 @@ public class SombreroTestController implements Initializable {
             Label description = null;
 
                 switch (pane.getStyle()) {
-                    case "-fx-background-color:BLACK;" : {
+                    case Colors.BLACK : {
                         cell_color = "BLACK";
                         if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
 
                         break;
                     }
-                    case "-fx-background-color:BLUE;" : {
+                    case Colors.BLUE : {
                         cell_color = "BLUE";
                         if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
                         break;
                     }
-                    case "-fx-background-color:RED;" : {
+                    case Colors.RED : {
                         cell_color = "RED";
                         if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
                         break;
                     }
-                    case "-fx-background-color:LIMEGREEN;" : {
+                    case Colors.GREEN : {
                         cell_color = "GREEN";
                         if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
                         break;
@@ -251,7 +371,7 @@ public class SombreroTestController implements Initializable {
                         break;
                 }
                 if (description == null) description = new Label("null");
-                JsonObject cell_params = Json.createObjectBuilder().add("color", cell_color).add("description", description.getText()).build();
+                JsonObject cell_params = Json.createObjectBuilder().add("COLOR", cell_color).add("description", description.getText()).build();
                 grid_list.add(cell_params);
         }
 

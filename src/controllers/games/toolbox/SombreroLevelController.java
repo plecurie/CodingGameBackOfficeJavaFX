@@ -22,7 +22,6 @@ public class SombreroLevelController {
 
     @FXML private void onSaveDescription(ActionEvent actionEvent) {
         // envoi description à l'API
-        System.out.println(selected_game.getDescription());
     }
 
     @FXML private void onCreate(ActionEvent actionEvent){

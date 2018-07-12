@@ -7,5 +7,6 @@ public class Colors {
     public static final String GREEN = "-fx-background-color:LIMEGREEN;";
     public static final String BLUE = "-fx-background-color:BLUE;";
     public static final String LIGHTGREY = "-fx-background-color:LIGHTGREY;";
+    public static final String WHITESMOKE = "-fx-background-color:WHITESMOKE;";
 
 }

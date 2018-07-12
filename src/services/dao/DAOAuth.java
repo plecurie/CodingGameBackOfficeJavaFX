@@ -12,6 +12,7 @@ public class DAOAuth {
         JsonObject parameters = Json.createObjectBuilder().add("username", username)
                 .add("password", password).build();
 
+
         HttpRequest http = new HttpRequest();
         String token = http.getToken(parameters,"/auth/signin");
 
