@@ -1,5 +1,8 @@
 package services.dao;
 
+import javax.json.Json;
+import javax.json.JsonObject;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DAOLevel {
@@ -31,5 +34,20 @@ public class DAOLevel {
         if (list != null) created = true;
 */
         return created;
+    }
+
+
+    public List createLevelQuizz(String question, ArrayList<String> responses, String correctAnswer){
+        HttpRequest httpRequest = null;
+        JsonObject parameters = Json.createObjectBuilder().add("question", question)
+                .add("reponse1", responses.get(0))
+                .add("reponse2", responses.get(1))
+                .add("reponse3", responses.get(2))
+                .add("reponse4", responses.get(3))
+                .add("correct_answer", correctAnswer)
+                .build();
+
+
+        return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 }
