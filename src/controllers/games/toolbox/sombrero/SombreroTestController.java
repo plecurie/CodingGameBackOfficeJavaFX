@@ -183,12 +183,41 @@ public class SombreroTestController implements Initializable {
                             if (item_cell[i][j].equals("null")){
                                 item_cell[i][j] = "";
                             }
-                            pane.getChildren().add(new Label(item_cell[i][j]));
 
                             if (CELL == 10){
                                 pane.setMinSize(60.0,60.0);
                             } else if (CELL == 15){
                                 pane.setMinSize(40.0,40.0);
+                            }
+
+                            switch (item_cell[i][j]) {
+                                case "up" : {
+                                    pane.getChildren().add(setArrowPosition(270));
+                                    break;
+                                }
+                                case "down" : {
+                                    pane.getChildren().add(setArrowPosition(90));
+                                    break;
+                                }
+                                case "left" : {
+                                    pane.getChildren().add(setArrowPosition(180));
+                                    break;
+                                }
+                                case "right" : {
+                                    pane.getChildren().add(setArrowPosition(0));
+                                    break;
+                                }
+                                case "item" : {
+                                    ImageView imageView = new ImageView("file:src/contents/images/stargold.png");
+                                    imageView.setFitHeight(30);
+                                    imageView.setFitWidth(30);
+                                    imageView.setLayoutX(15);
+                                    imageView.setLayoutY(15);
+                                    pane.getChildren().add(imageView);
+                                    break;
+                                }
+                                default:
+                                    break;
                             }
                             board.add(pane, j, i);
                         }
@@ -201,6 +230,16 @@ public class SombreroTestController implements Initializable {
         board.setVisible(true);
 
         return board;
+    }
+
+    private static ImageView setArrowPosition(int rotate) {
+        ImageView imageView = new ImageView("file:src/contents/images/arrow.png");
+        imageView.setRotate(rotate);
+        imageView.setFitHeight(30);
+        imageView.setFitWidth(30);
+        imageView.setLayoutX(15);
+        imageView.setLayoutY(15);
+        return imageView;
     }
 
     private Pane createCommandPane(int number) {
@@ -349,7 +388,6 @@ public class SombreroTestController implements Initializable {
                     case Colors.BLACK : {
                         cell_color = "BLACK";
                         if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
-
                         break;
                     }
                     case Colors.BLUE : {
