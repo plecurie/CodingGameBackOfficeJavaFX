@@ -170,7 +170,7 @@ public class DisplayerController implements Initializable {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
 
-        SombreroTestController.sombrero_test = sombrero_to_test;
+        SombreroTestController.sombrero_to_parse = sombrero_to_test;
         SombreroTestController.level_name = level_name;
         SombreroTestController.f1 = f1;
         SombreroTestController.f2 = f2;

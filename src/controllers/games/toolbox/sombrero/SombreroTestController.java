@@ -1,5 +1,6 @@
 package controllers.games.toolbox.sombrero;
 
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -10,6 +11,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.util.Duration;
 import models.Game;
 import services.JsonToString;
 import settings.Colors;
@@ -23,7 +25,7 @@ import java.util.ResourceBundle;
 
 public class SombreroTestController implements Initializable {
 
-    public static GridPane sombrero_test;
+    public static GridPane sombrero_to_parse;
     public static int cell_max;
     public static String level_name;
     public static int f1;
@@ -40,8 +42,10 @@ public class SombreroTestController implements Initializable {
     private static int F2;
     private static int F3;
     private static int F4;
+    private static GridPane sombrero_to_test;
     private static String ACTION;
     private static String COLOR;
+    private static ImageView player_iv;
 
     @FXML private Label level_label;
     @FXML private Label f1_label;
@@ -192,19 +196,23 @@ public class SombreroTestController implements Initializable {
 
                             switch (item_cell[i][j]) {
                                 case "up" : {
-                                    pane.getChildren().add(setArrowPosition(270));
+                                    player_iv = setArrowPosition(270);
+                                    pane.getChildren().add(player_iv);
                                     break;
                                 }
                                 case "down" : {
-                                    pane.getChildren().add(setArrowPosition(90));
+                                    player_iv = setArrowPosition(90);
+                                    pane.getChildren().add(player_iv);
                                     break;
                                 }
                                 case "left" : {
-                                    pane.getChildren().add(setArrowPosition(180));
+                                    player_iv = setArrowPosition(180);
+                                    pane.getChildren().add(player_iv);
                                     break;
                                 }
                                 case "right" : {
-                                    pane.getChildren().add(setArrowPosition(0));
+                                    player_iv = setArrowPosition(0);
+                                    pane.getChildren().add(player_iv);
                                     break;
                                 }
                                 case "item" : {
@@ -228,6 +236,7 @@ public class SombreroTestController implements Initializable {
         }
         board.setGridLinesVisible(true);
         board.setVisible(true);
+        sombrero_to_test = board;
 
         return board;
     }
@@ -259,8 +268,14 @@ public class SombreroTestController implements Initializable {
         return pane;
     }
 
-    @FXML private void onPlay() {
-        System.out.println("play");
+    @FXML private void onPlay(MouseEvent event) {
+        final TranslateTransition translateTranstion = new TranslateTransition(Duration.millis(300), player_iv);
+        translateTranstion.setToY(player_iv.getY()-30);
+        translateTranstion.play();
+
+        player_iv.setY(player_iv.getY() -30);
+        sombrero_to_test.
+
     }
 
     @FXML private void onNext() {
@@ -376,11 +391,11 @@ public class SombreroTestController implements Initializable {
         List<Object> grid_list = new ArrayList<>();
         String cell_color= "";
 
-        for (int i = 0; i < sombrero_test.getChildren().size()-1 ; i++) {
+        for (int i = 0; i < sombrero_to_parse.getChildren().size()-1 ; i++) {
             if (column == cell_max) column = 0;
             column++;
 
-            Node node = sombrero_test.getChildren().get(i);
+            Node node = sombrero_to_parse.getChildren().get(i);
             Pane pane = (Pane) node.lookup("Pane");
             Label description = null;
 
