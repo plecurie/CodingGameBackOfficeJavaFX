@@ -2,7 +2,8 @@ package controllers;
 
 import controllers.games.GamesController;
 import controllers.games.toolbox.SombreroLevelController;
-import controllers.games.toolbox.sombrero.SombreroTestController;
+import controllers.games.toolbox.sombrero.Sombrero;
+import controllers.games.toolbox.sombrero.SombreroFactory;
 import controllers.games.toolbox.sombrero.SombreroToolboxController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -166,20 +167,13 @@ public class DisplayerController implements Initializable {
         main.getChildren().add(sceneRoot);
     }
 
-    public void displaySombreroTest(GridPane sombrero_to_test, String level_name, Integer f1, Integer f2, Integer f3, Integer f4, Integer difficulty, int cellCount) throws IOException {
+    public void displaySombreroTest(Sombrero sombrero) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
 
-        SombreroTestController.sombrero_to_parse = sombrero_to_test;
-        SombreroTestController.level_name = level_name;
-        SombreroTestController.f1 = f1;
-        SombreroTestController.f2 = f2;
-        SombreroTestController.f3 = f3;
-        SombreroTestController.f4 = f4;
-        SombreroTestController.level_difficulty = difficulty;
-        SombreroTestController.cell_max = cellCount;
+        SombreroFactory.sombrero_to_break = sombrero;
 
-        GridPane sombrero_test = SombreroTestController.buildGrid();
+        GridPane sombrero_test = SombreroFactory.buildSombrero();
         sombrero_test.setMaxSize(600,600);
 
         BorderPane borderPane = loader.load();

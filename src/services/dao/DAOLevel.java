@@ -1,5 +1,11 @@
 package services.dao;
 
+import controllers.games.toolbox.sombrero.SombreroToolboxController;
+import models.Game;
+
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
 import java.util.List;
 
 public class DAOLevel {
@@ -8,28 +14,40 @@ public class DAOLevel {
         return null;
     }
 
-    public Boolean createLevel(int id_game, String name, int difficulty, String functions, List grid_list ) {
+    public Boolean createLevel(int id_game, String name, int difficulty ) {
         boolean created = false;
-/*        int i = 0;
+        JsonObject parameters = null;
 
-
-        JsonObject parameters = (JsonObject) Json.createObjectBuilder().add("id_game", id_game)
-                .add("name", name).add("difficulty", difficulty)
-                .add("functions", functions);
-
-        for (Object cell_txt : grid_list) {
-            ((JsonObjectBuilder) parameters).add("c"+i, String.valueOf(cell_txt));
-            i++;
+        switch (id_game) {
+            case 1 : {
+                parameters = Json.createObjectBuilder().add("id_game", id_game)
+                        .add("name", name).add("difficulty", difficulty).build();
+                break;
+            }
+            case 2 : {
+                parameters = Json.createObjectBuilder().add("id_game", id_game)
+                        .add("name", name).add("difficulty", difficulty).build();
+                break;
+            }
+            case 3 : {
+                parameters = Json.createObjectBuilder().add("id_game", id_game)
+                        .add("name", name).add("difficulty", difficulty).build();
+                break;
+            }
+            case 4 : {
+                parameters = Json.createObjectBuilder().add("id_game", id_game)
+                        .add("name", name).add("difficulty", difficulty).build();
+                break;
+            }
+            default:
+                break;
         }
-
-        ((JsonObjectBuilder) parameters).build();
-
 
         HttpRequest http = new HttpRequest();
         List list = http.sendPostRequest(parameters,"/levels/create/");
 
         if (list != null) created = true;
-*/
+
         return created;
     }
 }
