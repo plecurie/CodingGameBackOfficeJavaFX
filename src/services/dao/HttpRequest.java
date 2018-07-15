@@ -76,6 +76,7 @@ class HttpRequest {
 
     List sendPostRequest(JsonObject params, String route) {
         List response = new ArrayList();
+        System.out.print(params);
 
         try {
             URL server = new URL(ApiConstant.HOST + route);

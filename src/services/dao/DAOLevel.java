@@ -37,17 +37,20 @@ public class DAOLevel {
     }
 
 
-    public List createLevelQuizz(String question, ArrayList<String> responses, String correctAnswer){
-        HttpRequest httpRequest = null;
+    public Boolean createLevelQuizz(String question, ArrayList<String> responses, String correctAnswer){
+        HttpRequest httpRequest = new HttpRequest();
         JsonObject parameters = Json.createObjectBuilder().add("question", question)
-                .add("reponse1", responses.get(0))
-                .add("reponse2", responses.get(1))
-                .add("reponse3", responses.get(2))
-                .add("reponse4", responses.get(3))
+                .add("answer1", responses.get(0))
+                .add("answer2", responses.get(1))
+                .add("answer3", responses.get(2))
+                .add("answer4", responses.get(3))
                 .add("correct_answer", correctAnswer)
+                .add("evaluate_lvl_player", 1)
+                .add("difficulty", 1)
                 .build();
 
-
-        return httpRequest.sendPostRequest(parameters, "/level_quizz");
+        httpRequest.sendPostRequest(parameters, "/levels/createQuestionsQuiz/");
+        return true;
+        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 }

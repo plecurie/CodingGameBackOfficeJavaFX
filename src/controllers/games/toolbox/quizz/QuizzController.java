@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import services.dao.DAOAuth;
 import services.dao.DAOLevel;
 
 import java.io.Console;
@@ -25,6 +26,8 @@ public class QuizzController implements Initializable{
     @FXML private ChoiceBox<Integer> cb_correct_answer;
     @FXML private Button btn_valid_create_question;
     @FXML private TextField edt_question;
+
+    private DAOLevel daoLevel = new DAOLevel();
 
 
 
@@ -61,7 +64,6 @@ public class QuizzController implements Initializable{
         }
 
 
-        DAOLevel daoLevel = null;
         daoLevel.createLevelQuizz(edt_question.getText(), responses, correctAnswer);
 
     }
