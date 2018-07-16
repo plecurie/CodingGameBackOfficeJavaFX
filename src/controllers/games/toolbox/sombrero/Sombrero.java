@@ -8,8 +8,8 @@ public class Sombrero {
     private static String name;
     private static int f1, f2, f3, f4, difficulty, cellCount;
 
-    private static final double ITEM_DEFAULT_HEIGHT = 30;
-    private static final double ITEM_DEFAULT_WIDTH = 30;
+    private static final double INNER_ITEM_DEFAULT_HEIGHT = 30;
+    private static final double INNER_ITEM_DEFAULT_WIDTH = 30;
 
     public Sombrero(GridPane sombrero_gridpane, String name, int f1, int f2, int f3, int f4, int difficulty, int cellCount) {
         setGridpane(sombrero_gridpane);
@@ -39,6 +39,6 @@ public class Sombrero {
     int getF4() { return f4; }
     int getDifficulty() { return difficulty; }
     int getCellCount() { return cellCount; }
-    static double getITEM_DEFAULT_HEIGHT() { return ITEM_DEFAULT_HEIGHT; }
-    static double getITEM_DEFAULT_WIDTH() { return ITEM_DEFAULT_WIDTH; }
+    static double getINNER_ITEM_DEFAULT_HEIGHT() { return INNER_ITEM_DEFAULT_HEIGHT; }
+    static double getINNER_ITEM_DEFAULT_WIDTH() { return INNER_ITEM_DEFAULT_WIDTH; }
 }

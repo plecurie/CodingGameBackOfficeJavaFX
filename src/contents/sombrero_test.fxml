@@ -20,7 +20,7 @@
                      </font></Label>
                   <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                      <children>
-                        <GridPane fx:id="gridPane_f1" gridLinesVisible="true">
+                        <GridPane fx:id="f1_gridpane" gridLinesVisible="true">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="48.0" />
                           </columnConstraints>
@@ -41,7 +41,7 @@
                      </font></Label>
                   <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                      <children>
-                        <GridPane fx:id="gridPane_f2" gridLinesVisible="true">
+                        <GridPane fx:id="f2_gridpane" gridLinesVisible="true">
                            <children>
                               <Pane maxWidth="48.0" minWidth="48.0" prefHeight="200.0" prefWidth="48.0">
                                  <children>
@@ -63,7 +63,7 @@
                      </font></Label>
                   <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                      <children>
-                        <GridPane fx:id="gridPane_f3" gridLinesVisible="true">
+                        <GridPane fx:id="f3_gridpane" gridLinesVisible="true">
                            <children>
                               <Pane maxWidth="48.0" minWidth="48.0" prefHeight="200.0" prefWidth="48.0">
                                  <children>
@@ -85,7 +85,7 @@
                      </font></Label>
                   <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                      <children>
-                        <GridPane fx:id="gridPane_f4" gridLinesVisible="true">
+                        <GridPane fx:id="f4_gridpane" gridLinesVisible="true">
                            <children>
                               <Pane maxWidth="48.0" minWidth="48.0" prefHeight="200.0" prefWidth="48.0">
                                  <children>

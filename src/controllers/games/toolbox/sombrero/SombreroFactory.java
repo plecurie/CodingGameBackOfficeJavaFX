@@ -251,8 +251,6 @@ public class SombreroFactory {
     static int getF4() {
         return F4;
     }
-    static ImageView getArrow() {
-        return arrow;
-    }
+    static ImageView getArrow() { return arrow; }
 
 }
