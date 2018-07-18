@@ -4,6 +4,7 @@ import controllers.games.GamesController;
 import controllers.games.toolbox.SombreroLevelController;
 import controllers.games.toolbox.sombrero.Sombrero;
 import controllers.games.toolbox.sombrero.SombreroFactory;
+import controllers.games.toolbox.sombrero.SombreroTestController;
 import controllers.games.toolbox.sombrero.SombreroToolboxController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -171,14 +172,15 @@ public class DisplayerController implements Initializable {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
 
-        SombreroFactory.sombrero_to_break = sombrero;
-
-        GridPane sombrero_test = SombreroFactory.buildSombrero();
+        GridPane sombrero_test = SombreroFactory.buildTestSombrero(sombrero);
         sombrero_test.setMaxSize(600,600);
 
         BorderPane borderPane = loader.load();
         borderPane.setLeft(sombrero_test);
         borderPane.setStyle("-fx-background-color: moccasin ");
+
+        SombreroTestController testController = loader.getController();
+        testController.linkDisplayer(this);
 
         main.getChildren().clear();
         main.getChildren().add(borderPane);
@@ -250,7 +252,7 @@ public class DisplayerController implements Initializable {
         }
     }
 
-    public BorderPane displayExplorer() throws IOException {
+    private BorderPane displayExplorer() throws IOException {
         String resource_name = "../contents/explorer_toolbox.fxml";
 
         BorderPane sceneRoot = new BorderPane();
@@ -262,7 +264,7 @@ public class DisplayerController implements Initializable {
         return sceneRoot;
     }
 
-    public BorderPane displaySombrero(int cell) throws IOException {
+    private BorderPane displaySombrero(int cell) throws IOException {
         String resource_name = "../contents/sbr_toolbox_" + cell + "x" + cell + ".fxml";
 
         BorderPane sceneRoot = new BorderPane();
@@ -278,7 +280,7 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    public BorderPane displayQuizz() throws IOException {
+    private BorderPane displayQuizz() throws IOException {
         String resource_name = "../contents/quizz_toolbox.fxml";
 
         BorderPane sceneRoot = new BorderPane();
@@ -296,6 +298,14 @@ public class DisplayerController implements Initializable {
         alert.setTitle("Pepit'CodingGame - Error");
         alert.setHeaderText(null);
         alert.setContentText(error_message);
+        alert.showAndWait();
+    }
+
+    public void displayInformation(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Pepit'CodingGame - Message");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
         alert.showAndWait();
     }
 
@@ -321,13 +331,7 @@ public class DisplayerController implements Initializable {
             stage.setScene(scene);
             setStage(stage);
             stage.show();
-
-            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                @Override
-                public void handle(WindowEvent event) {
-                    onDisconnect(new ActionEvent());
-                }
-            });
+            stage.setOnCloseRequest(event -> onDisconnect(new ActionEvent()));
         } catch (IOException e) {
             e.printStackTrace();
         }

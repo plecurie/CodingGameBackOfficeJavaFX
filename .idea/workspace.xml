@@ -5,38 +5,47 @@
       <artifact name="PepitCodingGame-JavaApp:jar" />
     </artifacts-to-build>
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java" line="17" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/AnimationTimerExt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contents/selected_level.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_levels.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_levels.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_test.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/StarterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/StarterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/SombreroLevelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/SombreroLevelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/AnimationTimerExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/Sombrero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/Sombrero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroTestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroTestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroToolboxController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroToolboxController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/authentification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/authentification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/displayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/displayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/error.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/error.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/explorer_toolbox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/explorer_toolbox.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/games.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/games.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/gaming_settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/gaming_settings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/pepithack.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/pepithack.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/preferences.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/preferences.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/quizz_toolbox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/quizz_toolbox.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/selected_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/selected_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOLevel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/HttpRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/HttpRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/Colors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/Colors.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contents/sombrero_test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/sombrero_test.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/users.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DisplayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DisplayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StarterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StarterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/AnimationTimerExt.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/users/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/dao/DAOLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dao/DAOLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/dao/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dao/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/Colors.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,37 +163,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="DAOLevel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/dao/DAOLevel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="68" column="95" selection-start-line="68" selection-start-column="95" selection-end-line="68" selection-end-column="95" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SombreroTestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="61" column="15" lean-forward="true" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SombreroFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SombreroToolboxController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+              <folding>
+                <element signature="e#10785#10786#0" expanded="true" />
+                <element signature="e#10845#10846#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DisplayerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="294" selection-start-line="294" selection-end-line="294" />
+            <state relative-caret-position="181">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SombreroTestController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1879">
-              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2860#2861#0" expanded="true" />
-                <element signature="e#2894#2895#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SombreroToolboxController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="163" column="46" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -192,17 +227,29 @@
       <file leaf-file-name="Sombrero.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+            <state relative-caret-position="41">
+              <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/users/UsersController.java">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-268">
-              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+            <state relative-caret-position="119">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SombreroLevelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,43 +259,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>choice</find>
-      <find>yst</find>
-      <find>image</find>
-      <find>hbox</find>
-      <find>def</find>
-      <find>onval</find>
-      <find>system.ou</find>
-      <find>f3</find>
-      <find>main</find>
-      <find>choic</find>
-      <find>imageview</find>
-      <find>play</find>
-      <find>sy</find>
-      <find>setarr</find>
-      <find>onpla</find>
-      <find>imagevie</find>
-      <find>f1</find>
-      <find>system.out</find>
-      <find>item_default</find>
-      <find>getf1</find>
-      <find>void</find>
-      <find>move</find>
-      <find>SombreroFactory.geta</find>
-      <find>tool</find>
-      <find>arrow</find>
-      <find>toSeconds</find>
-      <find>showan</find>
       <find>showand</find>
       <find>observ</find>
+      <find>drop</find>
+      <find>-fx-background-color: lightgrey;</find>
+      <find>-fx-background-color: RED;</find>
+      <find>-fx-background-color: BLUE;</find>
+      <find>arrow</find>
+      <find>light</find>
+      <find>limegreen</find>
+      <find>LIMEGREE</find>
+      <find>-fx-background-color:</find>
       <find>syste</find>
+      <find>displayer</find>
+      <find>name</find>
+      <find>display</find>
+      <find>cance</find>
+      <find>displayController</find>
+      <find>cancel</find>
+      <find>test</find>
+      <find>link</find>
+      <find>canc</find>
+      <find>onsele</find>
+      <find>table</find>
+      <find>system.</find>
+      <find>create</find>
+      <find>system.out</find>
+      <find>factory</find>
+      <find>blue</find>
+      <find>build</find>
+      <find>composeGridPane</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -624,15 +671,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/controllers/games/levels/SombreroLevelsController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/ExplorerController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java" />
         <option value="$PROJECT_DIR$/src/contents/confirmation.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/ConfirmationController.java" />
         <option value="$PROJECT_DIR$/src/controllers/AlertController.java" />
         <option value="$PROJECT_DIR$/src/dao/apirequest/Put.java" />
-        <option value="$PROJECT_DIR$/src/controllers/users/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/models/User.java" />
         <option value="$PROJECT_DIR$/src/dao/apirequest/AuthToken.java" />
         <option value="$PROJECT_DIR$/src/contents/games.fxml" />
         <option value="$PROJECT_DIR$/src/dao/apirequest/Get.java" />
@@ -646,35 +688,40 @@
         <option value="$PROJECT_DIR$/src/dao/models/DAOAuth.java" />
         <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/LevelController.java" />
         <option value="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroController.java" />
-        <option value="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/dao/DAOLevel.java" />
         <option value="$PROJECT_DIR$/src/dao/DAOUser.java" />
         <option value="$PROJECT_DIR$/src/dao/DAOAuth.java" />
         <option value="$PROJECT_DIR$/src/services/HttpRequest.java" />
-        <option value="$PROJECT_DIR$/src/services/dao/HttpRequest.java" />
-        <option value="$PROJECT_DIR$/src/models/Game.java" />
         <option value="$PROJECT_DIR$/src/services/dao/DAOGame.java" />
         <option value="$PROJECT_DIR$/src/services/ErrorHandler.java" />
         <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" />
         <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" />
         <option value="$PROJECT_DIR$/src/services/dao/DAOAuth.java" />
         <option value="$PROJECT_DIR$/src/services/InputStreamToJson.java" />
-        <option value="$PROJECT_DIR$/src/controllers/StarterController.java" />
         <option value="$PROJECT_DIR$/src/contents/authentification.fxml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java" />
         <option value="$PROJECT_DIR$/src/services/dao/DAOUser.java" />
-        <option value="$PROJECT_DIR$/src/contents/sombrero_test.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/games/GamesController.java" />
-        <option value="$PROJECT_DIR$/src/settings/Colors.java" />
-        <option value="$PROJECT_DIR$/src/services/dao/DAOLevel.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java" />
-        <option value="$PROJECT_DIR$/src/controllers/DisplayerController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java" />
         <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/AnimationTimerExt.java" />
+        <option value="$PROJECT_DIR$/src/settings/Colors.java" />
+        <option value="$PROJECT_DIR$/src/controllers/StarterController.java" />
+        <option value="$PROJECT_DIR$/src/contents/sombrero_test.fxml" />
+        <option value="$PROJECT_DIR$/src/contents/selected_level.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/users/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" />
+        <option value="$PROJECT_DIR$/src/models/User.java" />
+        <option value="$PROJECT_DIR$/src/models/Level.java" />
+        <option value="$PROJECT_DIR$/src/models/Game.java" />
+        <option value="$PROJECT_DIR$/src/services/dao/HttpRequest.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroItem.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/DisplayerController.java" />
         <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java" />
+        <option value="$PROJECT_DIR$/src/services/dao/DAOLevel.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java" />
       </list>
     </option>
   </component>
@@ -689,9 +736,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="949" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -705,8 +752,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -784,6 +832,12 @@
               <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -799,62 +853,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 10.0.1 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 10.0.1 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 10.0.1 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 10.0.1 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 10.0.1 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx.controls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 10.0.1 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx.controls" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pepito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 10.0.1 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx.controls" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
-              <item name="control" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1075,12 +1077,13 @@
       <workItem from="1531435171306" duration="18000" />
       <workItem from="1531484953918" duration="2629000" />
       <workItem from="1531488637561" duration="47880000" />
-      <workItem from="1531611100170" duration="45275000" />
+      <workItem from="1531611100170" duration="96821000" />
+      <workItem from="1531899058277" duration="5962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="409868000" />
+    <option name="totallyTimeSpent" value="467376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1096,40 +1099,40 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.45699832" side_tool="true" weight="0.30127043" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.45699832" side_tool="true" weight="0.30127043" />
+      <window_info anchor="right" id="Maven Projects" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49068826" weight="0.32737032" />
-      <window_info anchor="right" id="Database" order="3" weight="0.3295129" />
+      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.49068826" weight="0.32737032" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3295129" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.68178135" weight="0.39892665" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4979757" weight="0.32737032" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.48340082" weight="0.32737032" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49716598" weight="0.32737032" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5430017" weight="0.29338104" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.48340082" weight="0.32737032" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49716598" weight="0.32737032" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5430017" visible="true" weight="0.42039356" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49635628" weight="0.32737032" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.46711636" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23724696" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4923077" weight="0.32737032" />
-      <window_info anchor="right" id="Gradle" order="3" weight="0.3295129" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info anchor="bottom" id="Changes" order="8" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.3295129" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Nl-Palette" order="6" />
+      <window_info anchor="bottom" id="Changes" order="13" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="JetGradle" order="6" />
+      <window_info anchor="right" id="JetGradle" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Problems" order="10" />
-      <window_info anchor="bottom" id="Profiler" order="9" />
-      <window_info anchor="bottom" id="Application Servers" order="12" />
-      <window_info anchor="right" id="Properties" order="3" />
+      <window_info anchor="bottom" id="Problems" order="15" />
+      <window_info anchor="bottom" id="Profiler" order="14" />
+      <window_info anchor="bottom" id="Application Servers" order="16" />
+      <window_info anchor="right" id="Properties" order="8" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -1154,11 +1157,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dao/httprequest/Delete.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/httprequest/Get.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/httprequest/Post.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/httprequest/Put.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/httprequest/AuthToken.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1182,29 +1180,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contents/selected_user.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/javafx/scene/image/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="1098" selection-start-line="1098" selection-end-line="1098" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contents/sombrero_levels.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1213,14 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="199" column="97" selection-start-line="199" selection-start-column="97" selection-end-line="199" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="333" column="97" selection-start-line="333" selection-start-column="97" selection-end-line="333" selection-end-column="97" />
         </state>
       </provider>
     </entry>
@@ -1252,25 +1223,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/ErrorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/contents/authentification.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1331,94 +1288,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/Colors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/dao/DAOUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1394">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/dao/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="37" column="81" lean-forward="true" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/GamesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/dao/DAOAuth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/dao/DAOLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contents/sombrero_test.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="396" column="36" lean-forward="true" selection-start-line="396" selection-start-column="36" selection-end-line="396" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/AnimationTimerExt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="172" column="46" lean-forward="true" selection-start-line="172" selection-start-column="45" selection-end-line="172" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1436,10 +1309,190 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/AnimationTimerExt.java" />
+    <entry file="file://$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="289" column="174" selection-start-line="289" selection-start-column="153" selection-end-line="289" selection-end-column="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/Colors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="9" column="72" lean-forward="true" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/StarterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/ErrorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/users.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/selected_level.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/selected_user.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/dao/DAOUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/GamesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/sombrero_levels.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/sombrero_test.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="423" column="41" selection-start-line="423" selection-start-column="41" selection-end-line="423" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/users/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/dao/HttpRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/dao/DAOLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="68" column="95" selection-start-line="68" selection-start-column="95" selection-end-line="68" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="294" selection-start-line="294" selection-end-line="294" />
+        <state relative-caret-position="181">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="61" column="15" lean-forward="true" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1448,33 +1501,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="163" column="46" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/users/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-268">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1879">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        <state relative-caret-position="143">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2860#2861#0" expanded="true" />
-            <element signature="e#2894#2895#0" expanded="true" />
+            <element signature="e#10785#10786#0" expanded="true" />
+            <element signature="e#10845#10846#0" expanded="true" />
           </folding>
         </state>
       </provider>

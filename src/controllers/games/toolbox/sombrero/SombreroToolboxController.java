@@ -25,7 +25,7 @@ import static settings.Colors.*;
 
 public class SombreroToolboxController implements Initializable {
 
-    @FXML private GridPane gridPane;
+    @FXML GridPane gridPane;
     @FXML private TextField level_name;
     @FXML private ChoiceBox<Integer> f1;
     @FXML private ChoiceBox<Integer> f2;
@@ -48,13 +48,18 @@ public class SombreroToolboxController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         onBlueClick(new ActionEvent());
         player = false;
-
+/*
+        if (Sombrero.getSelectedSombrero() != null){
+            gridPane = Sombrero.getSelectedSombrero().getGridpane();
+        }
+*/
         for (Node node : gridPane.getChildren()) {
             node.setStyle(BLACK);
             node.setOnMouseClicked((MouseEvent t) -> fillSombreroCell(node));
         }
         initFunctionsChoicebox();
         initDifficultyChoiceBox();
+
     }
 
     private void fillSombreroCell(Node node) {
@@ -180,12 +185,12 @@ public class SombreroToolboxController implements Initializable {
     }
 
     @FXML private void onFifteenToFifteen() {
-        if (ensureNotFilled()) changeGrid(15);
+        if (isFilled()) changeGrid(15);
         else if(requestConfirmation()) changeGrid(15);
     }
 
     @FXML private void onTenToTen() {
-        if (ensureNotFilled()) changeGrid(10);
+        if (isFilled()) changeGrid(10);
         else if(requestConfirmation()) changeGrid(10);
     }
 
@@ -239,13 +244,13 @@ public class SombreroToolboxController implements Initializable {
     }
 
     @FXML private void onResolveClick() {
-        if (ensureNotFilled())
+        if (isFilled())
             displayController.displayAlert("No map ! :( ");
         else if (!player)
             displayController.displayAlert("No player on the map !");
         else if (!item)
             displayController.displayAlert("Put at least one star on the map !");
-        else if (!ensureEverythingOnMap())
+        else if (!isOnMap())
             displayController.displayAlert("Put everything on the map !");
         else if (level_name.getText().isEmpty())
             displayController.displayAlert("The level name cannot be empty !");
@@ -265,13 +270,13 @@ public class SombreroToolboxController implements Initializable {
             displayController.displaySombreroLevels();
     }
 
-    private boolean ensureNotFilled() {
+    private boolean isFilled() {
         for (Node node : gridPane.getChildren())
             if (!node.getStyle().equals(BLACK)) return false;
         return true;
     }
 
-    private boolean ensureEverythingOnMap() {
+    private boolean isOnMap() {
         for (Node node : gridPane.getChildren()){
             if(node.getStyle().equals(BLACK)) {
                 Pane pane = (Pane) node.lookup("Pane");

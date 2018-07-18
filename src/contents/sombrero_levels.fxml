@@ -45,10 +45,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TableView layoutX="410.0" layoutY="194.0" prefHeight="384.0" prefWidth="612.0">
+      <TableView fx:id="tab_levels" onMouseClicked="#onSelectedRow" layoutX="410.0" layoutY="194.0" prefHeight="384.0" prefWidth="612.0">
          <columns>
-            <TableColumn prefWidth="484.0" text="Name" />
-            <TableColumn minWidth="0.0" prefWidth="127.0" text="Difficulty" />
+            <TableColumn fx:id="column_id" prefWidth="24.0" text="Id" />
+            <TableColumn fx:id="column_name" prefWidth="464.0" text="Name" />
+            <TableColumn fx:id="column_difficulty" minWidth="0.0" prefWidth="127.0" text="Difficulty" />
          </columns>
          <effect>
             <InnerShadow />

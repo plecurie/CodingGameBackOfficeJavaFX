@@ -55,7 +55,6 @@ public class StarterController {
                     DisplayerController displayerController = new DisplayerController();
                     displayerController.displayDashboard();
                 }
-
         }catch (Exception e){
             e.printStackTrace();
         }

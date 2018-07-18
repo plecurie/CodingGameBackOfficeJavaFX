@@ -62,10 +62,10 @@ public class UsersController implements Initializable {
     @FXML protected void onSelectedRow(MouseEvent event) {
 
         int index_selected_user = tab_users.getSelectionModel().getSelectedIndex();
-        ObservableValue cell = column_id.getCellObservableValue(index_selected_user);
+        ObservableValue<Integer> cell = column_id.getCellObservableValue(index_selected_user);
         Object id = cell.getValue();
         User selected_user = daoUser.getSelectedUser(Integer.valueOf(id.toString()));
-
+        System.out.println(selected_user.getId());
     }
 
 

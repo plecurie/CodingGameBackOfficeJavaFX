@@ -1,5 +1,6 @@
 package controllers.games.toolbox.sombrero;
 
+import controllers.DisplayerController;
 import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 import models.Game;
+import services.dao.DAOLevel;
 import settings.Colors;
 
 import java.net.URL;
@@ -38,23 +40,43 @@ public class SombreroTestController implements Initializable {
 
     private PathTransition animation = new PathTransition();
 
-    private static String ACTION;
-    private static String COLOR;
-    private ImageView PLAYER;
-    private double start_x;
-    private double start_y;
-    private double start_rotate;
+    private String ACTION;
+    private String COLOR;
+    private SombreroItem PLAYER;
+    private GridPane GRID;
+    private int column_start, row_start;
+    private double start_x, start_y, start_rotate;
+    private DisplayerController displayController;
+    private final int iteration_max = 200;
+    private int iteration = 0;
+    private Path road;
 
     @Override public void initialize(URL location, ResourceBundle resources) {
         level_label.setText(Game.GAME_NAME + ": " + SombreroFactory.getName());
         COLOR = Colors.LIGHTGREY;
-        ACTION = "";
+        ACTION = "move";
+
         fillCommandGrid();
 
         PLAYER = SombreroFactory.getArrow();
-        start_x = PLAYER.getLayoutX();
-        start_y = PLAYER.getLayoutY();
+        GRID = SombreroFactory.buildTestSombrero(Sombrero.getSelectedSombrero());
+        start_x = PLAYER.getX();
+        start_y = PLAYER.getY();
         start_rotate = PLAYER.getRotate();
+
+        column_start = PLAYER.getColumnId();
+        row_start = PLAYER.getRowId();
+
+    }
+
+    private void initPlayer() {
+        PLAYER.setRotate(start_rotate);
+
+        PLAYER.setX(start_x);
+        PLAYER.setY(start_y);
+
+        PLAYER.setRowId(row_start);
+        PLAYER.setColumnId(column_start);
     }
 
     @FXML private void onChooseUp(MouseEvent event){
@@ -86,21 +108,36 @@ public class SombreroTestController implements Initializable {
         ACTION = "void";
     }
 
-    @FXML private void onPlay(MouseEvent event) {
-        animation = playFunction(f1_gridpane);
-        animation.play();
+    @FXML private void onPlay() {
+        if (animation.getStatus().toString().equals("PAUSED")){
+            animation.play();
+        } else  {
+            initPlayer();
+            animation = playFunction(f1_gridpane);
+            animation.play();
+        }
     }
 
     @FXML private void onNext() {
-        animation.pause();
+        if (!animation.getStatus().toString().equals("PAUSED"))
+            animation.pause();
+        else
+            animation.play();
     }
 
     @FXML private void onStop() {
         animation.stop();
         animation.jumpTo(Duration.ZERO);
-        PLAYER.setRotate(start_rotate);
-        PLAYER.setX(start_x - Sombrero.getINNER_ITEM_DEFAULT_WIDTH()/2);
-        PLAYER.setY(start_y - Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()/2);
+
+        initPlayer();
+    }
+
+    @FXML private void onCancel() throws Exception {
+        displayController.displayToolbox();
+    }
+
+    @FXML private void onSubmit() {
+        fireGameWon();
     }
 
     private PathTransition playFunction(GridPane gridPane) {
@@ -109,53 +146,87 @@ public class SombreroTestController implements Initializable {
         for (Node node : gridPane.getChildren()) {
             Pane pane = (Pane) node.lookup("Pane");
             Label label = (Label) pane.lookup("Label");
-            String command = label.getText();
+            String movement = label.getText();
+            String condition = pane.getStyle();
+
+            String command = movement + ":" + condition;
 
             commands.add(command);
         }
 
-        Path road = createPath(commands);
-
-        PathTransition animation = new PathTransition();
-        animation.setNode(PLAYER);
-        animation.setPath(road);
-        animation.setDuration(new Duration(200*commands.size()));
-        animation.setInterpolator(Interpolator.LINEAR);
+        if (iteration < iteration_max){
+            road = createPath(commands);
+            PathTransition animation = new PathTransition();
+            animation.setNode(PLAYER);
+            animation.setPath(road);
+            System.out.println(road);
+            animation.setDuration(new Duration(200*commands.size()));
+            animation.setInterpolator(Interpolator.LINEAR);
+        } else  {
+            PathTransition animation = new PathTransition();
+            animation.setNode(PLAYER);
+            animation.setPath(road);
+            System.out.println("finally: " + road);
+            animation.setDuration(new Duration(200*commands.size()));
+            animation.setInterpolator(Interpolator.LINEAR);
+        }
 
         return animation;
     }
 
     private Path createPath(List<String> commands) {
         Path path = new Path();
-
+        iteration++;
         for (String command : commands) {
-            switch (command) {
+            String[] object = command.split(":");
+            String movement = object[0];
+            String style = object[1];
+            String color = object[2];
+
+            String cell_color = style + ":" + color;
+
+            switch (movement) {
                 case "move": {
-                    path = move(path);
+                    if(isColorCondition(cell_color) || cell_color.equals(Colors.SILVER)) {
+                        path = move(path);
+                        if (isBlack())
+                            fireGameOver();
+
+                        if (!isLastSombreroItem())
+                            removeIfIsItem();
+                        else if (isLastSombreroItem())
+                            fireGameWon();
+                    }
                     break;
                 }
                 case "left": {
-                    turnLeft();
+                    if(isColorCondition(cell_color) || cell_color.equals(Colors.SILVER))
+                        turnLeft();
                     break;
                 }
                 case "right": {
-                    turnRight();
+                    if(isColorCondition(cell_color) || cell_color.equals(Colors.SILVER))
+                        turnRight();
                     break;
                 }
                 case "F1": {
-                    playFunction(f1_gridpane);
+                    if(isColorCondition(cell_color) || cell_color.equals(Colors.SILVER))
+                        playFunction(f1_gridpane);
                     break;
                 }
                 case "F2": {
-                    playFunction(f2_gridpane);
+                    if(isColorCondition(cell_color) || cell_color.equals(Colors.SILVER))
+                        playFunction(f2_gridpane);
                     break;
                 }
                 case "F3": {
-                    playFunction(f3_gridpane);
+                    if(isColorCondition(cell_color) || cell_color.equals(Colors.SILVER))
+                        playFunction(f3_gridpane);
                     break;
                 }
                 case "F4": {
-                    playFunction(f4_gridpane);
+                    if(isColorCondition(cell_color) || cell_color.equals(Colors.SILVER))
+                        playFunction(f4_gridpane);
                     break;
                 }
                 default:
@@ -170,29 +241,40 @@ public class SombreroTestController implements Initializable {
         Double rotate = PLAYER.getRotate();
         int orientation = rotate.intValue();
 
+        double pos_x = PLAYER.getX() + Sombrero.getINNER_ITEM_DEFAULT_WIDTH()/2;
+        double pos_y = PLAYER.getY() + Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()/2;
+
         switch (orientation) {
             case 270 :{
-                path.getElements().add(new MoveTo(PLAYER.getX(), PLAYER.getY()));
-                path.getElements().add(new LineTo(PLAYER.getX(), PLAYER.getY() - 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()));
+                path.getElements().add(new MoveTo(pos_x, pos_y));
+                path.getElements().add(new LineTo(pos_x, pos_y - 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()));
                 PLAYER.setY(PLAYER.getY() - 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT());
+                PLAYER.setRowId(PLAYER.getRowId() - 1);
+
                 break;
             }
             case 90 :{
-                path.getElements().add(new MoveTo(PLAYER.getX(), PLAYER.getY()));
-                path.getElements().add(new LineTo(PLAYER.getX(), PLAYER.getY() + 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()));
+                path.getElements().add(new MoveTo(pos_x, pos_y));
+                path.getElements().add(new LineTo(pos_x, pos_y + 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()));
                 PLAYER.setY(PLAYER.getY() + 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT());
+                PLAYER.setRowId(PLAYER.getRowId() + 1);
+
                 break;
             }
             case 180 :{
-                path.getElements().add(new MoveTo(PLAYER.getX(), PLAYER.getY()));
-                path.getElements().add(new LineTo(PLAYER.getX() - 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH(), PLAYER.getY()));
+                path.getElements().add(new MoveTo(pos_x, pos_y));
+                path.getElements().add(new LineTo(pos_x - 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH(), pos_y));
                 PLAYER.setX(PLAYER.getX() - 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH());
+                PLAYER.setColumnId(PLAYER.getColumnId() - 1);
+
                 break;
             }
             case 0 :{
-                path.getElements().add(new MoveTo(PLAYER.getX(), PLAYER.getY()));
-                path.getElements().add(new LineTo(PLAYER.getX() + 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH(), PLAYER.getY()));
+                path.getElements().add(new MoveTo(pos_x, pos_y));
+                path.getElements().add(new LineTo(pos_x + 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH(), pos_y));
                 PLAYER.setX(PLAYER.getX() + 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH());
+                PLAYER.setColumnId(PLAYER.getColumnId() + 1);
+
                 break;
             }
             default:
@@ -213,6 +295,77 @@ public class SombreroTestController implements Initializable {
             PLAYER.setRotate(PLAYER.getRotate() + 90);
         else
             PLAYER.setRotate(0);
+    }
+
+    private boolean isColorCondition(String color) {
+        for (Node node : GRID.getChildren()) {
+            Pane pane = (Pane) node.lookup("Pane");
+            if (pane != null) {
+                if (GridPane.getColumnIndex(pane) == PLAYER.getColumnId()
+                        && GridPane.getRowIndex(pane) == PLAYER.getRowId()
+                        && pane.getStyle().equals(color)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean isBlack() {
+        for (Node node : GRID.getChildren()) {
+            Pane pane = (Pane) node.lookup("Pane");
+            if (pane != null) {
+                if (GridPane.getColumnIndex(pane) == PLAYER.getColumnId()
+                        && GridPane.getRowIndex(pane) == PLAYER.getRowId()){
+                        if(pane.getStyle().equals(Colors.BLACK))
+                            return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private void removeIfIsItem() {
+        for (Node node : GRID.getChildren()) {
+            Pane pane = (Pane) node.lookup("Pane");
+            if (pane != null) {
+                if (GridPane.getColumnIndex(pane) == PLAYER.getColumnId()
+                        && GridPane.getRowIndex(pane) == PLAYER.getRowId()){
+                    if (pane.getChildren().size() != 0){
+                        SombreroItem item = (SombreroItem) pane.getChildren().get(0).lookup("SombreroItem");
+                        if(item != null){
+                            item.setVisible(false);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private boolean isLastSombreroItem() {
+        for (Node node : GRID.getChildren()) {
+            Pane pane = (Pane) node.lookup("Pane");
+            if (pane != null) {
+                if (pane.getChildren().size() != 0){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private void fireGameOver() {
+        animation.stop();
+        displayController.displayInformation("You lose...");
+    }
+
+    private void fireGameWon() {
+        if (displayController.displayConfirmation("Would you like to submit this ?")) {
+            DAOLevel daoLevel = new DAOLevel();
+            if (daoLevel.createLevel(Game.GAME_ID, Sombrero.name, Sombrero.difficulty)){
+                displayController.displayInformation("Level created !");
+            }
+        }
     }
 
     private void fillCommandGrid() {
@@ -316,5 +469,9 @@ public class SombreroTestController implements Initializable {
         imageView.setFitWidth(30);
         imageView.relocate(parent_width/2-15,parent_height/2-15);
         return imageView;
+    }
+
+    public void linkDisplayer(DisplayerController displayerController) {
+        this.displayController = displayerController;
     }
 }

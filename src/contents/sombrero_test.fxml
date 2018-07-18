@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+
 <BorderPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroTestController">
    <children>
       <AnchorPane layoutX="335.0" prefHeight="400.0" prefWidth="265.0" />
@@ -187,7 +191,7 @@
                                  </children>
                               </Pane>
                               <Pane onMouseClicked="#onVoidChoose" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.rowIndex="1" />
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLUE;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
                                     <ImageView fitHeight="50.0" fitWidth="35.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseUp" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -196,16 +200,16 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLUE;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseLeft" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: BLUE;">
+                                    <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseLeft" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: blue;">
                                        <image>
                                           <Image url="@images/arrow-back.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLUE;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <children>
                                     <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseRight" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -214,7 +218,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLUE;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F1">
                                        <font>
@@ -223,7 +227,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLUE;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="5" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F2">
                                        <font>
@@ -232,7 +236,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLUE;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F3">
                                        <font>
@@ -241,7 +245,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLUE;" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="7" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F4">
                                        <font>
@@ -251,7 +255,7 @@
                                  </children>
                               </Pane>
                               <Pane onMouseClicked="#onVoidChoose" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.rowIndex="2" />
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIMEGREEN;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
                                     <ImageView fitHeight="50.0" fitWidth="35.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseUp" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -260,7 +264,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIMEGREEN;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <children>
                                     <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseLeft" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -269,7 +273,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIMEGREEN;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <children>
                                     <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseRight" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -278,7 +282,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIMEGREEN;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F1">
                                        <font>
@@ -287,7 +291,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIMEGREEN;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="5" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F2">
                                        <font>
@@ -296,7 +300,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIMEGREEN;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F3">
                                        <font>
@@ -305,7 +309,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIMEGREEN;" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="7" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F4">
                                        <font>
@@ -315,7 +319,7 @@
                                  </children>
                               </Pane>
                               <Pane onMouseClicked="#onVoidChoose" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.rowIndex="3" />
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <children>
                                     <ImageView fitHeight="50.0" fitWidth="35.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseUp" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -324,7 +328,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                  <children>
                                     <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseLeft" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -333,7 +337,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <children>
                                     <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#onChooseRight" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -342,7 +346,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="17.0" layoutY="13.0" onMouseClicked="#onFChoose" text="F1">
                                        <font>
@@ -351,7 +355,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="5" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="14.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F2">
                                        <font>
@@ -360,7 +364,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F3">
                                        <font>
@@ -369,7 +373,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="7" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F4">
                                        <font>
@@ -394,17 +398,42 @@
                            <image>
                               <Image url="@images/play.png" />
                            </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </ImageView>
                         <ImageView fitHeight="60.0" fitWidth="100.0" onMouseClicked="#onNext" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/pause.png" />
                            </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </ImageView>
                         <ImageView fitHeight="60.0" fitWidth="100.0" onMouseClicked="#onStop" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/stop.png" />
                            </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </ImageView>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#onCancel" style="-fx-background-radius: 30;" text="Cancel" textAlignment="CENTER" underline="true">
+                           <HBox.margin>
+                              <Insets left="30.0" right="10.0" />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button defaultButton="true" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 30;" text="Submit" textAlignment="CENTER" underline="true">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
                      </children>
                      <VBox.margin>
                         <Insets bottom="30.0" />
@@ -419,10 +448,16 @@
          <children>
             <Label fx:id="level_label" text="Level_name">
                <font>
-                  <Font name="Century Gothic" size="24.0" />
+                  <Font name="Century Gothic Bold" size="24.0" />
                </font>
             </Label>
          </children>
       </HBox>
    </top>
+   <bottom>
+      <Pane maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
