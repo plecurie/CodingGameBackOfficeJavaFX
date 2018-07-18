@@ -154,19 +154,20 @@ public class SombreroTestController implements Initializable {
             commands.add(command);
         }
 
+        // FIXME: 18/07/2018
         if (iteration < iteration_max){
             road = createPath(commands);
             PathTransition animation = new PathTransition();
             animation.setNode(PLAYER);
             animation.setPath(road);
-            System.out.println(road);
+
             animation.setDuration(new Duration(200*commands.size()));
             animation.setInterpolator(Interpolator.LINEAR);
         } else  {
             PathTransition animation = new PathTransition();
             animation.setNode(PLAYER);
             animation.setPath(road);
-            System.out.println("finally: " + road);
+
             animation.setDuration(new Duration(200*commands.size()));
             animation.setInterpolator(Interpolator.LINEAR);
         }

@@ -1,5 +1,7 @@
 package services;
 
+import settings.ApiConstant;
+
 public class ErrorHandler {
 
     public ErrorHandler() {
@@ -16,8 +18,8 @@ public class ErrorHandler {
         else if(message.contains("403")) {
             error = "Error 403 : FORBIDDEN";
         }
-        else if(message.contains("404")) {
-            error = "Error 404 : NOT FOUND";
+        else if(message.contains("404") || message.contains(ApiConstant.HOST)) {
+            error = "Error 404 : NO DATA FOUND";
         }
         else if(message.contains("409")) {
             error = "Error 409 : CONFLICT";

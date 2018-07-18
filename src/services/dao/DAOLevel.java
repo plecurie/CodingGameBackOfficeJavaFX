@@ -13,13 +13,13 @@ import java.util.List;
 
 public class DAOLevel {
 
-    public List getLevels() {
+    public List<Level> getLevels(int id_game) {
         int id = 0;
         String name = "";
         int difficulty;
 
         HttpRequest http = new HttpRequest();
-        List list = http.sendGetRequest("/levels/" + Game.GAME_ID);
+        List list = http.sendGetRequest("/levels/" + id_game);
 
         List<Level> list_levels = new ArrayList<>();
 

@@ -6,6 +6,8 @@ import controllers.games.toolbox.sombrero.Sombrero;
 import controllers.games.toolbox.sombrero.SombreroFactory;
 import controllers.games.toolbox.sombrero.SombreroTestController;
 import controllers.games.toolbox.sombrero.SombreroToolboxController;
+import controllers.users.SelectedUserController;
+import controllers.users.UsersController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -24,6 +26,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import models.Game;
+import models.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -129,14 +132,36 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    BorderPane displayUsers() throws Exception {
+    public BorderPane displayUsers() throws Exception {
 
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/users.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/users.fxml"));
+        AnchorPane anchorPane = loader.load();
+        UsersController usersController = loader.getController();
+        usersController.linkDisplayer(this);
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 
         return sceneRoot ;
+    }
+
+    public void displaySelectedUser(User selected_user) throws IOException {
+
+
+        BorderPane sceneRoot = new BorderPane();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/selected_user.fxml"));
+
+        User.setSelectedUser(selected_user);
+
+        final AnchorPane anchorPane = loader.load();
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        SelectedUserController selectedUserController = loader.getController();
+        selectedUserController.linkDisplayer(this, main);
+
+        main.getChildren().clear();
+        main.getChildren().add(sceneRoot);
     }
 
     BorderPane displayGames() throws Exception {

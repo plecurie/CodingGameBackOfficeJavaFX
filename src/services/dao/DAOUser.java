@@ -1,5 +1,6 @@
 package services.dao;
 
+import models.History;
 import models.User;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.List;
 
 public class DAOUser {
 
-    public List getUsers() {
+    public List<User> getUsers() {
 
         int id = 0;
         String username = "";
@@ -78,6 +79,48 @@ public class DAOUser {
             }
         }
         return list_users;
+    }
+
+    public List<History> getHistorySelectedUser(int id) {
+
+        String game="";
+        String level="";
+        int score = 0;
+        String date = "";
+
+        HttpRequest http = new HttpRequest();
+        List list = http.sendGetRequest("/history/" + id);
+        List<History> list_history = new ArrayList<>();
+
+        for (Object aList : list) {
+            String[] list_objet = aList.toString().split(":");
+            String key = list_objet[0];
+            String value = list_objet[1];
+
+
+            switch (key) {
+                case "game": {
+                    game = value;
+                    break;
+                }
+                case "level": {
+                    level = value;
+                    break;
+                }
+                case "score": {
+                    score = Integer.valueOf(value);
+                    break;
+                }
+                case "date": {
+                    date = value;
+                    list_history.add(new History(id, game, level, score, date));
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
+        return list_history;
     }
 
     public User getSelectedUser(int id) {

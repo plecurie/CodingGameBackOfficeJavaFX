@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.users.SelectedUserController">
    <children>
-      <Label layoutX="486.0" layoutY="56.0" text="Selected User" />
-      <ListView layoutX="211.0" layoutY="136.0" prefHeight="557.0" prefWidth="658.0" />
+      <Label fx:id="label_name" layoutX="464.0" layoutY="53.0" text="Selected User">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TableView fx:id="tab_history" layoutX="231.0" layoutY="112.0" prefHeight="524.0" prefWidth="618.0">
+        <columns>
+          <TableColumn style="-fx-alignment: CENTER" fx:id="column_game" prefWidth="145.0" text="Game" />
+          <TableColumn style="-fx-alignment: CENTER" fx:id="column_level" minWidth="0.0" prefWidth="164.0" text="Level" />
+            <TableColumn style="-fx-alignment: CENTER" fx:id="column_score" prefWidth="157.0" text="Score" />
+            <TableColumn style="-fx-alignment: CENTER" fx:id="column_date" prefWidth="150.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button defaultButton="true" layoutX="14.0" layoutY="14.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#onReturn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 30;" text="Return" />
    </children>
 </AnchorPane>

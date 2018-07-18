@@ -48,11 +48,14 @@ public class SombreroToolboxController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         onBlueClick(new ActionEvent());
         player = false;
-/*
+
+        // FIXME: 18/07/2018
+        /*
         if (Sombrero.getSelectedSombrero() != null){
             gridPane = Sombrero.getSelectedSombrero().getGridpane();
         }
-*/
+        */
+
         for (Node node : gridPane.getChildren()) {
             node.setStyle(BLACK);
             node.setOnMouseClicked((MouseEvent t) -> fillSombreroCell(node));
@@ -137,10 +140,10 @@ public class SombreroToolboxController implements Initializable {
         final List<Integer> list_functions = new ArrayList<>() ;
         for (int i = 0; i < 11; i++) list_functions.add(i);
 
-        f1 = setItems(f1, list_functions);
-        f2 = setItems(f2, list_functions);
-        f3 = setItems(f3, list_functions);
-        f4 = setItems(f4, list_functions);
+        f1 = buildChoiceBoxItems(f1, list_functions);
+        f2 = buildChoiceBoxItems(f2, list_functions);
+        f3 = buildChoiceBoxItems(f3, list_functions);
+        f4 = buildChoiceBoxItems(f4, list_functions);
 
         f1.setOnAction(event -> {
             if (f1.getValue() != 0) f2.setDisable(false);
@@ -165,7 +168,7 @@ public class SombreroToolboxController implements Initializable {
         });
     }
 
-    private ChoiceBox<Integer> setItems(ChoiceBox<Integer> function, List<Integer> list) {
+    private ChoiceBox<Integer> buildChoiceBoxItems(ChoiceBox<Integer> function, List<Integer> list) {
         function.setItems(FXCollections.observableArrayList(list));
         function.setValue(list.get(0));
         return function;

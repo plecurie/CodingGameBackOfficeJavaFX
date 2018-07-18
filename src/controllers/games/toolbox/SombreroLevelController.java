@@ -25,16 +25,16 @@ public class SombreroLevelController implements Initializable {
     private static DisplayerController displayController;
 
     @FXML TextArea description_ta;
-    @FXML private TableView<String> tab_levels;
-    @FXML private TableColumn<String, Integer> column_id;
-    @FXML private TableColumn<String, String> column_name;
-    @FXML private TableColumn<String, String> column_difficulty;
+    @FXML private TableView<Level> tab_levels;
+    @FXML private TableColumn<Level, Integer> column_id;
+    @FXML private TableColumn<Level, String> column_name;
+    @FXML private TableColumn<Level, String> column_difficulty;
 
     private DAOLevel daoLevel = new DAOLevel();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList list_levels = getInitialTableData();
+        ObservableList<Level> list_levels = getInitialTableData();
 
         if (!list_levels.isEmpty()) tab_levels.setItems(list_levels);
 
@@ -46,9 +46,9 @@ public class SombreroLevelController implements Initializable {
 
     }
 
-    private ObservableList getInitialTableData() {
-        List list ;
-        list = daoLevel.getLevels();
+    private ObservableList<Level> getInitialTableData() {
+        List<Level> list ;
+        list = daoLevel.getLevels(Game.GAME_ID);
 
         return FXCollections.observableList(list);
     }

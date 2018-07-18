@@ -12,6 +12,8 @@ public class User {
     private static String TYPE ;
     private static String TOKEN;
 
+    private static User SELECTED_USER;
+
     private int id ;
     private String username ;
     private String firstname ;
@@ -36,6 +38,14 @@ public class User {
         setLevel(level);
         setExp(exp);
         setType(type);
+    }
+
+    public static void setSelectedUser(User selected_user) {
+        SELECTED_USER = selected_user;
+    }
+
+    public static User getSelectedUser() {
+        return SELECTED_USER;
     }
 
     public int getId() {
