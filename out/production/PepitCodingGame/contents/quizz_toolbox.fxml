@@ -9,8 +9,8 @@
 
 <AnchorPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.quizz.QuizzController">
    <children>
-      <Label layoutX="191.0" layoutY="65.0" prefHeight="17.0" prefWidth="68.0" text="Question : " />
-      <TextField fx:id="edt_question" layoutX="259.0" layoutY="61.0" />
+      <Label layoutX="116.0" layoutY="76.0" prefHeight="17.0" prefWidth="68.0" text="Question : " />
+      <TextField fx:id="edt_question" layoutX="185.0" layoutY="72.0" />
       <TextField fx:id="edt_response1" layoutX="185.0" layoutY="138.0" />
       <Label layoutX="117.0" layoutY="142.0" prefHeight="17.0" prefWidth="68.0" text="Reponse 1 :" />
       <TextField fx:id="edt_response2" layoutX="185.0" layoutY="182.0" />
@@ -19,8 +19,13 @@
       <Label layoutX="117.0" layoutY="231.0" prefHeight="17.0" prefWidth="68.0" text="Reponse 3 :" />
       <TextField fx:id="edt_response4" layoutX="185.0" layoutY="268.0" />
       <Label layoutX="117.0" layoutY="272.0" prefHeight="17.0" prefWidth="68.0" text="Reponse 4 : " />
-      <ChoiceBox fx:id="cb_correct_answer" layoutX="225.0" layoutY="330.0" prefWidth="150.0" />
-      <Label layoutX="53.0" layoutY="334.0" prefHeight="17.0" prefWidth="186.0" text="Numero de la reponse correct : " />
-      <Button fx:id="btn_valid_create_question" onAction="#onSaveQuestion" layoutX="369.0" layoutY="423.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Button" />
+      <ChoiceBox fx:id="cb_correct_answer" layoutX="203.0" layoutY="318.0" prefWidth="150.0" />
+      <Label layoutX="23.0" layoutY="322.0" prefHeight="17.0" prefWidth="186.0" text="Numero de la reponse correct : " />
+      <Button fx:id="btn_valid_create_question" layoutX="367.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSaveQuestion" prefHeight="25.0" prefWidth="110.0" text="Valider" />
+      <TextArea layoutX="563.0" layoutY="63.0" prefHeight="345.0" prefWidth="343.0" text="Instruction&#10;Niveau de difficulté :&#10;1 =&gt; Algorithme simple (boucle, variable condition)&#10;2 =&gt; Fonction, tableau&#10;3 =&gt; Pointeur, tableau dynamique&#10;4 =&gt; Poo (Programmation objet)&#10;&#10;Le champs : &quot;Question pour le test d'évaluation du joueur : &quot;&#10;0 =&gt; Non (Question pour n'importe quel joueur)&#10;1 =&gt; Oui (Question pour le test évaluation du niveau du joueur et de ça personnalité)&#10;&#10;" />
+      <ChoiceBox fx:id="cb_is_evaluate_player" layoutX="278.0" layoutY="387.0" prefWidth="150.0" />
+      <Label layoutX="7.0" layoutY="391.0" prefHeight="17.0" prefWidth="253.0" text="Question pour le test d'évaluation du joueur : " />
+      <Label layoutX="108.0" layoutY="454.0" prefHeight="17.0" prefWidth="68.0" text="Difficulté : " />
+      <ChoiceBox fx:id="cb_difficulty" layoutX="209.0" layoutY="450.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

@@ -74,7 +74,7 @@ class HttpRequest {
         return response;
     }
 
-    List sendPostRequest(JsonObject params, String route) {
+    String sendPostRequest(JsonObject params, String route) {
         List response = new ArrayList();
         System.out.print(params);
 
@@ -95,7 +95,7 @@ class HttpRequest {
 
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
             response.add(new InputStreamToJson().parseInputStream(connection.getInputStream()));
-            response = new JsonToString().parseJSON(response.toString());
+            //response = new JsonToString().parseJSON(response.toString());
 
             in.close();
             connection.disconnect();
@@ -105,7 +105,7 @@ class HttpRequest {
             DisplayerController displayerController = new DisplayerController();
             displayerController.displayAlert(error);
         }
-        return response;
+        return response.toString();
     }
 
     String sendPutRequest(JsonObject params, String route) {

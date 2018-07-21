@@ -24,6 +24,8 @@ public class QuizzController implements Initializable{
     @FXML private TextField edt_response3;
     @FXML private TextField edt_response4;
     @FXML private ChoiceBox<Integer> cb_correct_answer;
+    @FXML private ChoiceBox<Integer> cb_is_evaluate_player;
+    @FXML private ChoiceBox<Integer> cb_difficulty;
     @FXML private Button btn_valid_create_question;
     @FXML private TextField edt_question;
 
@@ -64,7 +66,7 @@ public class QuizzController implements Initializable{
         }
 
 
-        daoLevel.createLevelQuizz(edt_question.getText(), responses, correctAnswer);
+        daoLevel.createLevelQuizz(edt_question.getText(), responses, correctAnswer, String.valueOf(cb_is_evaluate_player.getValue()), String.valueOf(cb_difficulty.getValue()));
 
     }
 
@@ -77,5 +79,17 @@ public class QuizzController implements Initializable{
         choice.add(4);
         cb_correct_answer.setItems(FXCollections.observableArrayList(choice));
         cb_correct_answer.setValue(choice.get(0));
+
+        cb_difficulty.setItems(FXCollections.observableArrayList(choice));
+        cb_difficulty.setValue(choice.get(0));
+
+        choice.clear();
+        choice.add(0);
+        choice.add(1);
+
+        cb_is_evaluate_player.setItems(FXCollections.observableArrayList(choice));
+        cb_is_evaluate_player.setValue(choice.get(0));
+
+
     }
 }
