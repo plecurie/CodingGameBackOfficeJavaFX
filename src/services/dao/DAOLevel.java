@@ -13,9 +13,7 @@ public class DAOLevel {
 
     public Boolean createLevel(int id_game, String name, int difficulty, String functions, List grid_list ) {
         boolean created = false;
-/*        int i = 0;
-
-
+        /*int i = 0;
         JsonObject parameters = (JsonObject) Json.createObjectBuilder().add("id_game", id_game)
                 .add("name", name).add("difficulty", difficulty)
                 .add("functions", functions);
@@ -27,12 +25,11 @@ public class DAOLevel {
 
         ((JsonObjectBuilder) parameters).build();
 
-
         HttpRequest http = new HttpRequest();
         List list = http.sendPostRequest(parameters,"/levels/create/");
 
         if (list != null) created = true;
-*/
+        */
         return created;
     }
 
@@ -52,5 +49,21 @@ public class DAOLevel {
         httpRequest.sendPostRequest(parameters, "/levels/createQuestionsQuiz/");
         return true;
         //return httpRequest.sendPostRequest(parameters, "/level_quizz");
+    }
+
+    public int createLevelAdventure(String question, ArrayList<String> answers, String correctAnswer){
+        HttpRequest httpRequest = new HttpRequest();
+        JsonObject parameters = Json.createObjectBuilder()
+                .add("id_game", 2)
+                .add("question", question)
+                .add("answer1", answers.get(0))
+                .add("answer2", answers.get(1))
+                .add("answer3", answers.get(2))
+                .add("correctAnswer", correctAnswer)
+                .add("difficulty", 1)
+                .build();
+        httpRequest.sendPostRequest(parameters, "/levels/create");
+
+        return 0;
     }
 }
