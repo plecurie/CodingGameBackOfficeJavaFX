@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameSettingsController">
    <children>
       <Button defaultButton="true" layoutX="510.0" layoutY="584.0" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-radius: 30; -fx-background-color: peru;" text="Save">
          <font>
@@ -17,32 +13,44 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Label layoutX="227.0" layoutY="77.0" text="Choose a profile  :" />
+      <Label layoutX="227.0" layoutY="77.0" text="Choose a profile  :">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font></Label>
       <ChoiceBox fx:id="profile_cb" layoutX="401.0" layoutY="71.0" prefWidth="150.0" />
       <TableView fx:id="tab_level" layoutX="72.0" layoutY="269.0" prefHeight="277.0" prefWidth="429.0">
         <columns>
-          <TableColumn style="-fx-alignment: CENTER" fx:id="column_name" prefWidth="317.0" text="Name" />
-          <TableColumn style="-fx-alignment: CENTER" fx:id="column_difficulty" prefWidth="110.0" text="Difficulty" />
+          <TableColumn fx:id="column_name" prefWidth="317.0" style="-fx-alignment: CENTER" text="Name" />
+          <TableColumn fx:id="column_difficulty" prefWidth="110.0" style="-fx-alignment: CENTER" text="Difficulty" />
         </columns>
       </TableView>
       <TableView layoutX="605.0" layoutY="269.0" prefHeight="277.0" prefWidth="429.0">
         <columns>
-          <TableColumn style="-fx-alignment: CENTER" prefWidth="330.0" text="Name" />
-          <TableColumn style="-fx-alignment: CENTER" prefWidth="98.0" text="Difficulty" />
+          <TableColumn prefWidth="330.0" style="-fx-alignment: CENTER" text="Name" />
+          <TableColumn prefWidth="98.0" style="-fx-alignment: CENTER" text="Difficulty" />
         </columns>
       </TableView>
-      <ChoiceBox onAction="#onGameChange" fx:id="game_cb" layoutX="401.0" layoutY="124.0" prefWidth="150.0" />
-      <Label layoutX="227.0" layoutY="130.0" text="Choose a game :" />
-      <Label layoutX="72.0" layoutY="229.0" text="Levels library" />
-      <Label layoutX="605.0" layoutY="229.0" text="In-Profile levels" />
-      <Button layoutX="523.0" layoutY="377.0" mnemonicParsing="false" text="--&gt;">
+      <ChoiceBox fx:id="game_cb" layoutX="401.0" layoutY="124.0" onAction="#onGameChange" prefWidth="150.0" />
+      <Label layoutX="227.0" layoutY="130.0" text="Choose a game :">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="72.0" layoutY="229.0" text="Levels library">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="605.0" layoutY="229.0" text="In-Profile levels">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font></Label>
+      <Button layoutX="523.0" layoutY="377.0" mnemonicParsing="false" style="-fx-background-color: moccasin;" text="--&gt;">
+         <font>
+            <Font name="Symbol" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="526.0" layoutY="439.0" mnemonicParsing="false" text="&lt;--">
+      <Button layoutX="526.0" layoutY="439.0" mnemonicParsing="false" style="-fx-background-color: moccasin;" text="&lt;--">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Symbol" size="18.0" />
          </font>
       </Button>
    </children>

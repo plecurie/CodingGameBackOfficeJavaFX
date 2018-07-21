@@ -24,23 +24,4 @@ public class DAOAuth {
         return authenticated;
     }
 
-    public Boolean signUp(String username, String password, String firstname, String lastname, String email, int age, String profil, int level, float exp, String type ) {
-        Boolean created = false;
-
-        /*
-        *
-        * */
-
-        return created;
-    }
-
-    public Boolean logOut() {
-        Boolean disconnected = false;
-
-        /*
-        *
-        * */
-
-        return disconnected;
-    }
 }

@@ -1,7 +1,6 @@
 package controllers;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,13 +13,12 @@ import models.Level;
 import services.dao.DAOGame;
 import services.dao.DAOLevel;
 
-import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class SettingsController implements Initializable {
+public class GameSettingsController implements Initializable {
 
     @FXML private ChoiceBox<String> profile_cb;
     @FXML private ChoiceBox<String> game_cb;
@@ -36,13 +34,9 @@ public class SettingsController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         List<String> list_profile = new ArrayList<>();
-        list_profile.add("Aventurier");
-        list_profile.add("Créatif");
-        list_profile.add("Festif");
-        list_profile.add("Geek");
         list_profile.add("Ninja");
-        list_profile.add("Sportif");
-        list_profile.add("Bizarre");
+        list_profile.add("Prof");
+        list_profile.add("Explorer");
         profile_cb.setItems(FXCollections.observableArrayList(list_profile));
         profile_cb.setValue(list_profile.get(0));
 

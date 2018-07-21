@@ -50,11 +50,11 @@ public class StarterController {
         String password = passwordField.getText();
 
         try{
-                if (daoAuth.signIn(username,password)) {
-                    stage.close();
-                    DisplayerController displayerController = new DisplayerController();
-                    displayerController.displayDashboard();
-                }
+            if (daoAuth.signIn(username,password)) {
+                stage.close();
+                DisplayerController displayerController = new DisplayerController();
+                displayerController.displayDashboard();
+            }
         }catch (Exception e){
             e.printStackTrace();
         }

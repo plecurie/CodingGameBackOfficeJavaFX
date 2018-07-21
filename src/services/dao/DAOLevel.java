@@ -79,9 +79,10 @@ public class DAOLevel {
         }
 
         HttpRequest http = new HttpRequest();
-        List list = http.sendPostRequest(parameters,"/levels/create/");
+        String response = http.sendPostRequest(parameters,"/levels/create/");
 
-        if (list != null) created = true;
+        if (!response.isEmpty())
+            created = true;
 
         return created;
     }

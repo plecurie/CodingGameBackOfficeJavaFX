@@ -115,7 +115,7 @@ public class DisplayerController implements Initializable {
     private BorderPane displayPreferences() throws Exception {
 
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/preferences.fxml"));
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/administration.fxml"));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 

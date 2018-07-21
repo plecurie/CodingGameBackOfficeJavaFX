@@ -1,7 +1,6 @@
 package controllers.games.toolbox;
 
 import controllers.DisplayerController;
-import controllers.games.toolbox.sombrero.Sombrero;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,7 +14,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import models.Game;
 import models.Level;
-import models.User;
 import services.dao.DAOLevel;
 
 import java.net.URL;

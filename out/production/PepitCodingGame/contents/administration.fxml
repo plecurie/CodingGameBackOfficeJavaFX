@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+   <children>
+      <TextField fx:id="firstname_textfield" layoutX="725.0" layoutY="195.0" />
+      <TextField fx:id="lastname_textfield" layoutX="725.0" layoutY="256.0" />
+      <TextField fx:id="username_textfield" layoutX="725.0" layoutY="315.0" />
+      <Button layoutX="667.0" layoutY="552.0" mnemonicParsing="false" onAction="#onCreateAdmin" prefHeight="39.0" prefWidth="282.0" style="-fx-background-color: peru; -fx-background-radius: 30;" text="Add Admin Account">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font></Button>
+      <Label layoutX="364.0" layoutY="33.0" text="Admininistration Management" underline="true">
+         <font>
+            <Font name="Century Gothic Bold" size="24.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Label>
+      <TableView fx:id="tab_admin" layoutX="61.0" layoutY="146.0" prefHeight="369.0" prefWidth="493.0">
+        <columns>
+          <TableColumn fx:id="column_id" prefWidth="53.0" text="id" />
+          <TableColumn fx:id="column_firstname" prefWidth="129.0" text="firstname" />
+            <TableColumn fx:id="column_lastname" prefWidth="127.0" text="lastname" />
+            <TableColumn fx:id="column_email" prefWidth="183.0" text="email" />
+        </columns>
+      </TableView>
+      <TextField fx:id="email_textfield" layoutX="725.0" layoutY="379.0" />
+      <TextField fx:id="age_textfield" layoutX="725.0" layoutY="438.0" />
+      <Label layoutX="619.0" layoutY="201.0" text="Firstname :">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="620.0" layoutY="262.0" text="Lastname :">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="621.0" layoutY="321.0" text="Username :">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="624.0" layoutY="385.0" text="Email :">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="623.0" layoutY="444.0" prefHeight="23.0" prefWidth="57.0" text="Age :">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="740.0" layoutY="115.0" text="New Admin">
+         <font>
+            <Font name="Century Gothic Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

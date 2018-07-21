@@ -73,8 +73,8 @@ class HttpRequest {
         return response;
     }
 
-    List sendPostRequest(JsonObject params, String route) {
-        List response = new ArrayList();
+    String sendPostRequest(JsonObject params, String route) {
+        String response = "";
 
         try {
             URL server = new URL(ApiConstant.HOST + route);
@@ -91,8 +91,7 @@ class HttpRequest {
             os.close();
 
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
-            response.add(new InputStreamToJson().parseInputStream(connection.getInputStream()));
-            response = new JsonToString().parseJSON(response.toString());
+            response = (new InputStreamToJson().parseInputStream(connection.getInputStream()));
 
             in.close();
             connection.disconnect();
