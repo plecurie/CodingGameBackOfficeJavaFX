@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+
 <BorderPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroTestController">
    <children>
       <AnchorPane layoutX="335.0" prefHeight="400.0" prefWidth="265.0" />
@@ -151,7 +155,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="4">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="4">
                                  <children>
                                     <Label layoutX="15.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F1">
                                        <font>
@@ -159,8 +163,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="5">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="5">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F2">
                                        <font>
@@ -168,8 +175,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="6">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="6">
                                  <children>
                                     <Label layoutX="16.0" layoutY="11.0" onMouseClicked="#onFChoose" text="F3">
                                        <font>
@@ -177,8 +187,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="7">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.columnIndex="7">
                                  <children>
                                     <Label layoutX="14.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F4">
                                        <font>
@@ -186,6 +199,9 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
                               <Pane onMouseClicked="#onVoidChoose" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.rowIndex="1" />
                               <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -215,7 +231,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F1">
                                        <font>
@@ -223,8 +239,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="5" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F2">
                                        <font>
@@ -232,8 +251,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F3">
                                        <font>
@@ -241,8 +263,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="7" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F4">
                                        <font>
@@ -250,6 +275,9 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
                               <Pane onMouseClicked="#onVoidChoose" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.rowIndex="2" />
                               <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -279,7 +307,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F1">
                                        <font>
@@ -287,8 +315,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="5" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F2">
                                        <font>
@@ -296,8 +327,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F3">
                                        <font>
@@ -305,8 +339,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: limegreen;" GridPane.columnIndex="7" GridPane.rowIndex="2">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F4">
                                        <font>
@@ -314,6 +351,9 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
                               <Pane onMouseClicked="#onVoidChoose" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" GridPane.rowIndex="3" />
                               <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -343,7 +383,7 @@
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="17.0" layoutY="13.0" onMouseClicked="#onFChoose" text="F1">
                                        <font>
@@ -351,8 +391,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="5" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="14.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F2">
                                        <font>
@@ -360,8 +403,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F3">
                                        <font>
@@ -369,8 +415,11 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                              <Pane onMouseEntered="#displayTooltip" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="7" GridPane.rowIndex="3">
                                  <children>
                                     <Label layoutX="16.0" layoutY="12.0" onMouseClicked="#onFChoose" text="F4">
                                        <font>
@@ -378,6 +427,9 @@
                                        </font>
                                     </Label>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </Pane>
                            </children>
                            <HBox.margin>

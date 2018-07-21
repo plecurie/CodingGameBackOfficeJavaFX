@@ -143,7 +143,7 @@ public class DAOLevel {
                     board.setGridLinesVisible(true);
                     board.setVisible(true);
 
-                    Sombrero sombrero = new Sombrero(board,name,F1, F2, F3, F4, difficulty, cell);
+                    Sombrero.setSelectedSombrero(new Sombrero(board,name,F1, F2, F3, F4, difficulty, cell));
 
                     selected_level = new Level(id_level, name, difficulty);
                     Level.setSelectedLevel(selected_level);

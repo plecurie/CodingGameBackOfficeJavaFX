@@ -56,8 +56,9 @@ public class DAOUser {
                     email = value;
                     break;
                 }
-                case "profil": {
-                    profil = value;
+                case "id_type_profil": {
+                    if (value != null) profil = value;
+                    else profil = "undefined";
                     break;
                 }
                 case "level": {
@@ -68,7 +69,7 @@ public class DAOUser {
                     exp = Float.valueOf(value);
                     break;
                 }
-                case "type": {
+                case "userType": {
                     type = value;
                     list_users.add(new User(id, username, firstname, lastname, age, email, profil, level, exp, type));
                     break;
@@ -89,7 +90,7 @@ public class DAOUser {
         String date = "";
 
         HttpRequest http = new HttpRequest();
-        List list = http.sendGetRequest("/history/" + id);
+        List list = http.sendGetRequest("/historic/" + id);
         List<History> list_history = new ArrayList<>();
 
         for (Object aList : list) {
@@ -97,13 +98,12 @@ public class DAOUser {
             String key = list_objet[0];
             String value = list_objet[1];
 
-
             switch (key) {
-                case "game": {
+                case "id_game": {
                     game = value;
                     break;
                 }
-                case "level": {
+                case "id_level": {
                     level = value;
                     break;
                 }
@@ -166,8 +166,9 @@ public class DAOUser {
                     email = value;
                     break;
                 }
-                case "profil": {
-                    profil = value;
+                case "id_type_profil": {
+                    if (value != null) profil = value;
+                    else value = "undefined";
                     break;
                 }
                 case "level": {
@@ -178,8 +179,8 @@ public class DAOUser {
                     exp = Float.valueOf(value);
                     break;
                 }
-                case "type": {
-                    type = value;
+                case "userType": {
+                    type = String.valueOf(value);
                     selected_user = new User(id, username, firstname, lastname, age, email, profil, level, exp, type);
                     break;
                 }

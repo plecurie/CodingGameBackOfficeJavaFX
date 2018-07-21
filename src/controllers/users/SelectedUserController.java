@@ -35,7 +35,7 @@ public class SelectedUserController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        label_name.setText(User.getSelectedUser().getLastname().toUpperCase() + " " + User.getSelectedUser().getLastname());
+        label_name.setText(User.getSelectedUser().getLastname().toUpperCase() + " " + User.getSelectedUser().getFirstname());
         ObservableList<History> list_history = getInitialTableData();
         if (!list_history.isEmpty()) tab_history.setItems(list_history);
 

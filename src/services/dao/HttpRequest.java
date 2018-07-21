@@ -48,7 +48,6 @@ class HttpRequest {
     }
 
     List sendGetRequest(String route)  {
-
         List response = new ArrayList();
 
         try {

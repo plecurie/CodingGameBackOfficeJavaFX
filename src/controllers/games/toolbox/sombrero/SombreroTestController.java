@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -38,6 +40,7 @@ public class SombreroTestController implements Initializable {
     @FXML private GridPane f3_gridpane;
     @FXML private GridPane f4_gridpane;
 
+    private Tooltip tooltip = new Tooltip("Recursion soon available.");
     private PathTransition animation = new PathTransition();
 
     private String ACTION;
@@ -242,38 +245,38 @@ public class SombreroTestController implements Initializable {
         Double rotate = PLAYER.getRotate();
         int orientation = rotate.intValue();
 
-        double pos_x = PLAYER.getX() + Sombrero.getINNER_ITEM_DEFAULT_WIDTH()/2;
-        double pos_y = PLAYER.getY() + Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()/2;
+        double pos_x = PLAYER.getX() + Sombrero.getInnerItemDefaultWidth()/2;
+        double pos_y = PLAYER.getY() + Sombrero.getInnerItemDefaultHeight()/2;
 
         switch (orientation) {
             case 270 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
-                path.getElements().add(new LineTo(pos_x, pos_y - 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()));
-                PLAYER.setY(PLAYER.getY() - 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT());
+                path.getElements().add(new LineTo(pos_x, pos_y - 2*Sombrero.getInnerItemDefaultWidth()));
+                PLAYER.setY(PLAYER.getY() - 2*Sombrero.getInnerItemDefaultHeight());
                 PLAYER.setRowId(PLAYER.getRowId() - 1);
 
                 break;
             }
             case 90 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
-                path.getElements().add(new LineTo(pos_x, pos_y + 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()));
-                PLAYER.setY(PLAYER.getY() + 2*Sombrero.getINNER_ITEM_DEFAULT_HEIGHT());
+                path.getElements().add(new LineTo(pos_x, pos_y + 2*Sombrero.getInnerItemDefaultWidth()));
+                PLAYER.setY(PLAYER.getY() + 2*Sombrero.getInnerItemDefaultHeight());
                 PLAYER.setRowId(PLAYER.getRowId() + 1);
 
                 break;
             }
             case 180 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
-                path.getElements().add(new LineTo(pos_x - 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH(), pos_y));
-                PLAYER.setX(PLAYER.getX() - 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH());
+                path.getElements().add(new LineTo(pos_x - 2*Sombrero.getInnerItemDefaultWidth(), pos_y));
+                PLAYER.setX(PLAYER.getX() - 2*Sombrero.getInnerItemDefaultHeight());
                 PLAYER.setColumnId(PLAYER.getColumnId() - 1);
 
                 break;
             }
             case 0 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
-                path.getElements().add(new LineTo(pos_x + 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH(), pos_y));
-                PLAYER.setX(PLAYER.getX() + 2*Sombrero.getINNER_ITEM_DEFAULT_WIDTH());
+                path.getElements().add(new LineTo(pos_x + 2*Sombrero.getInnerItemDefaultHeight(), pos_y));
+                PLAYER.setX(PLAYER.getX() + 2*Sombrero.getInnerItemDefaultWidth());
                 PLAYER.setColumnId(PLAYER.getColumnId() + 1);
 
                 break;
@@ -361,7 +364,7 @@ public class SombreroTestController implements Initializable {
     }
 
     private void fireGameWon() {
-        if (displayController.displayConfirmation("Would you like to submit this ?")) {
+        if (displayController.displayConfirmation("Would you like to submit this level ?")) {
             DAOLevel daoLevel = new DAOLevel();
             if (daoLevel.createLevel(Game.GAME_ID, Sombrero.name, Sombrero.difficulty)){
                 displayController.displayInformation("Level created !");
@@ -470,6 +473,13 @@ public class SombreroTestController implements Initializable {
         imageView.setFitWidth(30);
         imageView.relocate(parent_width/2-15,parent_height/2-15);
         return imageView;
+    }
+
+    @FXML void displayTooltip(MouseEvent event){
+
+        Pane pane = (Pane) event.getSource();
+        Tooltip.install(pane, tooltip);
+
     }
 
     public void linkDisplayer(DisplayerController displayerController) {

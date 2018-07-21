@@ -147,7 +147,6 @@ public class DisplayerController implements Initializable {
 
     public void displaySelectedUser(User selected_user) throws IOException {
 
-
         BorderPane sceneRoot = new BorderPane();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/selected_user.fxml"));
 

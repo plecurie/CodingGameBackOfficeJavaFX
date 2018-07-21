@@ -182,9 +182,9 @@ public class SombreroToolboxController implements Initializable {
     private void setArrowPosition(int rotate, Pane selected_pane) {
         position_iv.setImage(new Image("file:src/contents/images/arrow.png"));
         position_iv.setRotate(rotate);
-        position_iv.setFitHeight(Sombrero.getINNER_ITEM_DEFAULT_HEIGHT());
-        position_iv.setFitWidth(Sombrero.getINNER_ITEM_DEFAULT_WIDTH());
-        position_iv.relocate(selected_pane.getWidth()/2 - Sombrero.getINNER_ITEM_DEFAULT_HEIGHT()/2,selected_pane.getHeight()/2 - Sombrero.getINNER_ITEM_DEFAULT_WIDTH()/ 2);
+        position_iv.setFitHeight(Sombrero.getInnerItemDefaultHeight());
+        position_iv.setFitWidth(Sombrero.getInnerItemDefaultWidth());
+        position_iv.relocate(selected_pane.getWidth()/2 - Sombrero.getInnerItemDefaultHeight()/2,selected_pane.getHeight()/2 - Sombrero.getInnerItemDefaultWidth()/ 2);
     }
 
     @FXML private void onFifteenToFifteen() {
