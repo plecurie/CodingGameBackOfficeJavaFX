@@ -49,8 +49,6 @@ public class SombreroTestController implements Initializable {
     private int column_start, row_start;
     private double start_x, start_y, start_rotate;
     private DisplayerController displayController;
-    private final int iteration_max = 200;
-    private int iteration = 0;
     private Path road;
 
     @Override public void initialize(URL location, ResourceBundle resources) {
@@ -156,30 +154,19 @@ public class SombreroTestController implements Initializable {
             commands.add(command);
         }
 
-        // FIXME: 18/07/2018
-        if (iteration < iteration_max){
-            road = createPath(commands);
-            PathTransition animation = new PathTransition();
-            animation.setNode(PLAYER);
-            animation.setPath(road);
-
-            animation.setDuration(new Duration(200*commands.size()));
-            animation.setInterpolator(Interpolator.LINEAR);
-        } else  {
-            PathTransition animation = new PathTransition();
-            animation.setNode(PLAYER);
-            animation.setPath(road);
-
-            animation.setDuration(new Duration(200*commands.size()));
-            animation.setInterpolator(Interpolator.LINEAR);
-        }
+        road = createPath(commands);
+        PathTransition animation = new PathTransition();
+        animation.setNode(PLAYER);
+        animation.setPath(road);
+        animation.setDuration(new Duration(200*commands.size()));
+        animation.setInterpolator(Interpolator.LINEAR);
 
         return animation;
     }
 
     private Path createPath(List<String> commands) {
         Path path = new Path();
-        iteration++;
+
         for (String command : commands) {
             String[] object = command.split(":");
             String movement = object[0];

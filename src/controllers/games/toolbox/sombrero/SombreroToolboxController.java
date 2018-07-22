@@ -43,18 +43,10 @@ public class SombreroToolboxController implements Initializable {
 
     private DisplayerController displayController;
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         onBlueClick(new ActionEvent());
         player = false;
-
-        // FIXME: 18/07/2018
-        /*
-        if (Sombrero.getSelectedSombrero() != null){
-            gridPane = Sombrero.getSelectedSombrero().getGridpane();
-        }
-        */
 
         for (Node node : gridPane.getChildren()) {
             node.setStyle(BLACK);
@@ -62,7 +54,6 @@ public class SombreroToolboxController implements Initializable {
         }
         initFunctionsChoicebox();
         initDifficultyChoiceBox();
-
     }
 
     private void fillSombreroCell(Node node) {
