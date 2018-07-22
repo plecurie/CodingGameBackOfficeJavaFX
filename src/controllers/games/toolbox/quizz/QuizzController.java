@@ -22,6 +22,7 @@ import java.util.ResourceBundle;
 
 public class QuizzController implements Initializable{
 
+    private static DisplayerController displayController;
 
     @FXML private TextField edt_response1;
     @FXML private TextField edt_response2;
@@ -76,6 +77,8 @@ public class QuizzController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("initialize quizz controller");
+
         ArrayList<Integer> choice = new ArrayList<>();
         choice.add(1);
         choice.add(2);
@@ -94,6 +97,12 @@ public class QuizzController implements Initializable{
         cb_is_evaluate_player.setItems(FXCollections.observableArrayList(choice));
         cb_is_evaluate_player.setValue(choice.get(0));
 
+        System.out.println(" end initialize quizz controller");
+    }
+
+    public void linkDisplayer(DisplayerController displayerController){
+        System.out.println("linkDisplayer QuizzController");
+        QuizzController.displayController = displayerController;
 
     }
 

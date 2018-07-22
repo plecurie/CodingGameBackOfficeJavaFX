@@ -50,7 +50,7 @@ public class DAOLevel {
         int difficulty = 1;
 
         HttpRequest http = new HttpRequest();
-        List list = http.sendGetRequest("/level_quiz/questions_quiz");
+        List list = http.sendGetRequest("/level_quizz");
 
         List<LevelQuizz> listLevelQuizz = new ArrayList<>();
 
@@ -58,6 +58,8 @@ public class DAOLevel {
             String[] list_objet = aList.toString().split(":");
             String key = list_objet[0];
             String value = list_objet[1];
+
+
 
             switch (key) {
                 case "id": {

@@ -23,7 +23,7 @@ public class QuizzLevelController implements Initializable{
     private static DisplayerController displayController;
 
 
-    @FXML private TableView<LevelQuizz> arrLevelQuizz;
+    @FXML private TableView<LevelQuizz> tab_level_quizz;
     @FXML private TableColumn<LevelQuizz, String> column_quizz_question;
     @FXML private TableColumn<LevelQuizz, String> column_quizz_answer1;
     @FXML private TableColumn<LevelQuizz, String> column_quizz_answer2;
@@ -38,7 +38,7 @@ public class QuizzLevelController implements Initializable{
         ObservableList<LevelQuizz> listLevelsQuizz = getInitialTableData();
 
         if(!listLevelsQuizz.isEmpty()){
-            arrLevelQuizz.setItems(listLevelsQuizz);
+            tab_level_quizz.setItems(listLevelsQuizz);
         }
 
         column_quizz_question.setCellValueFactory(new PropertyValueFactory<>("question"));
@@ -48,7 +48,7 @@ public class QuizzLevelController implements Initializable{
         column_quizz_answer4.setCellValueFactory(new PropertyValueFactory<>("answer4"));
         column_quizz_difficulty.setCellValueFactory(new PropertyValueFactory<>("difficulty"));
 
-        arrLevelQuizz.getColumns().setAll(column_quizz_question, column_quizz_answer1, column_quizz_answer2, column_quizz_answer3, column_quizz_answer4, column_quizz_difficulty);
+        tab_level_quizz.getColumns().setAll(column_quizz_question, column_quizz_answer1, column_quizz_answer2, column_quizz_answer3, column_quizz_answer4, column_quizz_difficulty);
 
 
     }
@@ -63,11 +63,12 @@ public class QuizzLevelController implements Initializable{
     public void linkDisplayer(DisplayerController displayerController){
         QuizzLevelController.displayController = displayerController;
         Game selected_game = Game.SELECTED_GAME;
+
     }
 
     @FXML private void onCreateLevel(ActionEvent actionEvent){
         try {
-            displayController.displayToolbox();
+            displayController.displayQuizz();
         } catch (Exception e) {
             e.printStackTrace();
         }
