@@ -213,7 +213,7 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 4 : {
-                sceneRoot = displayQuizz();
+                sceneRoot = displayLevelsQuizz();
                 break;
             }
             default:
@@ -286,6 +286,18 @@ public class DisplayerController implements Initializable {
 
     public BorderPane displayQuizz() throws IOException {
         String resource_name = "../contents/quizz_toolbox.fxml";
+
+        BorderPane sceneRoot = new BorderPane();
+
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        return sceneRoot;
+    }
+
+    public BorderPane displayLevelsQuizz() throws IOException {
+        String resource_name = "../contents/quizz_levels.fxml";
 
         BorderPane sceneRoot = new BorderPane();
 

@@ -1,5 +1,6 @@
 package controllers.games.toolbox.quizz;
 
+import controllers.DisplayerController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import models.Game;
 import services.dao.DAOAuth;
 import services.dao.DAOLevel;
 
@@ -19,6 +21,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class QuizzController implements Initializable{
+
+
     @FXML private TextField edt_response1;
     @FXML private TextField edt_response2;
     @FXML private TextField edt_response3;
@@ -92,4 +96,5 @@ public class QuizzController implements Initializable{
 
 
     }
+
 }

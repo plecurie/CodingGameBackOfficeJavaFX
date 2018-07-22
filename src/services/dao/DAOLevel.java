@@ -1,5 +1,7 @@
 package services.dao;
 
+import models.LevelQuizz;
+
 import javax.json.Json;
 import javax.json.JsonObject;
 import java.util.ArrayList;
@@ -36,6 +38,72 @@ public class DAOLevel {
         return created;
     }
 
+    public List<LevelQuizz> getLevelsQuizz() {
+        int id = 0;
+        int idLevels = 0;
+        String question = "";
+        String answer1 = "";
+        String answer2 = "";
+        String answer3 = "";
+        String answer4 = "";
+        String correctAnswer = "";
+        int difficulty = 1;
+
+        HttpRequest http = new HttpRequest();
+        List list = http.sendGetRequest("/level_quiz/questions_quiz");
+
+        List<LevelQuizz> listLevelQuizz = new ArrayList<>();
+
+        for (Object aList : list) {
+            String[] list_objet = aList.toString().split(":");
+            String key = list_objet[0];
+            String value = list_objet[1];
+
+            switch (key) {
+                case "id": {
+                    id = Integer.valueOf(value);
+                    break;
+                }
+                case "id_levels": {
+                    idLevels = Integer.parseInt(value);
+                    break;
+                }
+                case "question": {
+                    question = value;
+                    break;
+                }
+                case "answer1": {
+                    answer1 = value;
+                    break;
+                }
+                case "answer2": {
+                    answer2 = value;
+                    break;
+                }
+                case "answer3": {
+                    answer3 = value;
+                    break;
+                }
+                case "answer4": {
+                    answer4 = value;
+                    break;
+                }
+                case "correct_answer": {
+                    correctAnswer = value;
+                    break;
+                }
+                case "difficulty": {
+                    difficulty = Integer.valueOf(value);
+                    listLevelQuizz.add(new LevelQuizz(id, idLevels, question, answer1, answer2, answer3, answer4, correctAnswer, difficulty));
+                    break;
+                }
+                default: {
+                    break;
+                }
+            }
+        }
+        return listLevelQuizz;
+    }
 
     public Boolean createLevelQuizz(String question, ArrayList<String> responses, String correctAnswer, String isEvaluateLevel, String difficulty){
         HttpRequest httpRequest = new HttpRequest();
