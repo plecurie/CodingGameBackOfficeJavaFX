@@ -7,10 +7,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import models.Game;
+import models.Level;
 import models.LevelQuizz;
 import services.dao.DAOLevel;
 
@@ -30,6 +32,8 @@ public class QuizzLevelController implements Initializable{
     @FXML private TableColumn<LevelQuizz, String> column_quizz_answer3;
     @FXML private TableColumn<LevelQuizz, String> column_quizz_answer4;
     @FXML private TableColumn<LevelQuizz, String> column_quizz_difficulty;
+
+    @FXML private Button btn_delete_level_quizz;
 
     private DAOLevel daoLevel = new DAOLevel();
 
@@ -73,4 +77,12 @@ public class QuizzLevelController implements Initializable{
             e.printStackTrace();
         }
     }
+
+    @FXML private void deleteLevelQuizz(ActionEvent actionEvent){
+        LevelQuizz selectedItem = tab_level_quizz.getSelectionModel().getSelectedItem();
+        daoLevel.deleteLevel(selectedItem.getId());
+        System.out.println("selected row : " + selectedItem.getId());
+    }
+
+
 }

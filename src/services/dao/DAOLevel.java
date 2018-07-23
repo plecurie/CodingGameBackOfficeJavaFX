@@ -1,5 +1,6 @@
 package services.dao;
 
+import models.Game;
 import models.LevelQuizz;
 
 import javax.json.Json;
@@ -122,6 +123,16 @@ public class DAOLevel {
                 .build();
 
         httpRequest.sendPostRequest(parameters, "/levels/create/");
+        return true;
+        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
+    }
+
+
+    public Boolean deleteLevel(int idLevel){
+        HttpRequest httpRequest = new HttpRequest();
+        JsonObject parameters = Json.createObjectBuilder().build();
+
+        httpRequest.sendDeleteRequest(parameters, "/levels/" + Game.GAME_ID + "/" + idLevel);
         return true;
         //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
