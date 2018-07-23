@@ -66,7 +66,8 @@ public class DAOLevel {
                 break;
             }
             case 3 : {
-                parameters = SombreroFactory.breakSombreroToJson(Sombrero.getSelectedSombrero());
+                SombreroFactory sombreroFactory = new SombreroFactory();
+                parameters = sombreroFactory.convertSombreroToJsonObject(Sombrero.getSelectedSombrero());
                 break;
             }
             case 4 : {
@@ -89,16 +90,14 @@ public class DAOLevel {
 
     public Level getSelectedLevel(int id_level) {
         String name = "";
-        int difficulty = 0;
-        GridPane board = new GridPane();
-        int cell = 0;
-        int F1 = 0;
-        int F2 = 0;
-        int F3 = 0;
-        int F4 = 0;
+        int difficulty;
 
         HttpRequest http = new HttpRequest();
         List list = http.sendGetRequest("/levels/" + Game.GAME_ID + "/" + id_level);
+
+        SombreroFactory sombreroFactory = new SombreroFactory();
+        sombreroFactory.browseAndBuildSombrero(list);
+
         Level selected_level = new Level();
 
         for (Object aList : list) {
@@ -111,44 +110,10 @@ public class DAOLevel {
                     name = value;
                     break;
                 }
-                case "cell" : {
-                    cell = Integer.valueOf(value);
-                    break;
-                }
                 case "difficulty" : {
                     difficulty = Integer.valueOf(value);
-                    break;
-                }
-                case "f1" : {
-                    F1 = Integer.valueOf(value);
-                    break;
-                }
-                case "f2" : {
-                    F2 = Integer.valueOf(value);
-                    break;
-                }
-                case "f3" : {
-                    F3 = Integer.valueOf(value);
-                    break;
-                }
-                case "f4" : {
-                    F4 = Integer.valueOf(value);
-                    break;
-                }
-                case "grid_list" : {
-
-                    String[] obj = aList.toString().split("[^\\w]", 2);
-                    value = obj[1];
-
-                    board = SombreroFactory.composeGridPane(board, value, cell);
-                    board.setGridLinesVisible(true);
-                    board.setVisible(true);
-
-                    Sombrero.setSelectedSombrero(new Sombrero(board,name,F1, F2, F3, F4, difficulty, cell));
-
                     selected_level = new Level(id_level, name, difficulty);
                     Level.setSelectedLevel(selected_level);
-
                     break;
                 }
                 default:

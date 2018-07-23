@@ -27,9 +27,12 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import models.Game;
 import models.User;
+import services.DataFactory;
 
+import javax.json.JsonObject;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -196,11 +199,15 @@ public class DisplayerController implements Initializable {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
 
-        GridPane sombrero_test = SombreroFactory.buildTestSombrero(sombrero);
-        sombrero_test.setMaxSize(600,600);
+        SombreroFactory sombreroFactory = new SombreroFactory();
+
+        JsonObject obj_sombrero = sombreroFactory.convertSombreroToJsonObject(sombrero);
+        List sombrero_list = new DataFactory().parseJSON(String.valueOf(obj_sombrero));
+        sombreroFactory.browseAndBuildSombrero(sombrero_list);
+        Sombrero.getSelectedSombrero().getGridpane().setMaxSize(600,600);
 
         BorderPane borderPane = loader.load();
-        borderPane.setLeft(sombrero_test);
+        borderPane.setLeft(Sombrero.getSelectedSombrero().getGridpane());
         borderPane.setStyle("-fx-background-color: moccasin ");
 
         SombreroTestController testController = loader.getController();

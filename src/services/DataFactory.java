@@ -1,12 +1,13 @@
 package services;
 
 import javax.json.Json;
+import javax.json.JsonObject;
 import javax.json.stream.JsonParser;
-import java.io.StringReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonToString {
+public class DataFactory {
 
     public List parseJSON(String s){
         JsonParser parser = Json.createParser(new StringReader(s));
@@ -38,6 +39,38 @@ public class JsonToString {
             }
         }
         return list;
+    }
+
+    public String parseInputStream(InputStream is) {
+        BufferedReader br = null;
+        StringBuilder json = new StringBuilder();
+
+        String line;
+        try {
+
+            br = new BufferedReader(new InputStreamReader(is));
+            while ((line = br.readLine()) != null) {
+                json.append(line);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return json.toString();
+    }
+
+    private List convertJsonObjecttoList(JsonObject objects) {
+
+        DataFactory dataFactory = new DataFactory();
+        return dataFactory.parseJSON(String.valueOf(objects));
     }
 
 

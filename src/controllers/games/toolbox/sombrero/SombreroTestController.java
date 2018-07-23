@@ -46,20 +46,24 @@ public class SombreroTestController implements Initializable {
     private String COLOR;
     private SombreroItem PLAYER;
     private GridPane GRID;
+    private Sombrero sombrero;
     private int column_start, row_start;
     private double start_x, start_y, start_rotate;
     private DisplayerController displayController;
     private Path road;
 
     @Override public void initialize(URL location, ResourceBundle resources) {
-        level_label.setText(Game.GAME_NAME + ": " + SombreroFactory.getName());
+
+        sombrero = Sombrero.getSelectedSombrero();
+
+        level_label.setText(Game.GAME_NAME + ": " + sombrero.getName());
         COLOR = Colors.LIGHTGREY;
         ACTION = "move";
 
         fillCommandGrid();
 
-        PLAYER = SombreroFactory.getArrow();
-        GRID = SombreroFactory.buildTestSombrero(Sombrero.getSelectedSombrero());
+        PLAYER = SombreroItem.getArrow();
+        GRID = sombrero.getGridpane();
         start_x = PLAYER.getX();
         start_y = PLAYER.getY();
         start_rotate = PLAYER.getRotate();
@@ -362,28 +366,28 @@ public class SombreroTestController implements Initializable {
 
         f1_gridpane.getChildren().clear();
 
-        for (int i = 0; i < SombreroFactory.getF1(); i++) {
+        for (int i = 0; i < sombrero.getF1(); i++) {
             Pane pane = createCommandPane(i);
             f1_gridpane.addColumn(i, pane);
             f1_label.setText("F1");
         }
 
         f2_gridpane.getChildren().clear();
-        for (int i = 0; i < SombreroFactory.getF2(); i++) {
+        for (int i = 0; i < sombrero.getF2(); i++) {
             Pane pane = createCommandPane(i);
             f2_gridpane.addColumn(i, pane);
             f2_label.setText("F2");
         }
 
         f3_gridpane.getChildren().clear();
-        for (int i = 0; i < SombreroFactory.getF3(); i++) {
+        for (int i = 0; i < sombrero.getF3(); i++) {
             Pane pane = createCommandPane(i);
             f3_gridpane.addColumn(i, pane);
             f3_label.setText("F3");
         }
 
         f4_gridpane.getChildren().clear();
-        for (int i = 0; i < SombreroFactory.getF4(); i++) {
+        for (int i = 0; i < sombrero.getF4(); i++) {
             Pane pane = createCommandPane(i);
             f4_gridpane.addColumn(i, pane);
             f4_label.setText("F4");

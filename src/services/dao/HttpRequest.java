@@ -3,8 +3,7 @@ package services.dao;
 import controllers.DisplayerController;
 import models.User;
 import services.ErrorHandler;
-import services.InputStreamToJson;
-import services.JsonToString;
+import services.DataFactory;
 import settings.ApiConstant;
 
 import javax.json.JsonObject;
@@ -35,7 +34,7 @@ class HttpRequest {
             os.write(params.toString().getBytes("UTF-8"));
             os.close();
 
-            token = new InputStreamToJson().parseInputStream(connection.getInputStream());
+            token = new DataFactory().parseInputStream(connection.getInputStream());
 
             connection.disconnect();
         } catch (IOException e) {
@@ -60,8 +59,8 @@ class HttpRequest {
             connection.setDoInput(true);
             connection.setRequestMethod("GET");
 
-            JsonToString jsonToString = new JsonToString();
-            response = jsonToString.parseJSON(new InputStreamToJson().parseInputStream(connection.getInputStream()));
+            DataFactory dataFactory = new DataFactory();
+            response = dataFactory.parseJSON(new DataFactory().parseInputStream(connection.getInputStream()));
 
         } catch (IOException e) {
             ErrorHandler errorHandler = new ErrorHandler();
@@ -91,7 +90,7 @@ class HttpRequest {
             os.close();
 
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
-            response = (new InputStreamToJson().parseInputStream(connection.getInputStream()));
+            response = (new DataFactory().parseInputStream(connection.getInputStream()));
 
             in.close();
             connection.disconnect();
@@ -121,7 +120,7 @@ class HttpRequest {
             os.close();
 
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
-            response = new InputStreamToJson().parseInputStream(connection.getInputStream());
+            response = new DataFactory().parseInputStream(connection.getInputStream());
             in.close();
 
             connection.disconnect();

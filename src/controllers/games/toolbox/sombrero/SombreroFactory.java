@@ -5,7 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import models.Game;
-import services.JsonToString;
+import services.DataFactory;
 import settings.Colors;
 
 import javax.json.Json;
@@ -17,77 +17,7 @@ import static settings.Colors.convertColor;
 
 public class SombreroFactory {
 
-    private static int difficulty;
-    private static int cell;
-    private static String name;
-    private static int F1;
-    private static int F2;
-    private static int F3;
-    private static int F4;
-
-    private static SombreroItem arrow;
-
-    public static GridPane buildTestSombrero(Sombrero sombrero) {
-
-        Sombrero.setSelectedSombrero(sombrero);
-
-        JsonObject grid_params = breakSombreroToJson(sombrero);
-        GridPane board = new GridPane();
-
-        JsonToString jsonToString = new JsonToString();
-        List grid_list = jsonToString.parseJSON(String .valueOf(grid_params));
-
-        for (Object aList : grid_list) {
-            String[] list_objet = aList.toString().split(":");
-            String key = list_objet[0];
-            String value = list_objet[1];
-
-            switch (key) {
-                case "name" : {
-                    name = value;
-                    break;
-                }
-                case "cell" : {
-                    cell = Integer.valueOf(value);
-                    break;
-                }
-                case "difficulty" : {
-                    difficulty = Integer.valueOf(value);
-                    break;
-                }
-                case "f1" : {
-                    F1 = Integer.valueOf(value);
-                    break;
-                }
-                case "f2" : {
-                    F2 = Integer.valueOf(value);
-                    break;
-                }
-                case "f3" : {
-                    F3 = Integer.valueOf(value);
-                    break;
-                }
-                case "f4" : {
-                    F4 = Integer.valueOf(value);
-                    break;
-                }
-                case "grid_list" : {
-
-                    String[] obj = aList.toString().split("[^\\w]", 2);
-                    value = obj[1];
-
-                    board = composeGridPane(board, value, cell);
-                    break;
-                }
-                default:
-                    break;
-            }
-        }
-
-        return board;
-    }
-
-    public static JsonObject breakSombreroToJson(Sombrero sombrero) {
+    public JsonObject convertSombreroToJsonObject(Sombrero sombrero) {
 
         GridPane gridPane = sombrero.getGridpane();
         String level_name = sombrero.getName();
@@ -143,97 +73,173 @@ public class SombreroFactory {
                 .add("f1", f1).add("f2", f2).add("f3", f3).add("f4", f4).add("grid_list", String.valueOf(grid_list)).build();
     }
 
-    public static GridPane composeGridPane(GridPane board, String gridpane_str, int cell) {
-        String[][] color_cell = new String[cell][cell];
-        String[][] item_cell = new String[cell][cell];
-        int cell_i = 0, cell_y = 0;
 
-        JsonToString jsonToString = new JsonToString();
-        List cell_list = jsonToString.parseJSON(String.valueOf(gridpane_str));
+    public void browseAndBuildSombrero(List sombrero_list) {
 
-        for (Object aList : cell_list) {
-            String[] o = aList.toString().split(":");
-            String k = o[0];
-            String v = o[1];
+        int difficulty = 0;
+        int cell_count = 0;
+        String name = "";
+        int f1 = 0;
+        int f2 = 0;
+        int f3 = 0;
+        int f4 = 0;
+        GridPane board = new GridPane();
 
-            if (cell_y == cell) {
-                cell_i++;
-                cell_y = 0;
-            }
+        for (Object object : sombrero_list) {
+            String[] list_objet = object.toString().split(":");
+            String key = list_objet[0];
+            String value = list_objet[1];
 
-            switch (k) {
-                case "COLOR" : {
-                    color_cell[cell_i][cell_y] = convertColor(v);
+            switch (key) {
+                case "name" : {
+                    name = value;
                     break;
                 }
-                case "description" : {
-                    item_cell[cell_i][cell_y] = v;
-                    cell_y++;
+                case "cell" : {
+                    cell_count = Integer.valueOf(value);
                     break;
                 }
-                default: break;
+                case "difficulty" : {
+                    difficulty = Integer.valueOf(value);
+                    break;
+                }
+                case "f1" : {
+                    f1 = Integer.valueOf(value);
+                    break;
+                }
+                case "f2" : {
+                    f2 = Integer.valueOf(value);
+                    break;
+                }
+                case "f3" : {
+                    f3 = Integer.valueOf(value);
+                    break;
+                }
+                case "f4" : {
+                    f4 = Integer.valueOf(value);
+                    break;
+                }
+                case "grid_list" : {
+
+                    String[] obj = object.toString().split("[^\\w]", 2);
+                    value = obj[1];
+
+                    String[][] color_cell = new String[cell_count][cell_count];
+                    String[][] item_cell = new String[cell_count][cell_count];
+                    int cell_i = 0, cell_y = 0;
+
+                    List cell_list = new DataFactory().parseJSON(String.valueOf(value));
+
+                    for (Object aList : cell_list) {
+                        String[] o = aList.toString().split(":");
+                        String k = o[0];
+                        String v = o[1];
+
+                        if (cell_y == cell_count) {
+                            cell_i++;
+                            cell_y = 0;
+                        }
+
+                        switch (k) {
+                            case "COLOR" : {
+                                color_cell[cell_i][cell_y] = convertColor(v);
+                                break;
+                            }
+                            case "description" : {
+                                item_cell[cell_i][cell_y] = v;
+                                cell_y++;
+                                break;
+                            }
+                            default: break;
+                        }
+                    }
+
+                    for (int i = 0; i < cell_count; i++) {
+                        for (int j = 0; j < cell_count; j++) {
+
+                            Pane pane = new Pane();
+                            pane.setStyle(color_cell[i][j]);
+                            SombreroItem arrow;
+
+                            if (item_cell[i][j].equals("null")){
+                                item_cell[i][j] = "";
+                            }
+
+                            if (cell_count == 10){
+                                pane.setMinSize(60.0,60.0);
+                            } else if (cell_count == 15){
+                                pane.setMinSize(40.0,40.0);
+                            }
+
+                            switch (item_cell[i][j]) {
+                                case "up" : {
+                                    arrow = setArrowOrientation(270,i,j);
+                                    SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
+                                    pane.getChildren().add(arrow);
+                                    break;
+                                }
+                                case "down" : {
+                                    arrow = setArrowOrientation(90,i,j);
+                                    SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
+                                    pane.getChildren().add(arrow);
+                                    break;
+                                }
+                                case "left" : {
+                                    arrow = setArrowOrientation(180,i,j);
+                                    SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
+                                    pane.getChildren().add(arrow);
+                                    break;
+                                }
+                                case "right" : {
+                                    arrow = setArrowOrientation(0,i,j);
+                                    SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
+                                    pane.getChildren().add(arrow);
+                                    break;
+                                }
+                                case "item" : {
+                                    SombreroItem imageView = new SombreroItem("file:src/contents/images/stargold.png", i, j);
+                                    imageView.setFitHeight(30);
+                                    imageView.setFitWidth(30);
+                                    imageView.setLayoutX(15);
+                                    imageView.setLayoutY(15);
+                                    pane.getChildren().add(imageView);
+                                    break;
+                                }
+                                default:
+                                    break;
+                            }
+                            GridPane.setRowIndex(pane, i);
+                            GridPane.setColumnIndex(pane, j);
+                            board.getChildren().addAll(pane);
+                        }
+                    }
+                    board.setGridLinesVisible(true);
+                    board.setVisible(true);
+                    Sombrero.setSelectedSombrero(new Sombrero(board, name, f1, f2, f3, f4, difficulty,cell_count));
+                    break;
+                }
+                default:
+                    break;
             }
         }
+    }
 
-        for (int i = 0; i < cell; i++) {
-            for (int j = 0; j < cell; j++) {
-
+    GridPane buildEmptySombrero(int cell_count) {
+        GridPane gridPane = new GridPane();
+        for (int i = 0; i < cell_count; i++) {
+            for (int j = 0; j < cell_count; j++) {
                 Pane pane = new Pane();
-                pane.setStyle(color_cell[i][j]);
-
-                if (item_cell[i][j].equals("null")){
-                    item_cell[i][j] = "";
-                }
-
-                if (cell == 10){
-                    pane.setMinSize(60.0,60.0);
-                } else if (cell == 15){
-                    pane.setMinSize(40.0,40.0);
-                }
-
-                switch (item_cell[i][j]) {
-                    case "up" : {
-                        arrow = setArrowOrientation(270,i,j);
-                        pane.getChildren().add(arrow);
-                        break;
-                    }
-                    case "down" : {
-                        arrow = setArrowOrientation(90,i,j);
-                        pane.getChildren().add(arrow);
-                        break;
-                    }
-                    case "left" : {
-                        arrow = setArrowOrientation(180,i,j);
-                        pane.getChildren().add(arrow);
-                        break;
-                    }
-                    case "right" : {
-                        arrow = setArrowOrientation(0,i,j);
-                        pane.getChildren().add(arrow);
-                        break;
-                    }
-                    case "item" : {
-                        SombreroItem imageView = new SombreroItem("file:src/contents/images/stargold.png", i, j);
-                        imageView.setFitHeight(30);
-                        imageView.setFitWidth(30);
-                        imageView.setLayoutX(15);
-                        imageView.setLayoutY(15);
-                        pane.getChildren().add(imageView);
-                        break;
-                    }
-                    default:
-                        break;
-                }
+                pane.setStyle(Colors.BLACK);
                 GridPane.setRowIndex(pane, i);
                 GridPane.setColumnIndex(pane, j);
-                board.getChildren().addAll(pane);
+                gridPane.getChildren().addAll(pane);
             }
         }
-        board.setGridLinesVisible(true);
-        board.setVisible(true);
-
-        return board;
+        gridPane.setGridLinesVisible(true);
+        gridPane.setVisible(true);
+        return gridPane;
     }
+
 
     private static SombreroItem setArrowOrientation(int rotate, int rowId, int columnId) {
         SombreroItem imageView = new SombreroItem("file:src/contents/images/arrow.png",rowId,columnId);
@@ -244,22 +250,5 @@ public class SombreroFactory {
         imageView.setLayoutY(15);
         return imageView;
     }
-
-    static String getName() {
-        return name;
-    }
-    static int getF1() {
-        return F1;
-    }
-    static int getF2() {
-        return F2;
-    }
-    static int getF3() {
-        return F3;
-    }
-    static int getF4() {
-        return F4;
-    }
-    static SombreroItem getArrow() { return arrow; }
 
 }
