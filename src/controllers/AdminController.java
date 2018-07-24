@@ -1,8 +1,8 @@
 package controllers;
 
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -54,7 +54,7 @@ public class AdminController implements Initializable  {
     }
 
 
-    @FXML public void onCreateAdmin() {
+    @FXML protected void onCreateAdmin() {
 
         String username = username_textfield.getText();
         String firstname = firstname_textfield.getText();
@@ -67,6 +67,20 @@ public class AdminController implements Initializable  {
         else
             displayerController.displayAlert("Administrator not created");
 
+    }
+
+    @FXML protected void onDeleteAdmin() {
+        try {
+            int index_selected_user = tab_admin.getSelectionModel().getSelectedIndex();
+            ObservableValue<String> cell = column_id.getCellObservableValue(index_selected_user);
+            Object id = cell.getValue();
+            if (displayerController.displayConfirmation("Are you sure to downgrade this administrator ?")){
+                daoUser.deleteAdmin(Integer.valueOf(id.toString()));
+                tab_admin.refresh();
+            }
+        }catch (NullPointerException ignored){
+
+        }
     }
 
 

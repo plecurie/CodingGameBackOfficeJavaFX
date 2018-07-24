@@ -2,7 +2,6 @@ package services.dao;
 
 import models.History;
 import models.User;
-import settings.ApiConstant;
 
 import javax.json.Json;
 import javax.json.JsonObject;
@@ -137,6 +136,16 @@ public class DAOUser {
         List list = http.sendGetRequest("/users/admin");
 
         return buildUserList(list);
+    }
+
+    public boolean deleteAdmin(int id) {
+        boolean created = false;
+        HttpRequest http = new HttpRequest();
+        String response = http.sendDeleteRequest("/users/"+ id);
+        if (!response.isEmpty())
+            created = true;
+
+        return created;
     }
 
     public boolean createAdmin(String username, String firstname, String lastname, String email, int age) {

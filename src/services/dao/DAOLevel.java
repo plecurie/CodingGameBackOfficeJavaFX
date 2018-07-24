@@ -2,7 +2,6 @@ package services.dao;
 
 import controllers.games.toolbox.sombrero.Sombrero;
 import controllers.games.toolbox.sombrero.SombreroFactory;
-import javafx.scene.layout.GridPane;
 import models.Game;
 import models.Level;
 

@@ -2,8 +2,8 @@ package services.dao;
 
 import controllers.DisplayerController;
 import models.User;
-import services.ErrorHandler;
 import services.DataFactory;
+import services.ErrorHandler;
 import settings.ApiConstant;
 
 import javax.json.JsonObject;
@@ -134,6 +134,33 @@ class HttpRequest {
         return response;
     }
 
+    String sendDeleteRequest(String route) {
+        String response = "";
+
+        try {
+            URL server = new URL(ApiConstant.HOST + route);
+            HttpURLConnection connection = (HttpURLConnection) server.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            connection.setRequestProperty("Authorization", User.getTOKEN());
+            connection.setDoOutput(true);
+            connection.setDoInput(true);
+            connection.setRequestMethod("DELETE");
+
+            InputStreamReader in = new InputStreamReader(connection.getInputStream());
+            response = new DataFactory().parseInputStream(connection.getInputStream());
+            in.close();
+
+            connection.disconnect();
+
+        } catch (IOException e) {
+            ErrorHandler errorHandler = new ErrorHandler();
+            String error = errorHandler.getErrorCode(e.getMessage());
+            DisplayerController displayerController = new DisplayerController();
+            displayerController.displayAlert(error);
+        }
+        return response;
+    }
 
 
 }

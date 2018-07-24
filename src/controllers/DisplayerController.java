@@ -321,7 +321,7 @@ public class DisplayerController implements Initializable {
         anchorPane.getChildren().add(borderPane);
 
         SombreroToolboxController sombreroToolboxController = loader.getController();
-        sombreroToolboxController.linkDisplayer(this, gridPane);
+        sombreroToolboxController.linkDisplayer(this);
 
         return sceneRoot ;
     }
