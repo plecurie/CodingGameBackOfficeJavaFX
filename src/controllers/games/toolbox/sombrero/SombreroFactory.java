@@ -43,22 +43,30 @@ public class SombreroFactory {
             switch (pane.getStyle()) {
                 case Colors.BLACK : {
                     cell_color = "BLACK";
-                    if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
+                    if (pane.getChildren().size() > 0) {
+                        description = (Label) pane.getChildren().get(1).lookup("Label");
+                    }
                     break;
                 }
                 case Colors.BLUE : {
                     cell_color = "BLUE";
-                    if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
+                    if (pane.getChildren().size() > 0){
+                        description = (Label) pane.getChildren().get(1).lookup("Label");
+                    }
                     break;
                 }
                 case Colors.RED : {
                     cell_color = "RED";
-                    if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
+                    if (pane.getChildren().size() > 0){
+                        description = (Label) pane.getChildren().get(1).lookup("Label");
+                    }
                     break;
                 }
                 case Colors.GREEN : {
                     cell_color = "GREEN";
-                    if (pane.getChildren().size() > 0) description = (Label) pane.getChildren().get(1).lookup("Label");
+                    if (pane.getChildren().size() > 0) {
+                        description = (Label) pane.getChildren().get(1).lookup("Label");
+                    }
                     break;
                 }
                 default:
@@ -74,8 +82,10 @@ public class SombreroFactory {
     }
 
 
-    public void browseAndBuildSombrero(List sombrero_list) {
+    public void browseAndBuildSombrero(List sombrero_list, boolean test) {
 
+        double width;
+        double height;
         int difficulty = 0;
         int cell_count = 0;
         String name = "";
@@ -126,28 +136,36 @@ public class SombreroFactory {
 
                     String[][] color_cell = new String[cell_count][cell_count];
                     String[][] item_cell = new String[cell_count][cell_count];
-                    int cell_i = 0, cell_y = 0;
+                    int line = 0, column = 0;
+
+                    if (test) {
+                        width = 600/cell_count;
+                        height = 600/cell_count;
+                    } else {
+                        width = 838/cell_count;
+                        height = 660/cell_count;
+                    }
 
                     List cell_list = new DataFactory().parseJSON(String.valueOf(value));
 
-                    for (Object aList : cell_list) {
-                        String[] o = aList.toString().split(":");
+                    for (Object cell : cell_list) {
+                        String[] o = cell.toString().split(":");
                         String k = o[0];
                         String v = o[1];
 
-                        if (cell_y == cell_count) {
-                            cell_i++;
-                            cell_y = 0;
+                        if (column == cell_count) {
+                            line ++;
+                            column = 0;
                         }
 
                         switch (k) {
                             case "COLOR" : {
-                                color_cell[cell_i][cell_y] = convertColor(v);
+                                color_cell[line][column] = convertColor(v);
                                 break;
                             }
                             case "description" : {
-                                item_cell[cell_i][cell_y] = v;
-                                cell_y++;
+                                item_cell[line][column] = v;
+                                column++;
                                 break;
                             }
                             default: break;
@@ -156,53 +174,55 @@ public class SombreroFactory {
 
                     for (int i = 0; i < cell_count; i++) {
                         for (int j = 0; j < cell_count; j++) {
-
                             Pane pane = new Pane();
                             pane.setStyle(color_cell[i][j]);
                             SombreroItem arrow;
+                            Label label = new Label();
+                            label.setVisible(false);
 
-                            if (item_cell[i][j].equals("null")){
-                                item_cell[i][j] = "";
-                            }
+                            pane.setMinWidth(width);
+                            pane.setMaxWidth(width);
+                            pane.setMinHeight(height);
+                            pane.setMaxHeight(height);
 
-                            if (cell_count == 10){
-                                pane.setMinSize(60.0,60.0);
-                            } else if (cell_count == 15){
-                                pane.setMinSize(40.0,40.0);
-                            }
 
                             switch (item_cell[i][j]) {
                                 case "up" : {
+                                    label.setText("up");
                                     arrow = setArrowOrientation(270,i,j);
                                     SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
-                                    pane.getChildren().add(arrow);
+                                    pane.getChildren().addAll(arrow, label);
                                     break;
                                 }
                                 case "down" : {
+                                    label.setText("down");
                                     arrow = setArrowOrientation(90,i,j);
                                     SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
-                                    pane.getChildren().add(arrow);
+                                    pane.getChildren().addAll(arrow, new Label("down"));
                                     break;
                                 }
                                 case "left" : {
+                                    label.setText("left");
                                     arrow = setArrowOrientation(180,i,j);
                                     SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
-                                    pane.getChildren().add(arrow);
+                                    pane.getChildren().addAll(arrow, new Label("left"));
                                     break;
                                 }
                                 case "right" : {
+                                    label.setText("right");
                                     arrow = setArrowOrientation(0,i,j);
                                     SombreroItem.setArrow(arrow, arrow.getX(), arrow.getY());
-                                    pane.getChildren().add(arrow);
+                                    pane.getChildren().addAll(arrow, new Label("right"));
                                     break;
                                 }
                                 case "item" : {
+                                    label.setText("item");
                                     SombreroItem imageView = new SombreroItem("file:src/contents/images/stargold.png", i, j);
                                     imageView.setFitHeight(30);
                                     imageView.setFitWidth(30);
                                     imageView.setLayoutX(15);
                                     imageView.setLayoutY(15);
-                                    pane.getChildren().add(imageView);
+                                    pane.getChildren().addAll(imageView, label);
                                     break;
                                 }
                                 default:
@@ -224,15 +244,25 @@ public class SombreroFactory {
         }
     }
 
-    GridPane buildEmptySombrero(int cell_count) {
+    public GridPane buildEmptyGridpane(int cell_count) {
         GridPane gridPane = new GridPane();
+        double width = 838/cell_count;
+        double height = 660/cell_count;
+
         for (int i = 0; i < cell_count; i++) {
             for (int j = 0; j < cell_count; j++) {
                 Pane pane = new Pane();
                 pane.setStyle(Colors.BLACK);
+
+
+                pane.setMinWidth(width);
+                pane.setMaxWidth(width);
+                pane.setMinHeight(height);
+                pane.setMaxHeight(height);
+
                 GridPane.setRowIndex(pane, i);
                 GridPane.setColumnIndex(pane, j);
-                gridPane.getChildren().addAll(pane);
+                gridPane.add(pane, j, i);
             }
         }
         gridPane.setGridLinesVisible(true);

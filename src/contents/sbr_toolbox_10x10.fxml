@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.sombrero.SombreroToolboxController">
    <children>
       <Button layoutX="939.0" layoutY="532.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="40.0" prefWidth="123.0" text="Clear All" textAlignment="CENTER" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="939.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="532.0" />
       <Button cancelButton="true" layoutX="938.0" layoutY="596.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="40.0" prefWidth="123.0" text="Quit" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="938.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="596.0" />
-      <Button layoutX="895.0" layoutY="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="84.0" text="10x10" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="895.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="30.0">
+      <Button fx:id="button_ten" layoutX="895.0" layoutY="30.0" mnemonicParsing="false" onAction="#onTenToTen" prefHeight="60.0" prefWidth="84.0" text="10x10" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="895.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="30.0">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Button layoutX="973.0" layoutY="30.0" mnemonicParsing="false" onAction="#onFifteenToFifteen" prefHeight="60.0" prefWidth="84.0" text="15x15" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="973.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="30.0" />
+      <Button fx:id="button_fifteen" layoutX="973.0" layoutY="30.0" mnemonicParsing="false" onAction="#onFifteenToFifteen" prefHeight="60.0" prefWidth="84.0" text="15x15" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="973.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="30.0" />
       <Label layoutX="907.0" layoutY="181.0" prefHeight="30.0" prefWidth="84.0" text="F1 commands :" AnchorPane.bottomAnchor="449.0" AnchorPane.leftAnchor="909.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="181.0" />
       <GridPane fx:id="gridPane" gridLinesVisible="true" layoutX="9.0" layoutY="10.0" prefHeight="660.0" prefWidth="838.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <columnConstraints>
@@ -143,6 +147,9 @@
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="9" />
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="9" />
          </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </GridPane>
       <Button defaultButton="true" layoutX="938.0" layoutY="472.0" mnemonicParsing="false" onAction="#onResolveClick" prefHeight="60.0" prefWidth="123.0" text="TEST IT !" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="938.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="472.0">
          <effect>

@@ -1,6 +1,7 @@
 package controllers.games.toolbox;
 
 import controllers.DisplayerController;
+import controllers.games.toolbox.sombrero.Sombrero;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,6 +13,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import models.Game;
 import models.Level;
 import services.dao.DAOLevel;
@@ -53,19 +55,20 @@ public class SombreroLevelController implements Initializable {
         return FXCollections.observableList(list);
     }
 
-    @FXML private void onSaveDescription(ActionEvent actionEvent) {
+    @FXML private void onSaveDescription() {
         daoLevel.updateLevels(description_ta.getText());
     }
 
-    @FXML private void onCreate(ActionEvent actionEvent){
+    @FXML private void onCreate(){
         try {
+            Sombrero.setSelectedSombrero(null);
             displayController.displayToolbox();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @FXML protected void onSelectedRow(MouseEvent event) throws Exception {
+    @FXML protected void onSelectedRow() throws Exception {
 
         int index_selected_level = tab_levels.getSelectionModel().getSelectedIndex();
         ObservableValue cell = column_id.getCellObservableValue(index_selected_level);

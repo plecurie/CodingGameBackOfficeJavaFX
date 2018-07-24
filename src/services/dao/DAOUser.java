@@ -213,7 +213,6 @@ public class DAOUser {
                 case "id_type_profil": {
                     if (value != null && Integer.valueOf(value) != 0){
                         List json = httpRequest.sendGetRequest("/users/type/" + value);
-                        System.out.println(value);
                         for (Object obj: json) {
                             String[] o = obj.toString().split(":");
                             if (o[0].equals("name")) profil = o[1];

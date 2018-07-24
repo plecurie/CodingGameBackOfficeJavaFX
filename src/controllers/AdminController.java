@@ -54,7 +54,7 @@ public class AdminController implements Initializable  {
     }
 
 
-    @FXML public void onCreateAdmin(ActionEvent event) {
+    @FXML public void onCreateAdmin() {
 
         String username = username_textfield.getText();
         String firstname = firstname_textfield.getText();
@@ -62,12 +62,11 @@ public class AdminController implements Initializable  {
         String email = email_textfield.getText();
         int age = Integer.valueOf(age_textfield.getText());
 
-        if (daoUser.createAdmin(username, firstname, lastname, email, age)){
+        if (daoUser.createAdmin(username, firstname, lastname, email, age))
             displayerController.displayInformation("Remember, default password is 'ESGI2018' ! ;)");
-        }
-        else {
+        else
             displayerController.displayAlert("Administrator not created");
-        }
+
     }
 
 

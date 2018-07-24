@@ -203,7 +203,8 @@ public class DisplayerController implements Initializable {
 
         JsonObject obj_sombrero = sombreroFactory.convertSombreroToJsonObject(sombrero);
         List sombrero_list = new DataFactory().parseJSON(String.valueOf(obj_sombrero));
-        sombreroFactory.browseAndBuildSombrero(sombrero_list);
+
+        sombreroFactory.browseAndBuildSombrero(sombrero_list, true);
         Sombrero.getSelectedSombrero().getGridpane().setMaxSize(600,600);
 
         BorderPane borderPane = loader.load();
@@ -231,12 +232,7 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 3 : {
-                int cell = SombreroToolboxController.getCellCount();
-                if (cell == 0) {
-                    SombreroToolboxController.setCellCount(10);
-                    cell = 10;
-                }
-                sceneRoot = displaySombrero(cell);
+                sceneRoot = displaySombrero();
                 break;
             }
             case 4 : {
@@ -295,18 +291,37 @@ public class DisplayerController implements Initializable {
         return sceneRoot;
     }
 
-    private BorderPane displaySombrero(int cell) throws IOException {
-        String resource_name = "../contents/sbr_toolbox_" + cell + "x" + cell + ".fxml";
+    private BorderPane displaySombrero() throws IOException {
 
         BorderPane sceneRoot = new BorderPane();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sbr_toolbox_10x10.fxml"));
+        GridPane gridPane;
+        if (Sombrero.getSelectedSombrero() != null){
+            SombreroFactory sombreroFactory = new SombreroFactory();
+            JsonObject obj_sombrero = sombreroFactory.convertSombreroToJsonObject(Sombrero.getSelectedSombrero());
+            List sombrero_list = new DataFactory().parseJSON(String.valueOf(obj_sombrero));
+
+            sombreroFactory.browseAndBuildSombrero(sombrero_list, false);
+            gridPane = Sombrero.getSelectedSombrero().getGridpane();
+        }
+        else{
+            gridPane = new SombreroFactory().buildEmptyGridpane(10);
+            Sombrero.setSelectedSombrero(new Sombrero(gridPane,"", 0, 0, 0, 0, 1, 10));
+        }
+
+        gridPane.setMaxSize(600,600);
+        BorderPane borderPane = new BorderPane();
+        borderPane.setLeft(gridPane);
+
         final AnchorPane anchorPane = loader.load();
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 
+        anchorPane.getChildren().add(borderPane);
+
         SombreroToolboxController sombreroToolboxController = loader.getController();
-        sombreroToolboxController.linkDisplayer(this);
+        sombreroToolboxController.linkDisplayer(this, gridPane);
 
         return sceneRoot ;
     }

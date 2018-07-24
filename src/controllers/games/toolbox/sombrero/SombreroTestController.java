@@ -64,6 +64,7 @@ public class SombreroTestController implements Initializable {
 
         PLAYER = SombreroItem.getArrow();
         GRID = sombrero.getGridpane();
+
         start_x = PLAYER.getX();
         start_y = PLAYER.getY();
         start_rotate = PLAYER.getRotate();

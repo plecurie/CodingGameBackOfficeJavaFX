@@ -96,7 +96,7 @@ public class DAOLevel {
         List list = http.sendGetRequest("/levels/" + Game.GAME_ID + "/" + id_level);
 
         SombreroFactory sombreroFactory = new SombreroFactory();
-        sombreroFactory.browseAndBuildSombrero(list);
+        sombreroFactory.browseAndBuildSombrero(list, false);
 
         Level selected_level = new Level();
 

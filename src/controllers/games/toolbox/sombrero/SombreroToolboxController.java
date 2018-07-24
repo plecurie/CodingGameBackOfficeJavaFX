@@ -3,17 +3,21 @@ package controllers.games.toolbox.sombrero;
 import controllers.DisplayerController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.InnerShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import settings.Colors;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,7 +29,9 @@ import static settings.Colors.*;
 
 public class SombreroToolboxController implements Initializable {
 
-    @FXML GridPane gridPane;
+    @FXML public GridPane gridPane;
+    @FXML private Button button_ten;
+    @FXML private Button button_fifteen;
     @FXML private TextField level_name;
     @FXML private ChoiceBox<Integer> f1;
     @FXML private ChoiceBox<Integer> f2;
@@ -33,11 +39,12 @@ public class SombreroToolboxController implements Initializable {
     @FXML private ChoiceBox<Integer> f4;
     @FXML private ChoiceBox<Integer> difficulty_cb;
 
+    private Sombrero sombrero;
     private static String color;
     private static int cellCount;
     private static String action = "color";
     private ImageView position_iv = new ImageView();
-    private Label description_iv = new Label();
+    private Label description_label = new Label();
     private boolean player;
     private boolean item;
 
@@ -45,21 +52,28 @@ public class SombreroToolboxController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        onBlueClick(new ActionEvent());
-        player = false;
 
-        for (Node node : gridPane.getChildren()) {
-            node.setStyle(BLACK);
-            node.setOnMouseClicked((MouseEvent t) -> fillSombreroCell(node));
+        onBlueClick(new ActionEvent());
+
+        sombrero = Sombrero.getSelectedSombrero();
+        gridPane = sombrero.getGridpane();
+        gridPane.setTranslateX(4);
+        gridPane.setVisible(true);
+
+        cellCount = sombrero.getCellCount();
+
+        for (Node node : sombrero.getGridpane().getChildren()) {
+            node.setOnMouseClicked(event -> colorCell(node));
         }
+
         initFunctionsChoicebox();
         initDifficultyChoiceBox();
     }
 
-    private void fillSombreroCell(Node node) {
+    private void colorCell(Node node) {
 
         Pane selectedPane = (Pane) node.lookup("Pane");
-        description_iv.setVisible(false);
+        description_label.setVisible(false);
 
         switch (action) {
             case "color" : {
@@ -72,33 +86,33 @@ public class SombreroToolboxController implements Initializable {
             }
             case "up" : {
                 if (selectedPane.getChildren().isEmpty()) {
-                    description_iv.setText("up");
+                    description_label.setText("up");
                     setArrowPosition(270, selectedPane);
-                    selectedPane.getChildren().addAll(position_iv, description_iv);
+                    selectedPane.getChildren().addAll(position_iv, description_label);
                 }
                 break;
             }
             case "down" : {
                 if (selectedPane.getChildren().isEmpty()) {
-                    description_iv.setText("down");
+                    description_label.setText("down");
                     setArrowPosition(90, selectedPane);
-                    selectedPane.getChildren().addAll(position_iv, description_iv);
+                    selectedPane.getChildren().addAll(position_iv, description_label);
                 }
                 break;
             }
             case "left" : {
                 if (selectedPane.getChildren().isEmpty()){
-                    description_iv.setText("left");
+                    description_label.setText("left");
                     setArrowPosition(180, selectedPane);
-                    selectedPane.getChildren().addAll(position_iv, description_iv);
+                    selectedPane.getChildren().addAll(position_iv, description_label);
                 }
                 break;
             }
             case "right" : {
                 if (selectedPane.getChildren().isEmpty()){
-                    description_iv.setText("right");
+                    description_label.setText("right");
                     setArrowPosition(0, selectedPane);
-                    selectedPane.getChildren().addAll(position_iv, description_iv);
+                    selectedPane.getChildren().addAll(position_iv, description_label);
                 }
                 break;
             }
@@ -178,14 +192,30 @@ public class SombreroToolboxController implements Initializable {
         position_iv.relocate(selected_pane.getWidth()/2 - Sombrero.getInnerItemDefaultHeight()/2,selected_pane.getHeight()/2 - Sombrero.getInnerItemDefaultWidth()/ 2);
     }
 
-    @FXML private void onFifteenToFifteen() {
-        if (isFilled()) changeGrid(15);
-        else if(requestConfirmation()) changeGrid(15);
+    @FXML private void onFifteenToFifteen(ActionEvent event) {
+        if (!isFilled()) {
+            button_fifteen.setEffect(new InnerShadow());
+            button_ten.setStyle("-fx-effect: null");
+            changeGrid(15);
+        }
+        else if(requestConfirmation()) {
+            button_fifteen.setEffect(new InnerShadow());
+            button_ten.setStyle("-fx-effect: null");
+            changeGrid(15);
+        }
     }
 
     @FXML private void onTenToTen() {
-        if (isFilled()) changeGrid(10);
-        else if(requestConfirmation()) changeGrid(10);
+        if (!isFilled()) {
+            button_ten.setEffect(new InnerShadow());
+            button_fifteen.setStyle("-fx-effect: null");
+            changeGrid(10);
+        }
+        else if(requestConfirmation()) {
+            button_ten.setEffect(new InnerShadow());
+            button_fifteen.setStyle("-fx-effect: null");
+            changeGrid(10);
+        }
     }
 
     @FXML private void onVoidClick(ActionEvent event) {
@@ -238,11 +268,11 @@ public class SombreroToolboxController implements Initializable {
     }
 
     @FXML private void onResolveClick() {
-        if (isFilled())
+        if (!isFilled())
             displayController.displayAlert("No map ! :( ");
-        else if (!player)
+        else if (SombreroItem.getArrow() == null)
             displayController.displayAlert("No player on the map !");
-        else if (!item)
+        else if (!hasItem())
             displayController.displayAlert("Put at least one star on the map !");
         else if (!isOnMap())
             displayController.displayAlert("Put everything on the map !");
@@ -265,9 +295,10 @@ public class SombreroToolboxController implements Initializable {
     }
 
     private boolean isFilled() {
-        for (Node node : gridPane.getChildren())
-            if (!node.getStyle().equals(BLACK)) return false;
-        return true;
+        for (Node node : gridPane.getChildren()){
+            if (!node.getStyle().equals(BLACK)) return true;
+        }
+        return false;
     }
 
     private boolean isOnMap() {
@@ -284,23 +315,44 @@ public class SombreroToolboxController implements Initializable {
         return true;
     }
 
+    private boolean hasItem() {
+        for (Node node : gridPane.getChildren()){
+                Pane pane = (Pane) node.lookup("Pane");
+                try {
+                    if (pane.getChildren().size() > 1) return true;
+                } catch (Exception e) {
+                    return false;
+                }
+        }
+        return false;
+    }
+
     private boolean requestConfirmation() {
         String confirm_message = "Would you like to delete modifications ?";
         return displayController.displayConfirmation(confirm_message);
     }
 
-    private void changeGrid(int gridCell) {
-        setCellCount(gridCell);
+    private void changeGrid(int cell_count) {
+
+        cellCount = cell_count;
         try {
-            displayController.displayToolbox();
+            gridPane.getChildren().clear();
+            GridPane new_grid = new SombreroFactory().buildEmptyGridpane(cellCount);
+            new_grid.setGridLinesVisible(true);
+            gridPane.getChildren().addAll(new_grid);
+            onBlueClick(new ActionEvent());
+            for (Node node : new_grid.getChildren()) {
+                node.setOnMouseClicked((MouseEvent t) -> colorCell(node));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private static void setColor(String color) { SombreroToolboxController.color = color; }
-    public void linkDisplayer(DisplayerController displayerController) {
+    public void linkDisplayer(DisplayerController displayerController, GridPane gridPane) {
         this.displayController = displayerController;
+        //this.gridPane = gridPane;
     }
     public static int getCellCount() { return cellCount; }
     public static void setCellCount(int cellCount) { SombreroToolboxController.cellCount = cellCount; }
