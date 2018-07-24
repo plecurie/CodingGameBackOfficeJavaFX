@@ -355,8 +355,11 @@ public class DisplayerController implements Initializable {
 
         BorderPane sceneRoot = new BorderPane();
 
+
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
         final AnchorPane anchorPane = loader.load();
+        System.out.println("jdsofpofjfds");
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 

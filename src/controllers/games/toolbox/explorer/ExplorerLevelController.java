@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -33,6 +34,8 @@ public class ExplorerLevelController implements Initializable{
     @FXML private TableColumn<LevelExplorer, String> column_explorer_answer2;
     @FXML private TableColumn<LevelExplorer, String> column_explorer_answer3;
     @FXML private TableColumn<LevelExplorer, String> column_explorer_correctAnswer;
+
+    @FXML private Button btn_delete_level_explorer;
 
     private DAOLevel daoLevel = new DAOLevel();
 

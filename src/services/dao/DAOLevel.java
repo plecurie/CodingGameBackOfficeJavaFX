@@ -88,6 +88,8 @@ public class DAOLevel {
             String[] list_objet = aList.toString().split(":");
             String key = list_objet[0];
             String value = list_objet[1];
+            System.out.println("key" + key);
+            System.out.println("value" + value);
 
             switch (key) {
                 case "id": {
@@ -172,7 +174,7 @@ public class DAOLevel {
             String[] list_objet = aList.toString().split(":");
             String key = list_objet[0];
             String value = list_objet[1];
-
+            System.out.println("list : " + aList.toString());
             switch (key) {
                 case "id": {
                     id = Integer.valueOf(value);
