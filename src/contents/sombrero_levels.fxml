@@ -20,7 +20,7 @@
             <Reflection />
          </effect>
          <font>
-            <Font name="Century Gothic" size="24.0" />
+            <Font name="Century Gothic Bold" size="24.0" />
          </font>
       </Label>
       <Button layoutX="121.0" layoutY="539.0" mnemonicParsing="false" onAction="#onSaveDescription" style="-fx-background-color: peru; -fx-background-radius: 40;" text="Save description">
@@ -45,10 +45,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TableView layoutX="410.0" layoutY="194.0" prefHeight="384.0" prefWidth="612.0">
+      <TableView fx:id="tab_levels" layoutX="410.0" layoutY="194.0" onMouseClicked="#onSelectedRow" prefHeight="384.0" prefWidth="612.0">
          <columns>
-            <TableColumn prefWidth="484.0" text="Name" />
-            <TableColumn minWidth="0.0" prefWidth="127.0" text="Difficulty" />
+            <TableColumn fx:id="column_id" prefWidth="86.0" style="-fx-alignment: CENTER" text="Id" />
+            <TableColumn fx:id="column_name" prefWidth="413.0" style="-fx-alignment: CENTER" text="Name" />
+            <TableColumn fx:id="column_difficulty" minWidth="0.0" prefWidth="112.0" style="-fx-alignment: CENTER" text="Difficulty" />
          </columns>
          <effect>
             <InnerShadow />

@@ -108,7 +108,7 @@ class HttpRequest {
         return response.toString();
     }
 
-    String sendPutRequest(JsonObject params, String route) {
+    String sendDeleteRequest(JsonObject params, String route) {
         String response = "";
 
         try {
@@ -116,9 +116,10 @@ class HttpRequest {
             HttpURLConnection connection = (HttpURLConnection) server.openConnection();
             connection.setConnectTimeout(5000);
             connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            connection.setRequestProperty("Authorization", User.getTOKEN());
             connection.setDoOutput(true);
             connection.setDoInput(true);
-            connection.setRequestMethod("PUT");
+            connection.setRequestMethod("DELETE");
 
             OutputStream os = connection.getOutputStream();
             os.write(params.toString().getBytes("UTF-8"));

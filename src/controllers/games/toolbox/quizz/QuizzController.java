@@ -1,5 +1,6 @@
 package controllers.games.toolbox.quizz;
 
+import controllers.DisplayerController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import models.Game;
 import services.dao.DAOAuth;
 import services.dao.DAOLevel;
 
@@ -19,11 +21,16 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class QuizzController implements Initializable{
+
+    private static DisplayerController displayController;
+
     @FXML private TextField edt_response1;
     @FXML private TextField edt_response2;
     @FXML private TextField edt_response3;
     @FXML private TextField edt_response4;
     @FXML private ChoiceBox<Integer> cb_correct_answer;
+    @FXML private ChoiceBox<Integer> cb_is_evaluate_player;
+    @FXML private ChoiceBox<Integer> cb_difficulty;
     @FXML private Button btn_valid_create_question;
     @FXML private TextField edt_question;
 
@@ -64,12 +71,14 @@ public class QuizzController implements Initializable{
         }
 
 
-        daoLevel.createLevelQuizz(edt_question.getText(), responses, correctAnswer);
+        daoLevel.createLevelQuizz(edt_question.getText(), responses, correctAnswer, String.valueOf(cb_is_evaluate_player.getValue()), String.valueOf(cb_difficulty.getValue()));
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("initialize quizz controller");
+
         ArrayList<Integer> choice = new ArrayList<>();
         choice.add(1);
         choice.add(2);
@@ -77,5 +86,24 @@ public class QuizzController implements Initializable{
         choice.add(4);
         cb_correct_answer.setItems(FXCollections.observableArrayList(choice));
         cb_correct_answer.setValue(choice.get(0));
+
+        cb_difficulty.setItems(FXCollections.observableArrayList(choice));
+        cb_difficulty.setValue(choice.get(0));
+
+        choice.clear();
+        choice.add(0);
+        choice.add(1);
+
+        cb_is_evaluate_player.setItems(FXCollections.observableArrayList(choice));
+        cb_is_evaluate_player.setValue(choice.get(0));
+
+        System.out.println(" end initialize quizz controller");
     }
+
+    public void linkDisplayer(DisplayerController displayerController){
+        System.out.println("linkDisplayer QuizzController");
+        QuizzController.displayController = displayerController;
+
+    }
+
 }

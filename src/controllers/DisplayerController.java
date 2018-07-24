@@ -2,8 +2,14 @@ package controllers;
 
 import controllers.games.GamesController;
 import controllers.games.toolbox.SombreroLevelController;
+import controllers.games.toolbox.sombrero.Sombrero;
+import controllers.games.toolbox.sombrero.SombreroFactory;
+import controllers.games.toolbox.quizz.QuizzController;
+import controllers.games.toolbox.quizz.QuizzLevelController;
 import controllers.games.toolbox.sombrero.SombreroTestController;
 import controllers.games.toolbox.sombrero.SombreroToolboxController;
+import controllers.users.SelectedUserController;
+import controllers.users.UsersController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -22,6 +28,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import models.Game;
+import models.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -110,7 +117,7 @@ public class DisplayerController implements Initializable {
     private BorderPane displayPreferences() throws Exception {
 
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/preferences.fxml"));
+        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/administration.fxml"));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 
@@ -127,14 +134,35 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    BorderPane displayUsers() throws Exception {
+    public BorderPane displayUsers() throws Exception {
 
         BorderPane sceneRoot = new BorderPane();
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../contents/users.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/users.fxml"));
+        AnchorPane anchorPane = loader.load();
+        UsersController usersController = loader.getController();
+        usersController.linkDisplayer(this);
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
 
         return sceneRoot ;
+    }
+
+    public void displaySelectedUser(User selected_user) throws IOException {
+
+        BorderPane sceneRoot = new BorderPane();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/selected_user.fxml"));
+
+        User.setSelectedUser(selected_user);
+
+        final AnchorPane anchorPane = loader.load();
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        SelectedUserController selectedUserController = loader.getController();
+        selectedUserController.linkDisplayer(this, main);
+
+        main.getChildren().clear();
+        main.getChildren().add(sceneRoot);
     }
 
     BorderPane displayGames() throws Exception {
@@ -166,25 +194,19 @@ public class DisplayerController implements Initializable {
         main.getChildren().add(sceneRoot);
     }
 
-    public void displaySombreroTest(GridPane sombrero_to_test, String level_name, Integer f1, Integer f2, Integer f3, Integer f4, Integer difficulty, int cellCount) throws IOException {
+    public void displaySombreroTest(Sombrero sombrero) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../contents/sombrero_test.fxml"));
 
-        SombreroTestController.sombrero_test = sombrero_to_test;
-        SombreroTestController.level_name = level_name;
-        SombreroTestController.f1 = f1;
-        SombreroTestController.f2 = f2;
-        SombreroTestController.f3 = f3;
-        SombreroTestController.f4 = f4;
-        SombreroTestController.level_difficulty = difficulty;
-        SombreroTestController.cell_max = cellCount;
-
-        GridPane sombrero_test = SombreroTestController.buildGrid();
+        GridPane sombrero_test = SombreroFactory.buildTestSombrero(sombrero);
         sombrero_test.setMaxSize(600,600);
 
         BorderPane borderPane = loader.load();
         borderPane.setLeft(sombrero_test);
         borderPane.setStyle("-fx-background-color: moccasin ");
+
+        SombreroTestController testController = loader.getController();
+        testController.linkDisplayer(this);
 
         main.getChildren().clear();
         main.getChildren().add(borderPane);
@@ -213,7 +235,7 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 4 : {
-                sceneRoot = displayQuizz();
+                sceneRoot = displayLevelsQuizz();
                 break;
             }
             default:
@@ -256,7 +278,7 @@ public class DisplayerController implements Initializable {
         }
     }
 
-    public BorderPane displayExplorer() throws IOException {
+    private BorderPane displayExplorer() throws IOException {
         String resource_name = "../contents/explorer_toolbox.fxml";
 
         BorderPane sceneRoot = new BorderPane();
@@ -268,7 +290,7 @@ public class DisplayerController implements Initializable {
         return sceneRoot;
     }
 
-    public BorderPane displaySombrero(int cell) throws IOException {
+    private BorderPane displaySombrero(int cell) throws IOException {
         String resource_name = "../contents/sbr_toolbox_" + cell + "x" + cell + ".fxml";
 
         BorderPane sceneRoot = new BorderPane();
@@ -284,14 +306,46 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    public BorderPane displayQuizz() throws IOException {
+
+    public void displayQuizz() throws IOException {
         String resource_name = "../contents/quizz_toolbox.fxml";
 
         BorderPane sceneRoot = new BorderPane();
 
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        //AnchorPane anchorPane = loader.getController();
+        final AnchorPane anchorPane = loader.load();
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
+
+        System.out.println("toolbox level " + loader.getController().toString());
+
+        QuizzController quizzController = loader.getController();
+        quizzController.linkDisplayer(this);
+
+        main.getChildren().clear();
+        main.getChildren().add(sceneRoot);
+    }
+
+    public BorderPane displayLevelsQuizz() throws IOException {
+        String resource_name = "../contents/quizz_levels.fxml";
+
+        BorderPane sceneRoot = new BorderPane();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        //AnchorPane anchorPane = loader.getController();
+        final AnchorPane anchorPane = loader.load();
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        System.out.println("list level " + loader.getController().toString());
+
+        QuizzLevelController quizzLevelController = loader.getController();
+        quizzLevelController.linkDisplayer(this);
+
+
 
         return sceneRoot;
     }
@@ -302,6 +356,14 @@ public class DisplayerController implements Initializable {
         alert.setTitle("Pepit'CodingGame - Error");
         alert.setHeaderText(null);
         alert.setContentText(error_message);
+        alert.showAndWait();
+    }
+
+    public void displayInformation(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Pepit'CodingGame - Message");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
         alert.showAndWait();
     }
 
@@ -327,13 +389,7 @@ public class DisplayerController implements Initializable {
             stage.setScene(scene);
             setStage(stage);
             stage.show();
-
-            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                @Override
-                public void handle(WindowEvent event) {
-                    onDisconnect(new ActionEvent());
-                }
-            });
+            stage.setOnCloseRequest(event -> onDisconnect(new ActionEvent()));
         } catch (IOException e) {
             e.printStackTrace();
         }

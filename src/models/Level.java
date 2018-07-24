@@ -1,49 +1,36 @@
 package models;
 
 public class Level {
-    private static int id;
-    private static int id_game;
-    private static String name;
-    private static String description;
-    private static String difficulty;
+    public static Level SELECTED_LEVEL;
+    public static int LEVEL_ID;
+    public static String LEVEL_NAME;
+    public static int LEVEL_DIFFICULTY;
 
-    public static int getId() {
+    private int id;
+    private String name;
+    private int difficulty;
+
+    public Level() {/*todo default constructor;*/}
+
+    public Level(int id, String name, int difficulty) {
+        setId(id);
+        setName(name);
+        setDifficulty(difficulty);
+    }
+
+    public static void setSelectedLevel(Level selectedLevel) {
+        SELECTED_LEVEL = selectedLevel;
+        LEVEL_ID = selectedLevel.id;
+        LEVEL_NAME = selectedLevel.name;
+        LEVEL_DIFFICULTY = selectedLevel.difficulty;
+    }
+
+    public int getId() {
         return id;
     }
-
-    public static void setId(int id) {
-        Level.id = id;
-    }
-
-    public static int getId_game() {
-        return id_game;
-    }
-
-    public static void setId_game(int id_game) {
-        Level.id_game = id_game;
-    }
-
-    public static String getName() {
-        return name;
-    }
-
-    public static void setName(String name) {
-        Level.name = name;
-    }
-
-    public static String getDescription() {
-        return description;
-    }
-
-    public static void setDescription(String description) {
-        Level.description = description;
-    }
-
-    public static String getDifficulty() {
-        return difficulty;
-    }
-
-    public static void setDifficulty(String difficulty) {
-        Level.difficulty = difficulty;
-    }
+    public void setId(int id) { this.id = id; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public int getDifficulty() { return difficulty; }
+    private void setDifficulty(int difficulty) { this.difficulty = difficulty; }
 }

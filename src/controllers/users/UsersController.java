@@ -1,5 +1,6 @@
 package controllers.users;
 
+import controllers.DisplayerController;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,30 +13,32 @@ import javafx.scene.input.MouseEvent;
 import models.User;
 import services.dao.DAOUser;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class UsersController implements Initializable {
 
-    @FXML private TableView<String> tab_users;
-    @FXML private TableColumn<String, Integer> column_id;
-    @FXML private TableColumn<String, String> column_username;
-    @FXML private TableColumn<String, String> column_firstname;
-    @FXML private TableColumn<String, String> column_lastname;
-    @FXML private TableColumn<String, Integer> column_age;
-    @FXML private TableColumn<String, String> column_email;
-    @FXML private TableColumn<String, String> column_profil;
-    @FXML private TableColumn<String, Integer> column_level;
-    @FXML private TableColumn<String, Float> column_exp;
-    @FXML private TableColumn<String, String> column_type;
+    @FXML private TableView<User> tab_users;
+    @FXML private TableColumn<User, Integer> column_id;
+    @FXML private TableColumn<User, String> column_username;
+    @FXML private TableColumn<User, String> column_firstname;
+    @FXML private TableColumn<User, String> column_lastname;
+    @FXML private TableColumn<User, Integer> column_age;
+    @FXML private TableColumn<User, String> column_email;
+    @FXML private TableColumn<User, String> column_profil;
+    @FXML private TableColumn<User, Integer> column_level;
+    @FXML private TableColumn<User, Float> column_exp;
+    @FXML private TableColumn<User, String> column_type;
 
     private DAOUser daoUser = new DAOUser();
+    private DisplayerController displayController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        ObservableList list_users = getInitialTableData();
+        ObservableList<User> list_users = getInitialTableData();
         if (!list_users.isEmpty()) tab_users.setItems(list_users);
 
         column_id.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -52,8 +55,8 @@ public class UsersController implements Initializable {
         tab_users.getColumns().setAll(column_id, column_username,column_firstname, column_lastname, column_age, column_email, column_profil, column_level, column_exp, column_type );
     }
 
-    private ObservableList getInitialTableData() {
-        List list ;
+    private ObservableList<User> getInitialTableData() {
+        List<User> list ;
         list = daoUser.getUsers();
 
         return FXCollections.observableList(list);
@@ -62,11 +65,20 @@ public class UsersController implements Initializable {
     @FXML protected void onSelectedRow(MouseEvent event) {
 
         int index_selected_user = tab_users.getSelectionModel().getSelectedIndex();
-        ObservableValue cell = column_id.getCellObservableValue(index_selected_user);
+        ObservableValue<Integer> cell = column_id.getCellObservableValue(index_selected_user);
         Object id = cell.getValue();
-        User selected_user = daoUser.getSelectedUser(Integer.valueOf(id.toString()));
 
+        try {
+            User selected_user = daoUser.getSelectedUser(Integer.valueOf(id.toString()));
+            if (!daoUser.getHistorySelectedUser(selected_user.getId()).isEmpty())
+                displayController.displaySelectedUser(selected_user);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
+    public void linkDisplayer(DisplayerController displayerController) {
+        this.displayController = displayerController;
+    }
 }

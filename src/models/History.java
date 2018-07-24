@@ -1,21 +1,18 @@
 package models;
 
-import java.util.Date;
-
 public class History {
-    private static int id;
     private static int id_user;
-    private static int id_game;
-    private static int id_level;
+    private static String game;
+    private static String level;
     private static double score;
-    private static Date date;
+    private static String date;
 
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        History.id = id;
+    public History(int id_user, String game, String level, int score, String date) {
+        setId_user(id_user);
+        setGame(game);
+        setLevel(level);
+        setScore(score);
+        setDate(date);
     }
 
     public static int getId_user() {
@@ -26,20 +23,20 @@ public class History {
         History.id_user = id_user;
     }
 
-    public static int getId_game() {
-        return id_game;
+    public static String getGame() {
+        return game;
     }
 
-    public static void setId_game(int id_game) {
-        History.id_game = id_game;
+    public static void setGame(String id_game) {
+        History.game = id_game;
     }
 
-    public static int getId_level() {
-        return id_level;
+    public static String getLevel() {
+        return level;
     }
 
-    public static void setId_level(int id_level) {
-        History.id_level = id_level;
+    public static void setLevel(String id_level) {
+        History.level = id_level;
     }
 
     public static double getScore() {
@@ -50,11 +47,11 @@ public class History {
         History.score = score;
     }
 
-    public static Date getDate() {
+    public static String getDate() {
         return date;
     }
 
-    public static void setDate(Date date) {
+    public static void setDate(String date) {
         History.date = date;
     }
 }

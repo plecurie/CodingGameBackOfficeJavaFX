@@ -13,6 +13,7 @@ public class DAOAuth {
         JsonObject parameters = Json.createObjectBuilder().add("username", username)
                 .add("password", password).build();
 
+
         HttpRequest http = new HttpRequest();
         String token = http.getToken(parameters,"/auth/signin");
 
@@ -24,23 +25,4 @@ public class DAOAuth {
         return authenticated;
     }
 
-    public Boolean signUp(String username, String password, String firstname, String lastname, String email, int age, String profil, int level, float exp, String type ) {
-        Boolean created = false;
-
-        /*
-        *
-        * */
-
-        return created;
-    }
-
-    public Boolean logOut() {
-        Boolean disconnected = false;
-
-        /*
-        *
-        * */
-
-        return disconnected;
-    }
 }

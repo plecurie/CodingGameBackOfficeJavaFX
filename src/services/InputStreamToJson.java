@@ -30,7 +30,6 @@ public class InputStreamToJson {
                 }
             }
         }
-
         return json.toString();
     }
 
