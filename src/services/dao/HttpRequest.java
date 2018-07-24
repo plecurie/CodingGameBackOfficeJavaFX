@@ -95,7 +95,6 @@ class HttpRequest {
 
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
             response.add(new InputStreamToJson().parseInputStream(connection.getInputStream()));
-            //response = new JsonToString().parseJSON(response.toString());
 
             in.close();
             connection.disconnect();
@@ -139,7 +138,4 @@ class HttpRequest {
         }
         return response;
     }
-
-
-
 }

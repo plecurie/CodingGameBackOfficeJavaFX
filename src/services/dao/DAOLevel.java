@@ -89,8 +89,6 @@ public class DAOLevel {
             String key = list_objet[0];
             String value = list_objet[1];
 
-
-
             switch (key) {
                 case "id": {
                     id = Integer.valueOf(value);
@@ -137,33 +135,22 @@ public class DAOLevel {
         return listLevelQuizz;
     }
 
-    public Boolean createLevelQuizz(String question, ArrayList<String> responses, String correctAnswer, String isEvaluateLevel, String difficulty){
+    public Boolean createLevelQuizz(String question, ArrayList<String> responses, String correctAnswer, String difficulty){
         HttpRequest httpRequest = new HttpRequest();
-        JsonObject parameters = Json.createObjectBuilder().add("question", question)
+        JsonObject parameters = Json.createObjectBuilder()
+                .add("question", question)
                 .add("id_game", 4)
-                .add("name", " ")
+                .add("name", question)
                 .add("answer1", responses.get(0))
                 .add("answer2", responses.get(1))
                 .add("answer3", responses.get(2))
                 .add("answer4", responses.get(3))
                 .add("correct_answer", correctAnswer)
-                .add("evaluate_lvl_player", isEvaluateLevel)
                 .add("difficulty", difficulty)
                 .build();
 
         httpRequest.sendPostRequest(parameters, "/levels/create/");
         return true;
-        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
-    }
-
-
-    public Boolean deleteLevel(int idLevel){
-        HttpRequest httpRequest = new HttpRequest();
-        JsonObject parameters = Json.createObjectBuilder().build();
-
-        httpRequest.sendDeleteRequest(parameters, "/levels/" + Game.GAME_ID + "/" + idLevel);
-        return true;
-        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 
     public List<LevelExplorer> getLevelsExplorer() {
@@ -174,6 +161,7 @@ public class DAOLevel {
         String answer2 = "";
         String answer3 = "";
         String correctAnswer = "";
+        int difficulty = 1;
 
         HttpRequest http = new HttpRequest();
         List list = http.sendGetRequest("/questions");
@@ -227,6 +215,7 @@ public class DAOLevel {
         HttpRequest httpRequest = new HttpRequest();
         JsonObject parameters = Json.createObjectBuilder()
                 .add("id_game", 2)
+                .add("name", question)
                 .add("question", question)
                 .add("answer1", answers.get(0))
                 .add("answer2", answers.get(1))
@@ -239,8 +228,15 @@ public class DAOLevel {
         return 0;
     }
 
-    public void updateLevels(String text) {
+    public void updateLevels(String text) {}
 
+    public Boolean deleteLevel(int idLevel){
+        HttpRequest httpRequest = new HttpRequest();
+        JsonObject parameters = Json.createObjectBuilder().build();
+
+        httpRequest.sendDeleteRequest(parameters, "/levels/" + Game.GAME_ID + "/" + idLevel);
+        return true;
+        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 
     public Level getSelectedLevel(int id_level) {
