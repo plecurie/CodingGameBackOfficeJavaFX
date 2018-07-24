@@ -3,6 +3,7 @@ package services.dao;
 import controllers.games.toolbox.sombrero.SombreroFactory;
 import models.Game;
 import models.Level;
+import models.LevelExplorer;
 import models.LevelQuizz;
 
 import javax.json.Json;
@@ -165,8 +166,64 @@ public class DAOLevel {
         //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 
+    public List<LevelExplorer> getLevelsExplorer() {
+        int id = 0;
+        int idLevels = 0;
+        String question = "";
+        String answer1 = "";
+        String answer2 = "";
+        String answer3 = "";
+        String correctAnswer = "";
 
-    public int createLevelAdventure(String question, ArrayList<String> answers, String correctAnswer){
+        HttpRequest http = new HttpRequest();
+        List list = http.sendGetRequest("/questions");
+
+        List<LevelExplorer> listLevelExplorer = new ArrayList<>();
+
+        for (Object aList : list) {
+            String[] list_objet = aList.toString().split(":");
+            String key = list_objet[0];
+            String value = list_objet[1];
+
+            switch (key) {
+                case "id": {
+                    id = Integer.valueOf(value);
+                    break;
+                }
+                case "id_explorer": {
+                    idLevels = Integer.parseInt(value);
+                    break;
+                }
+                case "question": {
+                    question = value;
+                    break;
+                }
+                case "answer1": {
+                    answer1 = value;
+                    break;
+                }
+                case "answer2": {
+                    answer2 = value;
+                    break;
+                }
+                case "answer3": {
+                    answer3 = value;
+                    break;
+                }
+                case "correctAnswer": {
+                    correctAnswer = value;
+                    listLevelExplorer.add(new LevelExplorer(id, idLevels, question, answer1, answer2, answer3, correctAnswer));
+                    break;
+                }
+                default: {
+                    break;
+                }
+            }
+        }
+        return listLevelExplorer;
+    }
+
+    public int createLevelExplorer(String question, ArrayList<String> answers, String correctAnswer){
         HttpRequest httpRequest = new HttpRequest();
         JsonObject parameters = Json.createObjectBuilder()
                 .add("id_game", 2)

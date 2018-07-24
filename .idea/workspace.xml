@@ -2,147 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/Pause-Play-Stop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow-back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow-collection.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow-next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow-straight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow-turn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow-up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow_pack-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow_pack-right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow_pack-straight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/arrow_pack.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/goldarrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/goldstar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/justdo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/power.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/programme.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/stargold.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/images/stop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/AdminController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/GameSettingsController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/quizz/QuizzLevelController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/Sombrero.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroItem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/LevelQuizz.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/Pause-Play-Stop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow-back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow-collection.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow-next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow-straight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow-turn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow-up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow_pack-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow_pack-right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow_pack-straight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/arrow_pack.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/goldarrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/goldstar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/justdo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/power.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/programme.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/stargold.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/images/stop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/administration.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/quizz_levels.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/selected_level.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/administration.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/quizz_levels.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/selected_level.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/AdminController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/GameSettingsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzLevelController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/Sombrero.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/LevelQuizz.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/preferences.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/PreferencesController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/SettingsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroToolboxController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroToolboxController$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroToolboxController$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/contents/preferences.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/controllers/PreferencesController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/controllers/SettingsController.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/Main.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contents/explorer_levels.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerLevelController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/LevelExplorer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController$1.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/DisplayerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/StarterController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/StarterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/SombreroLevelController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/SombreroLevelController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/explorer/ExplorerController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/explorer/ExplorerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/quizz/QuizzController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/quizz/QuizzController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroTestController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroTestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroToolboxController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/sombrero/SombreroToolboxController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/SelectedUserController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/SelectedUserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/UsersController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/users/UsersController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Game.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/History.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/History.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Level.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/Level.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/models/User.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/models/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/ErrorHandler.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/ErrorHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/InputStreamToJson.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/InputStreamToJson.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOAuth.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOAuth.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/quizz/QuizzLevelController.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/controllers/games/toolbox/quizz/QuizzLevelController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOLevel.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOLevel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOUser.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/DAOUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/HttpRequest.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/services/dao/HttpRequest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/ApiConstant.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/ApiConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/Colors.class" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/settings/Colors.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/gradle/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/gaming_settings.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/gaming_settings.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/quizz_toolbox.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/quizz_toolbox.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_10x10.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_10x10.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_15x15.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sbr_toolbox_15x15.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/selected_user.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/selected_user.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_levels.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_levels.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_test.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/sombrero_test.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/users.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/users.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/gaming_settings.fxml" afterPath="$PROJECT_DIR$/src/contents/gaming_settings.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/quizz_toolbox.fxml" afterPath="$PROJECT_DIR$/src/contents/quizz_toolbox.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" afterPath="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/selected_user.fxml" afterPath="$PROJECT_DIR$/src/contents/selected_user.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" afterPath="$PROJECT_DIR$/src/contents/sombrero_levels.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/sombrero_test.fxml" afterPath="$PROJECT_DIR$/src/contents/sombrero_test.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/users.fxml" afterPath="$PROJECT_DIR$/src/contents/users.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/quizz_levels.fxml" afterPath="$PROJECT_DIR$/out/production/PepitCodingGame/contents/quizz_levels.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contents/quizz_levels.fxml" afterPath="$PROJECT_DIR$/src/contents/quizz_levels.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/DisplayerController.java" afterPath="$PROJECT_DIR$/src/controllers/DisplayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/StarterController.java" afterPath="$PROJECT_DIR$/src/controllers/StarterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/users/SelectedUserController.java" afterPath="$PROJECT_DIR$/src/controllers/users/SelectedUserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/users/UsersController.java" afterPath="$PROJECT_DIR$/src/controllers/users/UsersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Game.java" afterPath="$PROJECT_DIR$/src/models/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/History.java" afterPath="$PROJECT_DIR$/src/models/History.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Level.java" afterPath="$PROJECT_DIR$/src/models/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/User.java" afterPath="$PROJECT_DIR$/src/models/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/ErrorHandler.java" afterPath="$PROJECT_DIR$/src/services/ErrorHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/InputStreamToJson.java" afterPath="$PROJECT_DIR$/src/services/InputStreamToJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/dao/DAOAuth.java" afterPath="$PROJECT_DIR$/src/services/dao/DAOAuth.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzLevelController.java" afterPath="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzLevelController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/dao/DAOLevel.java" afterPath="$PROJECT_DIR$/src/services/dao/DAOLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/dao/DAOUser.java" afterPath="$PROJECT_DIR$/src/services/dao/DAOUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/dao/HttpRequest.java" afterPath="$PROJECT_DIR$/src/services/dao/HttpRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/ApiConstant.java" afterPath="$PROJECT_DIR$/src/settings/ApiConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/Colors.java" afterPath="$PROJECT_DIR$/src/settings/Colors.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -167,39 +43,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="explorer_toolbox.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contents/explorer_toolbox.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="DisplayerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            <state relative-caret-position="359">
+              <caret line="357" column="0" lean-forward="false" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
               <folding>
-                <marker date="1532177947852" expanded="true" signature="2418:2431" ph="..." />
+                <element signature="method#displayHack#0;class#DisplayerController#0" expanded="false" />
+                <element signature="method#displaySombrero#0;class#DisplayerController#0" expanded="false" />
+                <element signature="method#displayQuizz#0;class#DisplayerController#0" expanded="false" />
+                <element signature="method#displayLevelsQuizz#0;class#DisplayerController#0" expanded="false" />
+                <element signature="method#displayAlert#0;class#DisplayerController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selected_level.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contents/selected_level.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DAOLevel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/dao/DAOLevel.java">
+      <file leaf-file-name="ExplorerLevelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerLevelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
+            <state relative-caret-position="298">
+              <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -207,50 +71,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SombreroFactory.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java">
+      <file leaf-file-name="DAOLevel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/services/dao/DAOLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="264" column="15" lean-forward="false" selection-start-line="264" selection-start-column="11" selection-end-line="264" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SombreroLevelController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/SombreroLevelController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="73" column="16" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+            <state relative-caret-position="445">
+              <caret line="178" column="51" lean-forward="false" selection-start-line="178" selection-start-column="51" selection-end-line="178" selection-end-column="51" />
               <folding>
-                <element signature="e#1901#1902#0" expanded="true" />
-                <element signature="e#1964#1965#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#getLevels#0;class#DAOLevel#0" expanded="false" />
+                <element signature="method#createLevel#0;class#DAOLevel#0" expanded="false" />
+                <element signature="method#getLevelsQuizz#0;class#DAOLevel#0" expanded="false" />
+                <element signature="method#createLevelQuizz#0;class#DAOLevel#0" expanded="false" />
+                <element signature="method#deleteLevel#0;class#DAOLevel#0" expanded="false" />
+                <element signature="method#createLevelExplorer#0;class#DAOLevel#0" expanded="false" />
+                <element signature="method#updateLevels#0;class#DAOLevel#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SombreroTestController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="354" column="60" lean-forward="false" selection-start-line="354" selection-start-column="60" selection-end-line="354" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExplorerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getLevels</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -258,11 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/controllers/games/levels/SombreroLevelsController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/ExplorerController.java" />
-        <option value="$PROJECT_DIR$/src/contents/confirmation.fxml" />
-        <option value="$PROJECT_DIR$/src/controllers/ConfirmationController.java" />
-        <option value="$PROJECT_DIR$/src/controllers/AlertController.java" />
         <option value="$PROJECT_DIR$/src/dao/apirequest/Put.java" />
         <option value="$PROJECT_DIR$/src/controllers/users/UsersController.java" />
         <option value="$PROJECT_DIR$/src/models/User.java" />
@@ -292,7 +140,6 @@
         <option value="$PROJECT_DIR$/src/services/dao/DAOGame.java" />
         <option value="$PROJECT_DIR$/src/services/ErrorHandler.java" />
         <option value="$PROJECT_DIR$/src/services/dao/DAOUser.java" />
-        <option value="$PROJECT_DIR$/src/controllers/DisplayerController.java" />
         <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_10x10.fxml" />
         <option value="$PROJECT_DIR$/src/contents/sbr_toolbox_15x15.fxml" />
         <option value="$PROJECT_DIR$/src/contents/sombrero_test.fxml" />
@@ -301,14 +148,20 @@
         <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroToolboxController.java" />
         <option value="$PROJECT_DIR$/src/contents/authentification.fxml" />
         <option value="$PROJECT_DIR$/src/services/dao/DAOAuth.java" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java" />
         <option value="$PROJECT_DIR$/src/contents/explorer_toolbox.fxml" />
-        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java" />
         <option value="$PROJECT_DIR$/src/services/dao/HttpRequest.java" />
         <option value="$PROJECT_DIR$/src/contents/quizz_toolbox.fxml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/services/dao/DAOLevel.java" />
         <option value="$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzLevelController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java" />
+        <option value="$PROJECT_DIR$/src/contents/quizz_levels.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/DisplayerController.java" />
+        <option value="$PROJECT_DIR$/src/models/LevelExplorer.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerLevelController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java" />
+        <option value="$PROJECT_DIR$/src/contents/explorer_levels.fxml" />
+        <option value="$PROJECT_DIR$/src/services/dao/DAOLevel.java" />
       </list>
     </option>
   </component>
@@ -345,12 +198,58 @@
             <path>
               <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="contents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
+              <item name="explorer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="toolbox" type="462c0819:PsiDirectoryNode" />
+              <item name="quizz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PepitCodingGame-JavaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PepitCodingGame-JavaApp" type="b2602c69:ProjectViewProjectNode" />
@@ -549,7 +448,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16302083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20364584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -571,23 +470,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/services/dao/DAOLevel.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/contents/confirmation.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/ConfirmationController.java" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/AlertController.java" />
-    <entry file="file://$PROJECT_DIR$/src/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.base/com/sun/javafx/event/EventHandlerManager.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.base/com/sun/javafx/event/CompositeEventHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/dao/httprequest/Delete.java" />
     <entry file="file://$PROJECT_DIR$/src/dao/httprequest/Get.java" />
     <entry file="file://$PROJECT_DIR$/src/dao/httprequest/Post.java" />
@@ -614,13 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1081">
-          <caret line="181" column="30" lean-forward="false" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -796,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/dao/HttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -855,14 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroTestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -882,21 +755,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/dao/DAOLevel.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
+        <state relative-caret-position="232">
+          <caret line="235" column="5" lean-forward="true" selection-start-line="235" selection-start-column="5" selection-end-line="235" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contents/quizz_levels.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="187" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="187" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1936">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/quizz/QuizzLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="63" column="5" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="63" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/LevelQuizz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="96" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/LevelExplorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/explorer/ExplorerLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/games/toolbox/sombrero/SombreroFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/contents/explorer_levels.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="264" column="15" lean-forward="false" selection-start-line="264" selection-start-column="11" selection-end-line="264" selection-end-column="15" />
+        <state relative-caret-position="796">
+          <caret line="48" column="106" lean-forward="false" selection-start-line="48" selection-start-column="106" selection-end-line="48" selection-end-column="106" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/DisplayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="357" column="0" lean-forward="false" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+          <folding>
+            <element signature="method#displayHack#0;class#DisplayerController#0" expanded="false" />
+            <element signature="method#displaySombrero#0;class#DisplayerController#0" expanded="false" />
+            <element signature="method#displayQuizz#0;class#DisplayerController#0" expanded="false" />
+            <element signature="method#displayLevelsQuizz#0;class#DisplayerController#0" expanded="false" />
+            <element signature="method#displayAlert#0;class#DisplayerController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/dao/DAOLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="178" column="51" lean-forward="false" selection-start-line="178" selection-start-column="51" selection-end-line="178" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getLevels#0;class#DAOLevel#0" expanded="false" />
+            <element signature="method#createLevel#0;class#DAOLevel#0" expanded="false" />
+            <element signature="method#getLevelsQuizz#0;class#DAOLevel#0" expanded="false" />
+            <element signature="method#createLevelQuizz#0;class#DAOLevel#0" expanded="false" />
+            <element signature="method#deleteLevel#0;class#DAOLevel#0" expanded="false" />
+            <element signature="method#createLevelExplorer#0;class#DAOLevel#0" expanded="false" />
+            <element signature="method#updateLevels#0;class#DAOLevel#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

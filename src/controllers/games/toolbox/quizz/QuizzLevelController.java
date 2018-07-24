@@ -56,7 +56,6 @@ public class QuizzLevelController implements Initializable{
 
 
     }
-
     private ObservableList<LevelQuizz> getInitialTableData() {
         List<LevelQuizz> list ;
         list = daoLevel.getLevelsQuizz();

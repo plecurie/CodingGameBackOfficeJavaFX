@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.effect.InnerShadow?>
+
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.effect.DropShadow?>
-
-<AnchorPane prefHeight="555.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.quizz.QuizzLevelController">
-
+<?import javafx.scene.effect.InnerShadow?>
+<AnchorPane prefHeight="555.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.explorer.ExplorerLevelController">
     <children>
-        <Label layoutX="364.0" layoutY="40.0" text="Quizz" textAlignment="CENTER" underline="true">
+        <Label layoutX="364.0" layoutY="40.0" text="Explorer" textAlignment="CENTER" underline="true">
             <effect>
                 <Reflection />
             </effect>
@@ -34,14 +31,13 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <TableView fx:id="tab_level_quizz" layoutX="11.0" layoutY="157.0" prefHeight="384.0" prefWidth="881.0">
+        <TableView fx:id="tab_level_explorer" layoutX="11.0" layoutY="157.0" prefHeight="384.0" prefWidth="881.0">
             <columns>
-                <TableColumn fx:id="column_quizz_question" prefWidth="199.0" text="Question" />
-                <TableColumn fx:id="column_quizz_answer1" minWidth="0.0" prefWidth="180.0" text="Reponse1" />
-                <TableColumn fx:id="column_quizz_answer2" prefWidth="134.0" text="Reponse2" />
-                <TableColumn fx:id="column_quizz_answer3" prefWidth="151.0" text="Reponse3" />
-                <TableColumn fx:id="column_quizz_answer4" prefWidth="120.0" text="Reponse4" />
-                <TableColumn fx:id="column_quizz_difficulty" prefWidth="92.0" text="Difficulty" />
+                <TableColumn fx:id="column_explorer_question" prefWidth="199.0" text="Question" />
+                <TableColumn fx:id="column_explorer_answer1" minWidth="0.0" prefWidth="180.0" text="Reponse1" />
+                <TableColumn fx:id="column_explorer_answer2" prefWidth="134.0" text="Reponse2" />
+                <TableColumn fx:id="column_explorer_answer3" prefWidth="151.0" text="Reponse3" />
+                <TableColumn fx:id="column_explorer_correctAnswer" prefWidth="151.0" text="correctAnswer" />
             </columns>
             <effect>
                 <InnerShadow />
@@ -50,7 +46,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </TableView>
-        <Button fx:id="btn_delete_level_quizz"  layoutX="716.0" layoutY="56.0" mnemonicParsing="false" onAction="#deleteLevelQuizz" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: peru; -fx-background-radius: 40;" text="- Delete Level">
+        <Button fx:id="btn_delete_level_explorer"  layoutX="716.0" layoutY="56.0" mnemonicParsing="false"  prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: peru; -fx-background-radius: 40;" text="- Delete Level">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>

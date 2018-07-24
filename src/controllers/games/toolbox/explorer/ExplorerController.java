@@ -1,5 +1,7 @@
 package controllers.games.toolbox.explorer;
 
+import controllers.DisplayerController;
+import controllers.games.toolbox.quizz.QuizzController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +16,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ExplorerController implements Initializable {
+
+    private static DisplayerController displayController;
 
     @FXML private TextField edt_question;
     @FXML private TextField edt_response1;
@@ -49,7 +53,7 @@ public class ExplorerController implements Initializable {
                 break;
         }
 
-        daoLevel.createLevelAdventure(edt_question.getText(), answers, correctAnswer);
+        daoLevel.createLevelExplorer(edt_question.getText(), answers, correctAnswer);
     }
 
 
@@ -60,5 +64,10 @@ public class ExplorerController implements Initializable {
         choice.add(3);
         cb_correct_answer.setItems(FXCollections.observableArrayList(choice));
         cb_correct_answer.setValue(choice.get(0));
+    }
+
+    public void linkDisplayer(DisplayerController displayerController){
+        System.out.println("linkDisplayer ExplorerController");
+        ExplorerController.displayController = displayerController;
     }
 }

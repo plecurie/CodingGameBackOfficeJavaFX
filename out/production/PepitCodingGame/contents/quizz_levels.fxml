@@ -38,10 +38,10 @@
             <columns>
                 <TableColumn fx:id="column_quizz_question" prefWidth="199.0" text="Question" />
                 <TableColumn fx:id="column_quizz_answer1" minWidth="0.0" prefWidth="180.0" text="Reponse1" />
-            <TableColumn fx:id="column_quizz_answer2" prefWidth="134.0" text="Reponse2" />
-            <TableColumn fx:id="column_quizz_answer3" prefWidth="151.0" text="Reponse3" />
-            <TableColumn fx:id="column_quizz_answer4" prefWidth="120.0" text="Reponse4" />
-            <TableColumn fx:id="column_quizz_difficulty" prefWidth="92.0" text="Difficulty" />
+                <TableColumn fx:id="column_quizz_answer2" prefWidth="134.0" text="Reponse2" />
+                <TableColumn fx:id="column_quizz_answer3" prefWidth="151.0" text="Reponse3" />
+                <TableColumn fx:id="column_quizz_answer4" prefWidth="120.0" text="Reponse4" />
+                <TableColumn fx:id="column_quizz_difficulty" prefWidth="92.0" text="Difficulty" />
             </columns>
             <effect>
                 <InnerShadow />
@@ -50,17 +50,17 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </TableView>
-      <Button fx:id="btn_delete_level_quizz"  layoutX="716.0" layoutY="56.0" mnemonicParsing="false" onAction="#deleteLevelQuizz" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: peru; -fx-background-radius: 40;" text="- Delete Level">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow />
-         </effect>
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
+        <Button fx:id="btn_delete_level_quizz"  layoutX="716.0" layoutY="56.0" mnemonicParsing="false" onAction="#deleteLevelQuizz" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: peru; -fx-background-radius: 40;" text="- Delete Level">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <DropShadow />
+            </effect>
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
     </children>
 
 </AnchorPane>

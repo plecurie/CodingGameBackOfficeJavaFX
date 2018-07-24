@@ -2,6 +2,7 @@ package controllers;
 
 import controllers.games.GamesController;
 import controllers.games.toolbox.SombreroLevelController;
+import controllers.games.toolbox.explorer.ExplorerLevelController;
 import controllers.games.toolbox.sombrero.Sombrero;
 import controllers.games.toolbox.sombrero.SombreroFactory;
 import controllers.games.toolbox.quizz.QuizzController;
@@ -222,7 +223,7 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 2 : {
-                sceneRoot = displayExplorer();
+                sceneRoot = displayLevelsExplorer();
                 break;
             }
             case 3 : {
@@ -278,7 +279,7 @@ public class DisplayerController implements Initializable {
         }
     }
 
-    private BorderPane displayExplorer() throws IOException {
+    public BorderPane displayExplorer() throws IOException {
         String resource_name = "../contents/explorer_toolbox.fxml";
 
         BorderPane sceneRoot = new BorderPane();
@@ -345,7 +346,23 @@ public class DisplayerController implements Initializable {
         QuizzLevelController quizzLevelController = loader.getController();
         quizzLevelController.linkDisplayer(this);
 
+        return sceneRoot;
+    }
 
+    public BorderPane displayLevelsExplorer() throws IOException {
+        String resource_name = "../contents/explorer_levels.fxml";
+
+        BorderPane sceneRoot = new BorderPane();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        final AnchorPane anchorPane = loader.load();
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        System.out.println("list level " + loader.getController().toString());
+
+        ExplorerLevelController explorerLevelController = loader.getController();
+        explorerLevelController.linkDisplayer(this);
 
         return sceneRoot;
     }

@@ -94,6 +94,7 @@ public class QuizzController implements Initializable{
         choice.add(0);
         choice.add(1);
 
+        // a supprimer
         cb_is_evaluate_player.setItems(FXCollections.observableArrayList(choice));
         cb_is_evaluate_player.setValue(choice.get(0));
 
