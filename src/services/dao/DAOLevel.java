@@ -1,10 +1,7 @@
 package services.dao;
 
-import controllers.games.toolbox.sombrero.Sombrero;
-import controllers.games.toolbox.sombrero.SombreroFactory;
-import javafx.scene.layout.GridPane;
 import models.Game;
-import models.Level;
+import models.LevelQuizz;
 
 import javax.json.Json;
 import javax.json.JsonObject;
@@ -13,33 +10,87 @@ import java.util.List;
 
 public class DAOLevel {
 
-    public List<Level> getLevels(int id_game) {
+    public List getLevels() {
+        return null;
+    }
+
+    public Boolean createLevel(int id_game, String name, int difficulty, String functions, List grid_list ) {
+        boolean created = false;
+/*        int i = 0;
+        JsonObject parameters = (JsonObject) Json.createObjectBuilder().add("id_game", id_game)
+                .add("name", name).add("difficulty", difficulty)
+                .add("functions", functions);
+        for (Object cell_txt : grid_list) {
+            ((JsonObjectBuilder) parameters).add("c"+i, String.valueOf(cell_txt));
+            i++;
+        }
+        ((JsonObjectBuilder) parameters).build();
+        HttpRequest http = new HttpRequest();
+        List list = http.sendPostRequest(parameters,"/levels/create/");
+        if (list != null) created = true;
+*/
+        return created;
+    }
+
+    public List<LevelQuizz> getLevelsQuizz() {
         int id = 0;
-        String name = "";
-        int difficulty;
+        int idLevels = 0;
+        String question = "";
+        String answer1 = "";
+        String answer2 = "";
+        String answer3 = "";
+        String answer4 = "";
+        String correctAnswer = "";
+        int difficulty = 1;
 
         HttpRequest http = new HttpRequest();
-        List list = http.sendGetRequest("/levels/" + id_game);
+        List list = http.sendGetRequest("/level_quizz");
 
-        List<Level> list_levels = new ArrayList<>();
+        List<LevelQuizz> listLevelQuizz = new ArrayList<>();
 
         for (Object aList : list) {
             String[] list_objet = aList.toString().split(":");
             String key = list_objet[0];
             String value = list_objet[1];
 
+
+
             switch (key) {
                 case "id": {
                     id = Integer.valueOf(value);
                     break;
                 }
-                case "name": {
-                    name = value;
+                case "id_levels": {
+                    idLevels = Integer.parseInt(value);
+                    break;
+                }
+                case "question": {
+                    question = value;
+                    break;
+                }
+                case "answer1": {
+                    answer1 = value;
+                    break;
+                }
+                case "answer2": {
+                    answer2 = value;
+                    break;
+                }
+                case "answer3": {
+                    answer3 = value;
+                    break;
+                }
+                case "answer4": {
+                    answer4 = value;
+                    break;
+                }
+                case "correct_answer": {
+                    correctAnswer = value;
                     break;
                 }
                 case "difficulty": {
                     difficulty = Integer.valueOf(value);
-                    list_levels.add(new Level(id, name, difficulty));
+                    listLevelQuizz.add(new LevelQuizz(id, idLevels, question, answer1, answer2, answer3, answer4, correctAnswer, difficulty));
                     break;
                 }
                 default: {
@@ -47,118 +98,36 @@ public class DAOLevel {
                 }
             }
         }
-        return list_levels;
+        return listLevelQuizz;
     }
 
-    public Boolean createLevel(int id_game, String name, int difficulty ) {
-        boolean created = false;
-        JsonObject parameters = null;
+    public Boolean createLevelQuizz(String question, ArrayList<String> responses, String correctAnswer, String isEvaluateLevel, String difficulty){
+        HttpRequest httpRequest = new HttpRequest();
+        JsonObject parameters = Json.createObjectBuilder().add("question", question)
+                .add("id_game", 4)
+                .add("name", " ")
+                .add("answer1", responses.get(0))
+                .add("answer2", responses.get(1))
+                .add("answer3", responses.get(2))
+                .add("answer4", responses.get(3))
+                .add("correct_answer", correctAnswer)
+                .add("evaluate_lvl_player", isEvaluateLevel)
+                .add("difficulty", difficulty)
+                .build();
 
-        switch (id_game) {
-            case 1 : {
-                parameters = Json.createObjectBuilder().add("id_game", id_game)
-                        .add("name", name).add("difficulty", difficulty).build();
-                break;
-            }
-            case 2 : {
-                parameters = Json.createObjectBuilder().add("id_game", id_game)
-                        .add("name", name).add("difficulty", difficulty).build();
-                break;
-            }
-            case 3 : {
-                parameters = SombreroFactory.breakSombreroToJson(Sombrero.getSelectedSombrero());
-                break;
-            }
-            case 4 : {
-                parameters = Json.createObjectBuilder().add("id_game", id_game)
-                        .add("name", name).add("difficulty", difficulty).build();
-                break;
-            }
-            default:
-                break;
-        }
-
-        HttpRequest http = new HttpRequest();
-        String response = http.sendPostRequest(parameters,"/levels/create/");
-
-        if (!response.isEmpty())
-            created = true;
-
-        return created;
+        httpRequest.sendPostRequest(parameters, "/levels/create/");
+        return true;
+        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 
-    public Level getSelectedLevel(int id_level) {
-        String name = "";
-        int difficulty = 0;
-        GridPane board = new GridPane();
-        int cell = 0;
-        int F1 = 0;
-        int F2 = 0;
-        int F3 = 0;
-        int F4 = 0;
 
-        HttpRequest http = new HttpRequest();
-        List list = http.sendGetRequest("/levels/" + Game.GAME_ID + "/" + id_level);
-        Level selected_level = new Level();
+    public Boolean deleteLevel(int idLevel){
+        HttpRequest httpRequest = new HttpRequest();
+        JsonObject parameters = Json.createObjectBuilder().build();
 
-        for (Object aList : list) {
-            String[] list_objet = aList.toString().split(":");
-            String key = list_objet[0];
-            String value = list_objet[1];
-
-            switch (key) {
-                case "name" : {
-                    name = value;
-                    break;
-                }
-                case "cell" : {
-                    cell = Integer.valueOf(value);
-                    break;
-                }
-                case "difficulty" : {
-                    difficulty = Integer.valueOf(value);
-                    break;
-                }
-                case "f1" : {
-                    F1 = Integer.valueOf(value);
-                    break;
-                }
-                case "f2" : {
-                    F2 = Integer.valueOf(value);
-                    break;
-                }
-                case "f3" : {
-                    F3 = Integer.valueOf(value);
-                    break;
-                }
-                case "f4" : {
-                    F4 = Integer.valueOf(value);
-                    break;
-                }
-                case "grid_list" : {
-
-                    String[] obj = aList.toString().split("[^\\w]", 2);
-                    value = obj[1];
-
-                    board = SombreroFactory.composeGridPane(board, value, cell);
-                    board.setGridLinesVisible(true);
-                    board.setVisible(true);
-
-                    Sombrero.setSelectedSombrero(new Sombrero(board,name,F1, F2, F3, F4, difficulty, cell));
-
-                    selected_level = new Level(id_level, name, difficulty);
-                    Level.setSelectedLevel(selected_level);
-
-                    break;
-                }
-                default:
-                    break;
-            }
-        }
-        return selected_level;
+        httpRequest.sendDeleteRequest(parameters, "/levels/" + Game.GAME_ID + "/" + idLevel);
+        return true;
+        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 
-    public void updateLevels(String text) {
-
-    }
 }

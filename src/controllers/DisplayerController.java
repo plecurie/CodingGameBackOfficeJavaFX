@@ -4,6 +4,8 @@ import controllers.games.GamesController;
 import controllers.games.toolbox.SombreroLevelController;
 import controllers.games.toolbox.sombrero.Sombrero;
 import controllers.games.toolbox.sombrero.SombreroFactory;
+import controllers.games.toolbox.quizz.QuizzController;
+import controllers.games.toolbox.quizz.QuizzLevelController;
 import controllers.games.toolbox.sombrero.SombreroTestController;
 import controllers.games.toolbox.sombrero.SombreroToolboxController;
 import controllers.users.SelectedUserController;
@@ -233,7 +235,7 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 4 : {
-                sceneRoot = displayQuizz();
+                sceneRoot = displayLevelsQuizz();
                 break;
             }
             default:
@@ -304,14 +306,46 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    private BorderPane displayQuizz() throws IOException {
+
+    public void displayQuizz() throws IOException {
         String resource_name = "../contents/quizz_toolbox.fxml";
 
         BorderPane sceneRoot = new BorderPane();
 
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        //AnchorPane anchorPane = loader.getController();
+        final AnchorPane anchorPane = loader.load();
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
+
+        System.out.println("toolbox level " + loader.getController().toString());
+
+        QuizzController quizzController = loader.getController();
+        quizzController.linkDisplayer(this);
+
+        main.getChildren().clear();
+        main.getChildren().add(sceneRoot);
+    }
+
+    public BorderPane displayLevelsQuizz() throws IOException {
+        String resource_name = "../contents/quizz_levels.fxml";
+
+        BorderPane sceneRoot = new BorderPane();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        //AnchorPane anchorPane = loader.getController();
+        final AnchorPane anchorPane = loader.load();
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        System.out.println("list level " + loader.getController().toString());
+
+        QuizzLevelController quizzLevelController = loader.getController();
+        quizzLevelController.linkDisplayer(this);
+
+
 
         return sceneRoot;
     }

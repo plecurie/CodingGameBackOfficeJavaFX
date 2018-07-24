@@ -48,6 +48,7 @@ class HttpRequest {
     }
 
     List sendGetRequest(String route)  {
+
         List response = new ArrayList();
 
         try {
@@ -74,7 +75,8 @@ class HttpRequest {
     }
 
     String sendPostRequest(JsonObject params, String route) {
-        String response = "";
+        List response = new ArrayList();
+        System.out.print(params);
 
         try {
             URL server = new URL(ApiConstant.HOST + route);
@@ -90,8 +92,10 @@ class HttpRequest {
             os.write(params.toString().getBytes("UTF-8"));
             os.close();
 
+
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
-            response = (new InputStreamToJson().parseInputStream(connection.getInputStream()));
+            response.add(new InputStreamToJson().parseInputStream(connection.getInputStream()));
+            //response = new JsonToString().parseJSON(response.toString());
 
             in.close();
             connection.disconnect();
@@ -101,10 +105,10 @@ class HttpRequest {
             DisplayerController displayerController = new DisplayerController();
             displayerController.displayAlert(error);
         }
-        return response;
+        return response.toString();
     }
 
-    String sendPutRequest(JsonObject params, String route) {
+    String sendDeleteRequest(JsonObject params, String route) {
         String response = "";
 
         try {
@@ -112,9 +116,10 @@ class HttpRequest {
             HttpURLConnection connection = (HttpURLConnection) server.openConnection();
             connection.setConnectTimeout(5000);
             connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            connection.setRequestProperty("Authorization", User.getTOKEN());
             connection.setDoOutput(true);
             connection.setDoInput(true);
-            connection.setRequestMethod("PUT");
+            connection.setRequestMethod("DELETE");
 
             OutputStream os = connection.getOutputStream();
             os.write(params.toString().getBytes("UTF-8"));
