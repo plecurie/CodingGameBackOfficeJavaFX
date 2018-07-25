@@ -3,7 +3,10 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_9">
     <output-test url="file://$MODULE_DIR$/../../gradle/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../gradle/src/test" />
+    <content url="file://$MODULE_DIR$/../../gradle/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../gradle/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../gradle/src/test/resources" type="java-test-resource" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />

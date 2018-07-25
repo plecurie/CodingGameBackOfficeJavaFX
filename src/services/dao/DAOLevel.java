@@ -1,5 +1,6 @@
 package services.dao;
 
+import controllers.DisplayerController;
 import controllers.games.toolbox.sombrero.Sombrero;
 import controllers.games.toolbox.sombrero.SombreroFactory;
 import models.Game;
@@ -210,6 +211,8 @@ public class DAOLevel {
                 .build();
 
         httpRequest.sendPostRequest(parameters, "/levels/create/");
+        DisplayerController displayerController = new DisplayerController();
+        displayerController.displayInformation("Succed Creation Level");
         return true;
     }
 
@@ -284,6 +287,8 @@ public class DAOLevel {
                 .add("difficulty", 1)
                 .build();
         httpRequest.sendPostRequest(parameters, "/levels/create");
+        DisplayerController displayerController = new DisplayerController();
+        displayerController.displayInformation("Succed Creation Level");
 
         return 0;
     }
@@ -295,7 +300,8 @@ public class DAOLevel {
         JsonObject parameters = Json.createObjectBuilder().build();
 
         httpRequest.sendDeleteRequest("/levels/" + Game.GAME_ID + "/" + idLevel);
+        DisplayerController displayerController = new DisplayerController();
+        displayerController.displayInformation("Deleted !");
         return true;
-        //return httpRequest.sendPostRequest(parameters, "/level_quizz");
     }
 }
