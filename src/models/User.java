@@ -2,6 +2,7 @@ package models;
 
 public class User {
 
+    private static  int USER_ID;
     private static String USERNAME ;
     private static String FIRSTNAME ;
     private static String LASTNAME ;
@@ -97,22 +98,6 @@ public class User {
     public String getType() { return type; }
     private void setType(String type) { this.type = type; }
 
-    public static String getUSERNAME() { return USERNAME; }
-    public static void setUSERNAME(String USERNAME) { User.USERNAME = USERNAME; }
-    public static String getFIRSTNAME() { return FIRSTNAME; }
-    public static void setFIRSTNAME(String FIRSTNAME) { User.FIRSTNAME = FIRSTNAME; }
-    public static String getLASTNAME() { return LASTNAME; }
-    public static void setLASTNAME(String LASTNAME) { User.LASTNAME = LASTNAME; }
-    public static String getAGE() { return AGE; }
-    public static void setAGE(String AGE) { User.AGE = AGE; }
-    public static String getEMAIL() { return EMAIL; }
-    public static void setEMAIL(String EMAIL) { User.EMAIL = EMAIL; }
-    public static String getLEVEL() { return LEVEL; }
-    public static void setLEVEL(String LEVEL) { User.LEVEL = LEVEL; }
-    public static String getEXP() { return EXP; }
-    public static void setEXP(String EXP) { User.EXP = EXP; }
-    public static String getTYPE() { return TYPE; }
-    public static void setTYPE(String TYPE) { User.TYPE = TYPE; }
     public static String getTOKEN() { return TOKEN; }
     public static void setTOKEN(String TOKEN) { User.TOKEN = TOKEN; }
 

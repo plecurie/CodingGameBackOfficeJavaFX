@@ -240,6 +240,7 @@ public class SombreroTestController implements Initializable {
         double pos_y = PLAYER.getY() + Sombrero.getInnerItemDefaultHeight()/2;
 
         switch (orientation) {
+            //haut
             case 270 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
                 path.getElements().add(new LineTo(pos_x, pos_y - 2*Sombrero.getInnerItemDefaultWidth()));
@@ -248,6 +249,7 @@ public class SombreroTestController implements Initializable {
 
                 break;
             }
+            //bas
             case 90 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
                 path.getElements().add(new LineTo(pos_x, pos_y + 2*Sombrero.getInnerItemDefaultWidth()));
@@ -256,6 +258,7 @@ public class SombreroTestController implements Initializable {
 
                 break;
             }
+            //gauche
             case 180 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
                 path.getElements().add(new LineTo(pos_x - 2*Sombrero.getInnerItemDefaultWidth(), pos_y));
@@ -264,6 +267,7 @@ public class SombreroTestController implements Initializable {
 
                 break;
             }
+            //droite
             case 0 :{
                 path.getElements().add(new MoveTo(pos_x, pos_y));
                 path.getElements().add(new LineTo(pos_x + 2*Sombrero.getInnerItemDefaultHeight(), pos_y));

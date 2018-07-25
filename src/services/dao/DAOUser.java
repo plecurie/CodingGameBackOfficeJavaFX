@@ -22,7 +22,6 @@ public class DAOUser {
     }
 
     public List<History> getHistorySelectedUser(int id) {
-
         String game="";
         String level="";
         int score = 0;

@@ -272,7 +272,7 @@ public class SombreroToolboxController implements Initializable {
     }
 
     @FXML private void onResolveClick() {
-        if (!isFilled()){
+        /*if (!isFilled()){
             displayController.displayAlert("No map ! :( ");
         }
         else if (!player){
@@ -283,8 +283,8 @@ public class SombreroToolboxController implements Initializable {
         }
         else if (!isOnMap()){
             displayController.displayAlert("Put everything on the map !");
-        }
-        else if (level_name.getText().isEmpty()){
+        }*/
+        if (level_name.getText().isEmpty()){
             displayController.displayAlert("The level name cannot be empty !");
         }
         else if (f1.getValue() == 0){

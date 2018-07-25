@@ -62,20 +62,21 @@ public class UsersController implements Initializable {
         return FXCollections.observableList(list);
     }
 
-    @FXML protected void onSelectedRow(MouseEvent event) {
-        try {
-            int index_selected_user = tab_users.getSelectionModel().getSelectedIndex();
-            ObservableValue<Integer> cell = column_id.getCellObservableValue(index_selected_user);
-            Object id = cell.getValue();
+    @FXML protected void onSelectedRow() {
 
+        int index_selected_user = tab_users.getSelectionModel().getSelectedIndex();
+        ObservableValue<Integer> cell = column_id.getCellObservableValue(index_selected_user);
+        Object id = cell.getValue();
+
+        try {
             User selected_user = daoUser.getSelectedUser(Integer.valueOf(id.toString()));
-            if (!daoUser.getHistorySelectedUser(selected_user.getId()).isEmpty()){
+            if (!daoUser.getHistorySelectedUser(selected_user.getId()).isEmpty())
                 displayController.displaySelectedUser(selected_user);
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     public void linkDisplayer(DisplayerController displayerController) {
         this.displayController = displayerController;

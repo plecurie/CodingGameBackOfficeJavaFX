@@ -11,18 +11,18 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 class HttpRequest {
 
-    private String token;
-
-    String getToken(JsonObject params, String route) {
-
+    String getToken(JsonObject params) {
+        String token = "";
         try {
-            URL url = new URL(ApiConstant.HOST + route);
+            URL url = new URL(ApiConstant.HOST + "/auth/signin");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setConnectTimeout(5000);
             connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
@@ -47,6 +47,7 @@ class HttpRequest {
     }
 
     List sendGetRequest(String route)  {
+
         List response = new ArrayList();
 
         try {
@@ -150,6 +151,35 @@ class HttpRequest {
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
             response = new DataFactory().parseInputStream(connection.getInputStream());
             in.close();
+
+            connection.disconnect();
+
+        } catch (IOException e) {
+            ErrorHandler errorHandler = new ErrorHandler();
+            String error = errorHandler.getErrorCode(e.getMessage());
+            DisplayerController displayerController = new DisplayerController();
+            displayerController.displayAlert(error);
+        }
+        return response;
+    }
+
+    String sendLogoutRequest(JsonObject params) {
+        String response = "";
+        try {
+            URL server = new URL(ApiConstant.HOST + "/auth/logout");
+            HttpURLConnection connection = (HttpURLConnection) server.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            connection.setRequestProperty("Authorization", User.getTOKEN());
+            connection.setDoOutput(true);
+            connection.setDoInput(true);
+            connection.setRequestMethod("POST");
+
+            OutputStream os = connection.getOutputStream();
+            os.write(params.toString().getBytes("UTF-8"));
+            os.close();
+
+            response = new DataFactory().parseInputStream(connection.getInputStream());
 
             connection.disconnect();
 

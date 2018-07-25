@@ -28,6 +28,7 @@ import javafx.stage.WindowEvent;
 import models.Game;
 import models.User;
 import services.DataFactory;
+import services.dao.DAOAuth;
 
 import javax.json.JsonObject;
 import java.io.IOException;
@@ -377,16 +378,19 @@ public class DisplayerController implements Initializable {
             stage.setScene(scene);
             setStage(stage);
             stage.show();
-            stage.setOnCloseRequest(event -> onDisconnect(new ActionEvent()));
+            stage.setOnCloseRequest(event -> onDisconnect());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    @FXML private void onDisconnect(ActionEvent actionEvent){
-        stage.close();
-        StarterController starterController = new StarterController();
-        starterController.displayStarter();
+    @FXML private void onDisconnect(){
+        DAOAuth daoAuth = new DAOAuth();
+        if (daoAuth.logout()) {
+            stage.close();
+            StarterController starterController = new StarterController();
+            starterController.displayStarter();
+        }
     }
 
 }

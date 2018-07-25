@@ -4,6 +4,7 @@ import models.User;
 
 import javax.json.Json;
 import javax.json.JsonObject;
+import java.util.List;
 
 public class DAOAuth {
     public Boolean signIn(String username, String password) {
@@ -12,16 +13,22 @@ public class DAOAuth {
         JsonObject parameters = Json.createObjectBuilder().add("username", username)
                 .add("password", password).build();
 
-
         HttpRequest http = new HttpRequest();
-        String token = http.getToken(parameters,"/auth/signin");
+        String token = http.getToken(parameters);
 
-        if (token != null) {
+        if (!token.isEmpty()) {
             User.setTOKEN(token);
             authenticated = true;
         }
 
         return authenticated;
+    }
+
+    public Boolean logout() {
+
+        User.setTOKEN("");
+
+        return true;
     }
 
 }
