@@ -2,8 +2,12 @@ package controllers;
 
 import controllers.games.GamesController;
 import controllers.games.toolbox.SombreroLevelController;
+import controllers.games.toolbox.explorer.ExplorerController;
+import controllers.games.toolbox.explorer.ExplorerLevelController;
 import controllers.games.toolbox.sombrero.Sombrero;
 import controllers.games.toolbox.sombrero.SombreroFactory;
+import controllers.games.toolbox.quizz.QuizzController;
+import controllers.games.toolbox.quizz.QuizzLevelController;
 import controllers.games.toolbox.sombrero.SombreroTestController;
 import controllers.games.toolbox.sombrero.SombreroToolboxController;
 import controllers.users.SelectedUserController;
@@ -229,7 +233,7 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 2 : {
-                sceneRoot = displayExplorer();
+                sceneRoot = displayLevelsExplorer();
                 break;
             }
             case 3 : {
@@ -237,7 +241,7 @@ public class DisplayerController implements Initializable {
                 break;
             }
             case 4 : {
-                sceneRoot = displayQuizz();
+                sceneRoot = displayLevelsQuizz();
                 break;
             }
             default:
@@ -280,19 +284,8 @@ public class DisplayerController implements Initializable {
         }
     }
 
-    private BorderPane displayExplorer() throws IOException {
-        String resource_name = "../contents/explorer_toolbox.fxml";
-
-        BorderPane sceneRoot = new BorderPane();
-
-        final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
-        sceneRoot.setCenter(anchorPane);
-        sceneRoot.setVisible(true);
-
-        return sceneRoot;
-    }
-
     private BorderPane displaySombrero() throws IOException {
+        String resource_name = "../contents/sbr_toolbox_10x10.fxml";
 
         BorderPane sceneRoot = new BorderPane();
 
@@ -327,14 +320,77 @@ public class DisplayerController implements Initializable {
         return sceneRoot ;
     }
 
-    private BorderPane displayQuizz() throws IOException {
+    public void displayQuizz() throws IOException {
         String resource_name = "../contents/quizz_toolbox.fxml";
+
+        BorderPane sceneRoot = new BorderPane();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        //AnchorPane anchorPane = loader.getController();
+        final AnchorPane anchorPane = loader.load();
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        System.out.println("toolbox level " + loader.getController().toString());
+
+        QuizzController quizzController = loader.getController();
+        quizzController.linkDisplayer(this);
+
+        main.getChildren().clear();
+        main.getChildren().add(sceneRoot);
+    }
+
+    public BorderPane displayLevelsQuizz() throws IOException {
+        String resource_name = "../contents/quizz_levels.fxml";
+
+        BorderPane sceneRoot = new BorderPane();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        //AnchorPane anchorPane = loader.getController();
+        final AnchorPane anchorPane = loader.load();
+        //final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        System.out.println("list level " + loader.getController().toString());
+
+        QuizzLevelController quizzLevelController = loader.getController();
+        quizzLevelController.linkDisplayer(this);
+
+        return sceneRoot;
+    }
+
+    public void displayExplorer() throws IOException {
+        String resource_name = "../contents/explorer_toolbox.fxml";
 
         BorderPane sceneRoot = new BorderPane();
 
         final AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(resource_name));
         sceneRoot.setCenter(anchorPane);
         sceneRoot.setVisible(true);
+
+        main.getChildren().clear();
+        main.getChildren().add(sceneRoot);
+    }
+
+    public BorderPane displayLevelsExplorer() throws IOException {
+        String resource_name = "../contents/explorer_levels.fxml";
+
+        BorderPane sceneRoot = new BorderPane();
+
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(resource_name));
+        final AnchorPane anchorPane = loader.load();
+        System.out.println("jdsofpofjfds");
+        sceneRoot.setCenter(anchorPane);
+        sceneRoot.setVisible(true);
+
+        System.out.println("list level " + loader.getController().toString());
+
+        ExplorerLevelController explorerLevelController = loader.getController();
+        explorerLevelController.linkDisplayer(this);
 
         return sceneRoot;
     }

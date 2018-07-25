@@ -112,6 +112,7 @@ class HttpRequest {
             HttpURLConnection connection = (HttpURLConnection) server.openConnection();
             connection.setConnectTimeout(5000);
             connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            connection.setRequestProperty("Authorization", User.getTOKEN());
             connection.setDoOutput(true);
             connection.setDoInput(true);
             connection.setRequestMethod("PUT");
@@ -191,6 +192,4 @@ class HttpRequest {
         }
         return response;
     }
-
-
 }

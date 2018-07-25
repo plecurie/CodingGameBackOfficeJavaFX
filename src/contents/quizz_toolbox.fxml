@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.games.toolbox.quizz.QuizzController">
    <children>
-      <Label layoutX="258.0" layoutY="303.0" text="PEPITQUIZZ : On construction...">
+      <Label layoutX="439.0" layoutY="31.0" text="PEPITO QUIZZ">
          <font>
-            <Font name="System Bold" size="38.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
+      <ImageView fitHeight="179.0" fitWidth="202.0" layoutX="799.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/quizz.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="82.0" layoutY="354.0" prefHeight="21.0" prefWidth="98.0" text="Question : " />
+      <TextField fx:id="edt_question" layoutX="177.0" layoutY="349.0" prefHeight="31.0" prefWidth="425.0" />
+      <TextField fx:id="edt_response1" layoutX="177.0" layoutY="400.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="82.0" layoutY="405.0" prefHeight="21.0" prefWidth="87.0" text="Reponse 1 :" />
+      <TextField fx:id="edt_response2" layoutX="177.0" layoutY="444.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="82.0" layoutY="449.0" prefHeight="21.0" prefWidth="79.0" text="Reponse 2 :" />
+      <TextField fx:id="edt_response3" layoutX="177.0" layoutY="489.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="82.0" layoutY="494.0" prefHeight="21.0" prefWidth="87.0" text="Reponse 3 :" />
+      <TextField fx:id="edt_response4" layoutX="177.0" layoutY="531.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="82.0" layoutY="535.0" prefHeight="21.0" prefWidth="87.0" text="Reponse 4 : " />
+      <Label layoutX="42.0" layoutY="590.0" prefHeight="21.0" prefWidth="119.0" text="Réponse correct : " />
+      <TextArea layoutX="31.0" layoutY="95.0" prefHeight="226.0" prefWidth="618.0" text="Notice:&#10;Niveau de difficulté :&#10;1 =&gt; Algorithme simple (boucles, variables et conditions)&#10;2 =&gt; Fonctions, Tableaux statiques&#10;3 =&gt; Pointeurs, Tableaux dynamiques&#10;4 =&gt; POO (Programmation Orienté Objet)&#10;&#10;Le champs : &quot;Question pour le test d'évaluation du joueur : &quot;&#10;0 =&gt; Non (Question pour n'importe quel joueur)&#10;1 =&gt; Oui (Question pour le test évaluation du niveau du joueur et de ça personnalité)&#10;&#10;" />
+      <Label layoutX="488.0" layoutY="434.0" prefHeight="21.0" prefWidth="334.0" text="Question pour le test d'évaluation du joueur : " />
+      <Label layoutX="721.0" layoutY="365.0" prefHeight="21.0" prefWidth="98.0" text="Difficulté : " />
+
+      <Button fx:id="btn_valid_create_question" layoutX="721.0" layoutY="563.0" mnemonicParsing="false" onAction="#onSaveQuestion" prefHeight="45.0" prefWidth="129.0" text="Valider" />
+      <ChoiceBox fx:id="cb_correct_answer" layoutX="177.0" layoutY="585.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="cb_difficulty" layoutX="799.0" layoutY="360.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="cb_is_evaluate_player" layoutX="802.0" layoutY="429.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
