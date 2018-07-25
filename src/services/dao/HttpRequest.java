@@ -52,6 +52,7 @@ class HttpRequest {
 
         try {
             URL serverURL = new URL( ApiConstant.HOST + route);
+            System.out.println(ApiConstant.HOST + route);
             HttpURLConnection connection = (HttpURLConnection) serverURL.openConnection();
             connection.setConnectTimeout(5000);
             connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");

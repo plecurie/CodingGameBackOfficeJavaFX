@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: javax.json:javax.json:">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/gradle/Could not find javax.json:javax.json:." />
+      <root url="jar://$PROJECT_DIR$/lib/javax.json-1.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
