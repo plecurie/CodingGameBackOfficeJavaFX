@@ -76,4 +76,11 @@ public class ExplorerLevelController implements Initializable{
         ExplorerLevelController.displayController = displayerController;
         Game selected_game = Game.SELECTED_GAME;
     }
+
+    @FXML private void deleteLevelExplorer(ActionEvent actionEvent){
+        System.out.println("func deleteExplorer");
+        LevelExplorer selectedItem = tab_level_explorer.getSelectionModel().getSelectedItem();
+        daoLevel.deleteLevel(selectedItem.getId_levels());
+        System.out.println("selected row : " + selectedItem.getId());
+    }
 }

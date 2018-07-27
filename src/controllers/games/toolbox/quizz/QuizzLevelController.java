@@ -79,7 +79,7 @@ public class QuizzLevelController implements Initializable{
 
     @FXML private void deleteLevelQuizz(ActionEvent actionEvent){
         LevelQuizz selectedItem = tab_level_quizz.getSelectionModel().getSelectedItem();
-        daoLevel.deleteLevel(selectedItem.getId());
+        daoLevel.deleteLevel(selectedItem.getId_levels());
         System.out.println("selected row : " + selectedItem.getId());
     }
 

@@ -235,13 +235,12 @@ public class DAOLevel {
             String[] list_objet = aList.toString().split(":");
             String key = list_objet[0];
             String value = list_objet[1];
-            System.out.println("list : " + aList.toString());
             switch (key) {
                 case "id": {
                     id = Integer.valueOf(value);
                     break;
                 }
-                case "id_explorer": {
+                case "id_levels": {
                     idLevels = Integer.parseInt(value);
                     break;
                 }
@@ -299,6 +298,7 @@ public class DAOLevel {
         HttpRequest httpRequest = new HttpRequest();
         JsonObject parameters = Json.createObjectBuilder().build();
 
+        System.out.println("/levels/" + Game.GAME_ID + "/" + idLevel);
         httpRequest.sendDeleteRequest("/levels/" + Game.GAME_ID + "/" + idLevel);
         DisplayerController displayerController = new DisplayerController();
         displayerController.displayInformation("Deleted !");

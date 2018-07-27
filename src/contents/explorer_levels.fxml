@@ -46,7 +46,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </TableView>
-        <Button fx:id="btn_delete_level_explorer"  layoutX="716.0" layoutY="56.0" mnemonicParsing="false"  prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: peru; -fx-background-radius: 40;" text="- Delete Level">
+        <Button fx:id="btn_delete_level_explorer" onAction="#deleteLevelExplorer"  layoutX="716.0" layoutY="56.0" mnemonicParsing="false"  prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: peru; -fx-background-radius: 40;" text="- Delete Level">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
